@@ -1,6 +1,6 @@
 # Privacy Lite YouTube Embeds
 
-Privacy Lite YouTube Embeds replaces YouTube embeds with fast, privacy-friendly local placeholders.
+Privacy Lite YouTube Embeds replaces YouTube embeds with lightweight local placeholders.
 
 The goal is simple: before the visitor clicks, the page should not load YouTube/Google resources in the browser.
 
@@ -13,7 +13,9 @@ Before click, the frontend loads only local resources from the site:
 
 The YouTube player is created only after user interaction and uses `https://www.youtube-nocookie.com/embed/`.
 
-## Features in v0.1.2
+> Important: this plugin is a technical privacy/performance aid. It does not constitute legal advice and does not by itself guarantee compliance with privacy laws. Site owners remain responsible for their own privacy notices, consent setup, and legal assessment.
+
+## Features in v1.0.0
 
 - Replaces Gutenberg YouTube embed blocks.
 - Optional replacement scope for all YouTube videos found in post content.
@@ -33,7 +35,11 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Admin tool to scan content and generate missing thumbnails.
 - Admin tool to clear the local thumbnail cache.
 - Privacy verification notes in the settings page.
+- WordPress privacy policy helper text.
 - Translation source files in `/languages/`.
+- WordPress.org-compatible `readme.txt`.
+- GPL license file.
+- Uninstall cleanup for options, failed-download transients and local thumbnail files.
 
 ## Settings
 
@@ -103,6 +109,8 @@ After click, the plugin creates an iframe using:
 
 `https://www.youtube-nocookie.com/embed/VIDEO_ID`
 
+The plugin also adds suggested wording to WordPress' privacy policy guide so site owners can adapt their policy text.
+
 ## How to test privacy behavior
 
 Open a page containing a YouTube embed and use your browser DevTools.
@@ -135,6 +143,10 @@ File structure:
 
 ```text
 privacy-lite-youtube-embeds.php
+readme.txt
+README.md
+LICENSE.txt
+uninstall.php
 assets/
   privacy-lite-youtube-embeds.css
   privacy-lite-youtube-embeds.js
@@ -147,7 +159,7 @@ languages/
 
 A `.pot` template and an Italian `.po` file are included.
 
-To use the Italian translation in WordPress, compile the `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
+To use the Italian translation in WordPress before wordpress.org language packs are available, compile the `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
 
 ## Planned improvements
 
