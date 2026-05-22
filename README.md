@@ -2,6 +2,8 @@
 
 Privacy Lite YouTube Embeds replaces YouTube embeds with lightweight local placeholders.
 
+**Fast YouTube embeds. Nothing loads until click.**
+
 The goal is simple: before the visitor clicks, the page should not load YouTube/Google resources in the browser.
 
 Before click, the frontend loads only local resources from the site:
@@ -39,6 +41,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Settings link from the WordPress plugins screen.
 - Admin tool to scan content and generate missing thumbnails.
 - Admin tool to clear the local thumbnail cache.
+- Optional support box for donations, enabled only when a real support URL is configured.
 - Privacy verification notes in the settings page.
 - WordPress privacy policy helper text.
 - Translation source files in `/languages/`.
@@ -83,6 +86,28 @@ Deletes locally cached thumbnail files from:
 It also clears failed-download retry markers.
 
 After clearing, thumbnails are regenerated when content is scanned, saved, or viewed.
+
+## Optional support box
+
+The settings page includes an optional “Support development” box.
+
+By default it is hidden, because the plugin should not ship with placeholder or fake donation links.
+
+To enable it, define a support URL in `wp-config.php`:
+
+```php
+define('PLYE_SUPPORT_URL', 'https://ko-fi.com/YOUR_PROFILE');
+```
+
+Or use the filter:
+
+```php
+add_filter('plye_support_url', function () {
+    return 'https://ko-fi.com/YOUR_PROFILE';
+});
+```
+
+Recommended platform: **Ko-fi**, because it is simple, lightweight and works well for a discreet “buy me a coffee” link.
 
 ## Thumbnail handling
 
@@ -155,6 +180,8 @@ uninstall.php
 assets/
   privacy-lite-youtube-embeds.css
   privacy-lite-youtube-embeds.js
+docs/
+  wordpress-org-assets.md
 languages/
   privacy-lite-youtube-embeds.pot
   privacy-lite-youtube-embeds-it_IT.po
@@ -164,7 +191,27 @@ languages/
 
 A `.pot` template and an Italian `.po` file are included.
 
-To use the Italian translation in WordPress before wordpress.org language packs are available, compile the `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
+Recommended first translations:
+
+- `it_IT`
+- `de_DE`
+- `fr_FR`
+- `es_ES`
+
+To use local translations before wordpress.org language packs are available, compile the relevant `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
+
+## WordPress.org visual direction
+
+Main copy:
+
+```text
+Privacy Lite YouTube Embeds
+Fast YouTube embeds. Nothing loads until click.
+```
+
+The visual direction should focus on performance: a lightweight video placeholder, no unnecessary scripts before click, and YouTube loaded only on demand. Avoid using the official YouTube logo or trademark-heavy visual elements.
+
+See `docs/wordpress-org-assets.md` for the working visual specification.
 
 ## Planned improvements
 
