@@ -468,7 +468,7 @@ final class Privacy_Lite_YouTube_Embeds {
     }
 
     private function support_logo_url(): string {
-        $filename = 'cofffee-love-icon.svg';
+        $filename = 'coffee-love-icon.svg';
         $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
 
         if (is_readable($path)) {
