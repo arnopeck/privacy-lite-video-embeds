@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Privacy Lite YouTube Embeds
  * Description: Replaces YouTube embeds with fast, privacy-friendly local placeholders and loads youtube-nocookie only after user interaction.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Arno Peck
  * Author URI: https://github.com/arnopeck
  * Text Domain: privacy-lite-youtube-embeds
@@ -17,9 +17,10 @@ if (!defined('ABSPATH')) {
 }
 
 final class Privacy_Lite_YouTube_Embeds {
-    private const VERSION = '0.1.0';
+    private const VERSION = '0.1.1';
     private const OPTION_NAME = 'plye_settings';
     private const THUMB_DIR = 'privacy-lite-youtube-embeds';
+    private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
 
     private static ?self $instance = null;
 
@@ -36,7 +37,9 @@ final class Privacy_Lite_YouTube_Embeds {
         add_action('admin_init', [$this, 'register_settings']);
         add_action('admin_menu', [$this, 'add_settings_page']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
+        add_action('save_post', [$this, 'prime_post_thumbnails'], 20, 3);
 
+        add_filter('plugin_action_links_' . plugin_basename(__FILE__), [$this, 'add_plugin_action_links']);
         add_filter('render_block', [$this, 'filter_render_block'], 20, 2);
         add_filter('embed_oembed_html', [$this, 'filter_oembed_html'], 20, 4);
         add_filter('the_content', [$this, 'filter_content_iframes'], 20);
@@ -77,6 +80,16 @@ final class Privacy_Lite_YouTube_Embeds {
             self::VERSION,
             true
         );
+    }
+
+    public function add_plugin_action_links(array $links): array {
+        $settings_url = admin_url('options-general.php?page=privacy-lite-youtube-embeds');
+        array_unshift(
+            $links,
+            '<a href="' . esc_url($settings_url) . '">' . esc_html__('Settings', 'privacy-lite-youtube-embeds') . '</a>'
+        );
+
+        return $links;
     }
 
     public function register_settings(): void {
@@ -245,6 +258,23 @@ final class Privacy_Lite_YouTube_Embeds {
         ) ?: $content;
     }
 
+    public function prime_post_thumbnails(int $post_id, WP_Post $post, bool $update): void {
+        unset($update);
+
+        if (wp_is_post_revision($post_id) || wp_is_post_autosave($post_id) || empty($post->post_content)) {
+            return;
+        }
+
+        $video_ids = $this->get_video_ids_for_post_content($post->post_content);
+        if (!$video_ids) {
+            return;
+        }
+
+        foreach (array_slice($video_ids, 0, 10) as $video_id) {
+            $this->get_local_thumbnail($video_id);
+        }
+    }
+
     private function render_placeholder(string $video_id, string $title = ''): string {
         $settings = $this->settings();
         $thumb = $this->get_local_thumbnail($video_id);
@@ -296,14 +326,21 @@ final class Privacy_Lite_YouTube_Embeds {
             return ['path' => $path, 'url' => $url];
         }
 
+        if (get_transient($this->failed_thumbnail_transient_key($video_id))) {
+            return null;
+        }
+
         if (!is_dir($dir) && !wp_mkdir_p($dir)) {
             return null;
         }
 
         $downloaded = $this->download_thumbnail($video_id, $path);
         if (!$downloaded || !is_readable($path)) {
+            set_transient($this->failed_thumbnail_transient_key($video_id), 1, self::FAILED_THUMB_TTL);
             return null;
         }
+
+        delete_transient($this->failed_thumbnail_transient_key($video_id));
 
         return ['path' => $path, 'url' => $url];
     }
@@ -317,7 +354,7 @@ final class Privacy_Lite_YouTube_Embeds {
 
         foreach ($candidates as $candidate) {
             $url = sprintf('https://img.youtube.com/vi/%s/%s', rawurlencode($video_id), $candidate);
-            $response = wp_remote_get($url, [
+            $response = wp_safe_remote_get($url, [
                 'timeout' => 8,
                 'redirection' => 3,
                 'user-agent' => 'Privacy Lite YouTube Embeds/' . self::VERSION . '; ' . home_url('/'),
@@ -347,28 +384,71 @@ final class Privacy_Lite_YouTube_Embeds {
         return false;
     }
 
-    private function extract_video_id(string $value): string {
-        if ('' === $value) {
-            return '';
+    private function get_video_ids_for_post_content(string $content): array {
+        if ('gutenberg' === $this->settings()['scope'] && function_exists('parse_blocks')) {
+            return $this->get_video_ids_from_blocks(parse_blocks($content));
+        }
+
+        return $this->extract_video_ids($content);
+    }
+
+    private function get_video_ids_from_blocks(array $blocks): array {
+        $video_ids = [];
+
+        foreach ($blocks as $block) {
+            if (!empty($block['blockName']) && 'core/embed' === $block['blockName']) {
+                $attrs = isset($block['attrs']) && is_array($block['attrs']) ? $block['attrs'] : [];
+                $provider = isset($attrs['providerNameSlug']) ? sanitize_key((string) $attrs['providerNameSlug']) : '';
+                $url = isset($attrs['url']) ? (string) $attrs['url'] : '';
+
+                if ('youtube' === $provider || $this->extract_video_id($url)) {
+                    $video_id = $this->extract_video_id($url);
+                    if ($video_id) {
+                        $video_ids[] = $video_id;
+                    }
+                }
+            }
+
+            if (!empty($block['innerBlocks']) && is_array($block['innerBlocks'])) {
+                $video_ids = array_merge($video_ids, $this->get_video_ids_from_blocks($block['innerBlocks']));
+            }
+        }
+
+        return array_values(array_unique(array_filter($video_ids)));
+    }
+
+    private function extract_video_ids(string $value): array {
+        if ('' === $value || false === stripos($value, 'youtu')) {
+            return [];
         }
 
         $value = html_entity_decode($value, ENT_QUOTES, get_bloginfo('charset') ?: 'UTF-8');
+        $video_ids = [];
 
         $patterns = [
             '#youtu\.be/([A-Za-z0-9_-]{6,20})#i',
             '#youtube(?:-nocookie)?\.com/embed/([A-Za-z0-9_-]{6,20})#i',
             '#youtube(?:-nocookie)?\.com/shorts/([A-Za-z0-9_-]{6,20})#i',
-            '#youtube(?:-nocookie)?\.com/(?:watch|.*?[?&]v=)[^\s"\']*?[?&]v=([A-Za-z0-9_-]{6,20})#i',
             '#[?&]v=([A-Za-z0-9_-]{6,20})#i',
         ];
 
         foreach ($patterns as $pattern) {
-            if (preg_match($pattern, $value, $matches)) {
-                return $this->sanitize_video_id($matches[1]);
+            if (preg_match_all($pattern, $value, $matches)) {
+                foreach ($matches[1] as $match) {
+                    $video_id = $this->sanitize_video_id($match);
+                    if ($video_id) {
+                        $video_ids[] = $video_id;
+                    }
+                }
             }
         }
 
-        return '';
+        return array_values(array_unique($video_ids));
+    }
+
+    private function extract_video_id(string $value): string {
+        $video_ids = $this->extract_video_ids($value);
+        return $video_ids[0] ?? '';
     }
 
     private function sanitize_video_id(string $video_id): string {
@@ -378,6 +458,10 @@ final class Privacy_Lite_YouTube_Embeds {
         }
 
         return $video_id;
+    }
+
+    private function failed_thumbnail_transient_key(string $video_id): string {
+        return 'plye_thumb_fail_' . md5($video_id);
     }
 
     private function extract_title_from_html(string $html): string {
