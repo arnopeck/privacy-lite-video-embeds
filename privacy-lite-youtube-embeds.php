@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Privacy Lite YouTube Embeds
- * Plugin URI: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds
+ * Plugin URI: https://github.com/arnopeck/privacy-lite-youtube-embeds
  * Description: Replaces YouTube embeds with local thumbnails and loads the youtube-nocookie player only after user interaction.
  * Version: 1.0.0
  * Author: Arno Peck
@@ -160,18 +160,21 @@ final class Privacy_Lite_YouTube_Embeds {
         }
         ?>
         <div class="wrap">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1120px; margin-bottom:16px;">
-                <div>
-                    <h1 style="margin:0 0 6px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
-                    <p style="margin:0; color:#646970; font-size:14px;"><?php echo esc_html__('Fast YouTube embeds. Nothing loads until click.', 'privacy-lite-youtube-embeds'); ?></p>
-                </div>
-                <?php $this->render_support_badge(); ?>
+            <div style="max-width:1120px; margin-bottom:16px;">
+                <h1 style="margin:0 0 6px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
+                <p style="margin:0; color:#646970; font-size:14px;"><?php echo esc_html__('Fast YouTube embeds. Nothing loads until click.', 'privacy-lite-youtube-embeds'); ?></p>
             </div>
+
             <?php $this->render_admin_tool_notice(); ?>
+
             <div class="notice notice-info inline" style="max-width:1120px; margin-top:0;">
                 <p><strong><?php echo esc_html__('Privacy behavior', 'privacy-lite-youtube-embeds'); ?></strong></p>
                 <p><?php echo esc_html__('Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder.', 'privacy-lite-youtube-embeds'); ?></p>
                 <p><?php echo esc_html__('To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.', 'privacy-lite-youtube-embeds'); ?></p>
+            </div>
+
+            <div style="max-width:1120px; margin:12px 0 18px; display:flex; justify-content:flex-end;">
+                <?php $this->render_support_badge(); ?>
             </div>
 
             <form method="post" action="options.php" style="max-width:1120px;">
@@ -245,9 +248,8 @@ final class Privacy_Lite_YouTube_Embeds {
 
     public function render_consent_text_field(): void {
         $settings = $this->settings();
-        $is_disabled = empty($settings['show_consent_text']);
         ?>
-        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]" <?php echo $is_disabled ? 'readonly="readonly"' : ''; ?> aria-disabled="<?php echo $is_disabled ? 'true' : 'false'; ?>" style="<?php echo $is_disabled ? 'opacity:.68;' : ''; ?>"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
+        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
         <p class="description"><?php echo esc_html__('Displayed only if the consent text option is enabled.', 'privacy-lite-youtube-embeds'); ?></p>
         <?php
     }
