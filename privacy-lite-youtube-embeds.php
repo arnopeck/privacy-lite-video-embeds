@@ -209,6 +209,8 @@ final class Privacy_Lite_YouTube_Embeds {
                 ?>
                 <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-youtube-embeds'); ?></p>
             </form>
+
+            <?php $this->render_support_box(); ?>
         </div>
         <?php
     }
@@ -431,6 +433,33 @@ final class Privacy_Lite_YouTube_Embeds {
             </div>
             <?php
         }
+    }
+
+    private function render_support_box(): void {
+        $support_url = $this->support_url();
+        if (!$support_url) {
+            return;
+        }
+        ?>
+        <hr>
+        <div class="card" style="max-width: 720px;">
+            <h2><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></h2>
+            <p><?php echo esc_html__('Enjoying Privacy Lite YouTube Embeds? If this plugin helped you keep your pages lighter, you can support its development with a coffee.', 'privacy-lite-youtube-embeds'); ?></p>
+            <p>
+                <a class="button button-secondary" href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer">
+                    <?php echo esc_html__('Buy me a coffee', 'privacy-lite-youtube-embeds'); ?>
+                </a>
+            </p>
+        </div>
+        <?php
+    }
+
+    private function support_url(): string {
+        $url = defined('PLYE_SUPPORT_URL') ? (string) PLYE_SUPPORT_URL : '';
+        $url = (string) apply_filters('plye_support_url', $url);
+        $url = esc_url_raw($url, ['https']);
+
+        return $url ?: '';
     }
 
     private function scan_content_for_thumbnails(int $limit): array {
