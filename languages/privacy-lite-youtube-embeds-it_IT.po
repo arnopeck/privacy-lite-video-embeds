@@ -1,0 +1,110 @@
+# Italian translation for Privacy Lite YouTube Embeds.
+# Copyright (C) 2026 Arno Peck
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Privacy Lite YouTube Embeds 0.1.2\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds/issues\n"
+"POT-Creation-Date: 2026-05-22 00:00+0000\n"
+"PO-Revision-Date: 2026-05-22 00:00+0000\n"
+"Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ChatGPT\n"
+"X-Domain: privacy-lite-youtube-embeds\n"
+
+msgid "Settings"
+msgstr "Impostazioni"
+
+msgid "YouTube privacy replacement"
+msgstr "Sostituzione YouTube orientata alla privacy"
+
+msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
+msgstr "Sostituisce gli embed YouTube con thumbnail locali e carica il player video solo dopo il click."
+
+msgid "Replacement scope"
+msgstr "Ambito di sostituzione"
+
+msgid "Consent text"
+msgstr "Testo consenso"
+
+msgid "Consent message"
+msgstr "Messaggio consenso"
+
+msgid "Autoplay after click"
+msgstr "Autoplay dopo il click"
+
+msgid "Privacy Lite YouTube Embeds"
+msgstr "Privacy Lite YouTube Embeds"
+
+msgid "Privacy Lite YouTube"
+msgstr "Privacy Lite YouTube"
+
+msgid "Privacy behavior"
+msgstr "Comportamento privacy"
+
+msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
+msgstr "Prima del click, il frontend carica solo HTML, CSS, JavaScript e thumbnail locali. YouTube viene caricato da youtube-nocookie.com solo dopo il click del visitatore sul placeholder."
+
+msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
+msgstr "Per verificarlo, apri il pannello Network del browser e ricarica una pagina con un embed YouTube: prima del click non dovrebbero esserci richieste verso youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com o gstatic.com."
+
+msgid "Thumbnail tools"
+msgstr "Strumenti thumbnail"
+
+msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
+msgstr "Usa questi strumenti per contenuti esistenti, risoluzione problemi o dopo aver modificato molti embed YouTube."
+
+msgid "Scan content and generate missing thumbnails"
+msgstr "Scansiona contenuti e genera le thumbnail mancanti"
+
+msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
+msgstr "Scansiona fino a %d post/pagine pubbliche pubblicate per esecuzione e scarica le thumbnail locali mancanti."
+
+msgid "Clear local thumbnail cache"
+msgstr "Svuota cache thumbnail locale"
+
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "Eliminare tutte le thumbnail YouTube salvate localmente?"
+
+msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
+msgstr "Elimina i file thumbnail salvati localmente e cancella i marker dei download falliti. Le thumbnail saranno rigenerate quando i contenuti vengono scansionati, salvati o visualizzati."
+
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "Solo blocchi embed YouTube Gutenberg"
+
+msgid "All YouTube videos found in content"
+msgstr "Tutti i video YouTube trovati nel contenuto"
+
+msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
+msgstr "Usa “Tutti” per sostituire anche oEmbed classici e iframe YouTube incollati manualmente."
+
+msgid "Show a short privacy message inside the placeholder."
+msgstr "Mostra un breve messaggio privacy dentro il placeholder."
+
+msgid "Displayed only if the consent text option is enabled."
+msgstr "Mostrato solo se l’opzione testo consenso è attiva."
+
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr "Avvia la riproduzione subito dopo il click dell’utente sul placeholder."
+
+msgid "You do not have permission to run this tool."
+msgstr "Non hai i permessi per eseguire questo strumento."
+
+msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr "Scansione completata. Contenuti scansionati: %1$d. Video trovati: %2$d. Thumbnail esistenti: %3$d. Generate: %4$d. Fallite o non disponibili: %5$d."
+
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr "Cache thumbnail locale svuotata. File eliminati: %d."
+
+msgid "Play video: %s"
+msgstr "Riproduci video: %s"
+
+msgid "Play YouTube video"
+msgstr "Riproduci video YouTube"
+
+msgid "The video is loaded from YouTube only after your click."
+msgstr "Il video viene caricato da YouTube solo dopo il tuo click."
