@@ -1,0 +1,183 @@
+# Copyright (C) 2026 Arno Peck
+# This file is distributed under the GPL-2.0-or-later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-"
+"Embeds/issues\n"
+"POT-Creation-Date: 2026-05-22 13:08+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+"X-Domain: privacy-lite-youtube-embeds\n"
+
+msgid "Settings"
+msgstr "设置"
+
+#, fuzzy
+msgid "YouTube privacy replacement"
+msgstr "YouTube隐私替代"
+
+#, fuzzy
+msgid ""
+"Replace YouTube embeds with local thumbnails and load the video player only "
+"after click."
+msgstr "用本地缩略图替换YouTube嵌入，点击后才加载视频播放器。"
+
+#, fuzzy
+msgid ""
+"This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
+"local placeholder. Before a visitor clicks a video placeholder, the visitor "
+"browser does not load the YouTube player or remote YouTube thumbnails. If "
+"the visitor chooses to play a video, the YouTube player is loaded from the "
+"privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process "
+"data according to their own terms and privacy policy."
+msgstr ""
+"本网站使用 Privacy Lite YouTube 嵌入软件，展示带有本地占位符的 YouTube 视频。"
+"访客点击视频占位符之前，访客浏览器不会加载YouTube播放器或远程YouTube缩略图。"
+"如果访客选择播放视频，YouTube 播放器会从隐私增强的 youtube-nocookie.com 域加"
+"载，YouTube 或 Google 可能会根据自身条款和隐私政策处理数据。"
+
+#, fuzzy
+msgid "Replacement scope"
+msgstr "替换范围"
+
+#, fuzzy
+msgid "Consent text"
+msgstr "同意书文本"
+
+msgid "Consent message"
+msgstr "内容信息"
+
+#, fuzzy
+msgid "Autoplay after click"
+msgstr "点击后自动播放"
+
+#, fuzzy
+msgid "Privacy Lite YouTube Embeds"
+msgstr "Privacy Lite YouTube 嵌入"
+
+#, fuzzy
+msgid "Privacy Lite YouTube"
+msgstr "隐私轻量版 YouTube"
+
+#, fuzzy
+msgid "Privacy behavior"
+msgstr "隐私行为"
+
+#, fuzzy
+msgid ""
+"Before click, the frontend loads only local HTML, CSS, JavaScript and "
+"locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
+"after the visitor clicks the placeholder."
+msgstr ""
+"点击前，前端只加载本地 HTML、CSS、JavaScript 和本地缓存的缩略图。YouTube只有"
+"在访客点击占位符后才会从 youtube-nocookie.com 加载。"
+
+#, fuzzy
+msgid ""
+"To verify this, open your browser Network panel and reload a page with a "
+"YouTube embed: before the click there should be no requests to youtube.com, "
+"youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
+msgstr ""
+"要验证这一点，打开浏览器网络面板，重新加载带有 YouTube 嵌入的页面：点击前不应"
+"有请求 youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、"
+"google.com 或 gstatic.com。"
+
+#, fuzzy
+msgid "Thumbnail tools"
+msgstr "缩略工具"
+
+#, fuzzy
+msgid ""
+"Use these tools for existing content, troubleshooting, or after changing "
+"many YouTube embeds."
+msgstr "使用这些工具进行现有内容、故障排除，或在更改大量YouTube嵌入后使用。"
+
+#, fuzzy
+msgid "Scan content and generate missing thumbnails"
+msgstr "扫描内容并生成缺失的缩略图"
+
+#, fuzzy
+msgid ""
+"Scans up to %d published public posts/pages per run and downloads missing "
+"local thumbnails."
+msgstr ""
+"每次运行最多扫描%d篇已发布的公开帖子/页面，并下载缺少本地缩略图的帖子。"
+
+#, fuzzy
+msgid "Clear local thumbnail cache"
+msgstr "清除本地缩略图缓存"
+
+#, fuzzy
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "删除所有本地缓存的YouTube缩略图？"
+
+#, fuzzy
+msgid ""
+"Deletes locally cached thumbnail files and clears failed-download retry "
+"markers. Thumbnails will be regenerated when content is scanned, saved, or "
+"viewed."
+msgstr ""
+"删除本地缓存的缩略图文件，清除下载失败的重试标记。缩略图在扫描、保存或查看内"
+"容时会重新生成。"
+
+#, fuzzy
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "只有古腾堡的YouTube嵌入块"
+
+#, fuzzy
+msgid "All YouTube videos found in content"
+msgstr "所有内容中的YouTube视频"
+
+#, fuzzy
+msgid ""
+"Use “All” to also replace classic oEmbeds and manually pasted YouTube "
+"iframes."
+msgstr "使用“全部”来替换经典的 oEmbed 和手动粘贴的 YouTube iframe。"
+
+#, fuzzy
+msgid "Show a short privacy message inside the placeholder."
+msgstr "在占位符内显示简短的隐私信息。"
+
+#, fuzzy
+msgid "Displayed only if the consent text option is enabled."
+msgstr "仅在启用同意文本选项时显示。"
+
+#, fuzzy
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr "用户点击占位符后立即开始播放。"
+
+#, fuzzy
+msgid "You do not have permission to run this tool."
+msgstr "你没有权限运行这个工具。"
+
+#, fuzzy
+msgid ""
+"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
+"%3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+"扫描完成。已扫描帖子：%1$d。已找到视频：%2$d。现有缩略图：%3$d。生成：%4$d。"
+"失败或不可用：%5$d。"
+
+#, fuzzy
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr "本地缩略图缓存已清除。删除文件：%d。"
+
+#, fuzzy
+msgid "Play video: %s"
+msgstr "播放视频：%s"
+
+#, fuzzy
+msgid "Play YouTube video"
+msgstr "播放YouTube视频"
+
+#, fuzzy
+msgid "The video is loaded from YouTube only after your click."
+msgstr "视频只有在你点击后才会从YouTube加载。"
