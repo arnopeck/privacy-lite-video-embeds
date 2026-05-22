@@ -1,5 +1,6 @@
 === Privacy Lite YouTube Embeds ===
 Contributors: arnopeck
+Donate link: https://ko-fi.com/luminescenza
 Tags: youtube, embeds, privacy, performance, lazy load
 Requires at least: 6.0
 Tested up to: 6.8
@@ -97,6 +98,11 @@ Open a page containing a YouTube embed and use your browser DevTools.
 3. Before clicking the placeholder, check that there are no requests to `youtube.com`, `youtube-nocookie.com`, `ytimg.com`, `googlevideo.com`, `google.com`, or `gstatic.com`.
 4. Click the placeholder.
 5. Confirm that the iframe is created and loads from `youtube-nocookie.com`.
+
+== Screenshots ==
+
+1. Plugin settings page with privacy behavior notes, replacement options and thumbnail tools.
+2. Frontend YouTube placeholder before click, using a local thumbnail and play button.
 
 == Changelog ==
 
