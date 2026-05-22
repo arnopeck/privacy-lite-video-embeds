@@ -160,9 +160,12 @@ final class Privacy_Lite_YouTube_Embeds {
         }
         ?>
         <div class="wrap">
-            <h1><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; max-width:1120px;">
+                <h1 style="margin-bottom:16px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
+                <?php $this->render_support_badge(); ?>
+            </div>
             <?php $this->render_admin_tool_notice(); ?>
-            <div class="notice notice-info inline">
+            <div class="notice notice-info inline" style="max-width:1120px;">
                 <p><strong><?php echo esc_html__('Privacy behavior', 'privacy-lite-youtube-embeds'); ?></strong></p>
                 <p><?php echo esc_html__('Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder.', 'privacy-lite-youtube-embeds'); ?></p>
                 <p><?php echo esc_html__('To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.', 'privacy-lite-youtube-embeds'); ?></p>
@@ -180,7 +183,7 @@ final class Privacy_Lite_YouTube_Embeds {
             <h2><?php echo esc_html__('Thumbnail tools', 'privacy-lite-youtube-embeds'); ?></h2>
             <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-youtube-embeds'); ?></p>
 
-            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom: 1em;">
+            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom:1em;">
                 <input type="hidden" name="action" value="plye_scan_thumbnails">
                 <?php wp_nonce_field('plye_scan_thumbnails'); ?>
                 <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-youtube-embeds'), 'secondary', 'submit', false); ?>
@@ -210,8 +213,6 @@ final class Privacy_Lite_YouTube_Embeds {
                 ?>
                 <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-youtube-embeds'); ?></p>
             </form>
-
-            <?php $this->render_support_box(); ?>
         </div>
         <?php
     }
@@ -436,23 +437,45 @@ final class Privacy_Lite_YouTube_Embeds {
         }
     }
 
-    private function render_support_box(): void {
+    private function render_support_badge(): void {
         $support_url = $this->support_url();
         if (!$support_url) {
             return;
         }
+
+        $logo_url = $this->support_logo_url();
         ?>
-        <hr>
-        <div class="card" style="max-width: 720px;">
-            <h2><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></h2>
-            <p><?php echo esc_html__('Enjoying Privacy Lite YouTube Embeds? If this plugin helped you keep your pages lighter, you can support its development with a coffee.', 'privacy-lite-youtube-embeds'); ?></p>
-            <p>
-                <a class="button button-secondary" href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer">
-                    <?php echo esc_html__('Buy me a coffee', 'privacy-lite-youtube-embeds'); ?>
-                </a>
-            </p>
-        </div>
+        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:8px 12px; border:1px solid #dcdcde; border-radius:999px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
+            <?php if ($logo_url) : ?>
+                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:22px; height:22px; object-fit:contain;">
+            <?php else : ?>
+                <span aria-hidden="true" style="font-size:18px; line-height:1;">☕</span>
+            <?php endif; ?>
+            <span style="font-weight:600;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
+        </a>
         <?php
+    }
+
+    private function support_logo_url(): string {
+        $candidates = [
+            'ko-fi.png',
+            'kofi.png',
+            'ko-fi-logo.png',
+            'kofi-logo.png',
+            'ko-fi.svg',
+            'kofi.svg',
+            'ko-fi.webp',
+            'kofi.webp',
+        ];
+
+        foreach ($candidates as $filename) {
+            $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
+            if (is_readable($path)) {
+                return plugins_url('assets/' . $filename, __FILE__);
+            }
+        }
+
+        return '';
     }
 
     private function support_url(): string {
