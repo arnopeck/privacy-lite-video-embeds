@@ -68,7 +68,7 @@
   height: 54px;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: rgba(0, 0, 0, 0.72);
+  background: #ff0033;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
   transition: transform 160ms ease, background 160ms ease;
 }
@@ -89,7 +89,7 @@
 .plye-video__button:hover .plye-video__play,
 .plye-video__button:focus-visible .plye-video__play {
   transform: translate(-50%, -50%) scale(1.04);
-  background: rgba(0, 0, 0, 0.86);
+  background: #cc0029;
 }
 
 .plye-video__consent {
