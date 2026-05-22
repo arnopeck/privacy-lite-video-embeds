@@ -24,6 +24,7 @@ final class Privacy_Lite_YouTube_Embeds {
     private const THUMB_DIR = 'privacy-lite-youtube-embeds';
     private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
     private const MAX_SCAN_POSTS = 50;
+    private const DEFAULT_SUPPORT_URL = 'https://ko-fi.com/luminescenza';
 
     private static ?self $instance = null;
 
@@ -455,7 +456,10 @@ final class Privacy_Lite_YouTube_Embeds {
     }
 
     private function support_url(): string {
-        $url = defined('PLYE_SUPPORT_URL') ? (string) PLYE_SUPPORT_URL : '';
+        $url = self::DEFAULT_SUPPORT_URL;
+        if (defined('PLYE_SUPPORT_URL')) {
+            $url = (string) PLYE_SUPPORT_URL;
+        }
         $url = (string) apply_filters('plye_support_url', $url);
         $url = esc_url_raw($url, ['https']);
 
