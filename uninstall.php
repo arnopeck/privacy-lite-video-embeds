@@ -30,18 +30,15 @@ function plye_uninstall_delete_thumbnail_cache(): void {
 }
 
 function plye_uninstall_delete_failed_transients(): void {
-    global $wpdb;
+    $keys = get_option('plye_failed_thumbnail_keys', []);
 
-    $like = $wpdb->esc_like('_transient_plye_thumb_fail_') . '%';
-    $timeout_like = $wpdb->esc_like('_transient_timeout_plye_thumb_fail_') . '%';
+    if (is_array($keys)) {
+        foreach ($keys as $key) {
+            delete_transient(sanitize_key((string) $key));
+        }
+    }
 
-    $wpdb->query(
-        $wpdb->prepare(
-            "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
-            $like,
-            $timeout_like
-        )
-    );
+    delete_option('plye_failed_thumbnail_keys');
 }
 
 function plye_uninstall_for_current_site(): void {
