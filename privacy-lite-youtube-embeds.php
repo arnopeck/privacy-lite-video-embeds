@@ -247,7 +247,7 @@ final class Privacy_Lite_YouTube_Embeds {
         $settings = $this->settings();
         $is_disabled = empty($settings['show_consent_text']);
         ?>
-        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]" <?php readonly($is_disabled); ?> aria-disabled="<?php echo $is_disabled ? 'true' : 'false'; ?>" style="<?php echo $is_disabled ? 'opacity:.68;' : ''; ?>"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
+        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]" <?php echo $is_disabled ? 'readonly="readonly"' : ''; ?> aria-disabled="<?php echo $is_disabled ? 'true' : 'false'; ?>" style="<?php echo $is_disabled ? 'opacity:.68;' : ''; ?>"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
         <p class="description"><?php echo esc_html__('Displayed only if the consent text option is enabled.', 'privacy-lite-youtube-embeds'); ?></p>
         <?php
     }
