@@ -11,13 +11,15 @@ Before the visitor clicks, the page loads only local resources from the site:
 
 The YouTube player is created only after user interaction and uses `https://www.youtube-nocookie.com/embed/`.
 
-## Features in v0.1.0
+## Features in v0.1.1
 
 - Replaces Gutenberg YouTube embed blocks.
 - Optional replacement scope for all YouTube videos found in post content.
 - Replaces classic oEmbed output when scope is set to “All”.
 - Replaces manually pasted YouTube iframes when scope is set to “All”.
 - Downloads YouTube thumbnails server-side into the WordPress uploads directory.
+- Pre-generates local thumbnails when a post is saved, where possible.
+- Avoids repeated failed thumbnail downloads for 12 hours.
 - Serves thumbnails locally from `/wp-content/uploads/privacy-lite-youtube-embeds/`.
 - Falls back to a local CSS placeholder when no thumbnail can be downloaded.
 - Loads YouTube only after click.
@@ -25,6 +27,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Optional consent/privacy text in the placeholder.
 - Optional autoplay after click.
 - Accessible button markup with keyboard support.
+- Settings link from the WordPress plugins screen.
 
 ## Settings
 
@@ -60,7 +63,9 @@ It tries, in order:
 
 The downloaded image is validated before being saved.
 
-If no valid thumbnail can be downloaded, the frontend uses a CSS-only local placeholder.
+If no valid thumbnail can be downloaded, the frontend uses a CSS-only local placeholder. Failed thumbnail download attempts are cached for 12 hours to avoid repeated server-side requests.
+
+When a post is saved, the plugin also scans the content and tries to pre-generate thumbnails for detected YouTube videos. This keeps the frontend lighter for newly edited content.
 
 ## Privacy note
 
@@ -80,7 +85,7 @@ After click, the plugin creates an iframe using:
 
 ## Development notes
 
-The v0.1.0 implementation intentionally avoids build tools and dependencies.
+The v0.1.1 implementation intentionally avoids build tools and dependencies.
 
 File structure:
 
@@ -95,7 +100,7 @@ assets/
 
 Possible next steps:
 
-- Admin tool to scan posts and pre-generate thumbnails.
+- Admin tool to scan posts and pre-generate thumbnails in bulk.
 - Admin list of detected YouTube videos and thumbnail status.
 - Button to clear cached thumbnails.
 - More granular control for iframe parameters.
