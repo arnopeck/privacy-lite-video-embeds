@@ -41,7 +41,6 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Settings link from the WordPress plugins screen.
 - Admin tool to scan content and generate missing thumbnails.
 - Admin tool to clear the local thumbnail cache.
-- Support box for donations via Ko-fi, with filter/constant override available.
 - Privacy verification notes in the settings page.
 - WordPress privacy policy helper text.
 - Translation source files in `/languages/`.
@@ -86,30 +85,6 @@ Deletes locally cached thumbnail files from:
 It also clears failed-download retry markers.
 
 After clearing, thumbnails are regenerated when content is scanned, saved, or viewed.
-
-## Support box
-
-The settings page includes a discreet “Support development” box.
-
-Default support URL:
-
-```text
-https://ko-fi.com/luminescenza
-```
-
-To override it in a custom installation, define a different support URL in `wp-config.php`:
-
-```php
-define('PLYE_SUPPORT_URL', 'https://ko-fi.com/YOUR_PROFILE');
-```
-
-Or use the filter:
-
-```php
-add_filter('plye_support_url', function () {
-    return 'https://ko-fi.com/YOUR_PROFILE';
-});
-```
 
 ## Thumbnail handling
 
