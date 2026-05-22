@@ -468,31 +468,11 @@ final class Privacy_Lite_YouTube_Embeds {
     }
 
     private function support_logo_url(): string {
-        $candidates = [
-            'support-coffee.svg',
-            'coffee-support.svg',
-            'coffee-icon.svg',
-            'support-icon.svg',
-            'warm-coffee-love-icon.svg',
-            'warm_coffee_love_icon.svg',
-            'coffee-love-icon.svg',
-            'buy-me-a-coffee.svg',
-        ];
+        $filename = 'support-coffee.svg';
+        $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
 
-        foreach ($candidates as $filename) {
-            $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
-            if (is_readable($path)) {
-                return plugins_url('assets/' . $filename, __FILE__);
-            }
-        }
-
-        $svg_files = glob(plugin_dir_path(__FILE__) . 'assets/*{coffee,support,cup}*.svg', GLOB_BRACE);
-        if (is_array($svg_files)) {
-            foreach ($svg_files as $path) {
-                if (is_readable($path)) {
-                    return plugins_url('assets/' . basename($path), __FILE__);
-                }
-            }
+        if (is_readable($path)) {
+            return plugins_url('assets/' . $filename, __FILE__);
         }
 
         return '';
