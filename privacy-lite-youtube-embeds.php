@@ -455,9 +455,9 @@ final class Privacy_Lite_YouTube_Embeds {
         ?>
         <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border:1px solid #dcdcde; border-radius:12px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
             <?php if ($logo_url) : ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:auto; height:34px; max-width:150px; object-fit:contain;">
+                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:38px; height:38px; object-fit:contain; flex:0 0 auto;">
             <?php else : ?>
-                <span aria-hidden="true" style="font-size:18px; line-height:1;">☕</span>
+                <span aria-hidden="true" style="display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:999px; background:#fff7ed; font-size:21px; line-height:1; flex:0 0 auto;">☕</span>
             <?php endif; ?>
             <span style="display:flex; flex-direction:column; line-height:1.2;">
                 <span style="font-weight:600; color:#1d2327;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
@@ -469,21 +469,29 @@ final class Privacy_Lite_YouTube_Embeds {
 
     private function support_logo_url(): string {
         $candidates = [
-            'support_me_on_kofi_badge_beige.png',
-            'ko-fi.png',
-            'kofi.png',
-            'ko-fi-logo.png',
-            'kofi-logo.png',
-            'ko-fi.svg',
-            'kofi.svg',
-            'ko-fi.webp',
-            'kofi.webp',
+            'support-coffee.svg',
+            'coffee-support.svg',
+            'coffee-icon.svg',
+            'support-icon.svg',
+            'warm-coffee-love-icon.svg',
+            'warm_coffee_love_icon.svg',
+            'coffee-love-icon.svg',
+            'buy-me-a-coffee.svg',
         ];
 
         foreach ($candidates as $filename) {
             $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
             if (is_readable($path)) {
                 return plugins_url('assets/' . $filename, __FILE__);
+            }
+        }
+
+        $svg_files = glob(plugin_dir_path(__FILE__) . 'assets/*{coffee,support,cup}*.svg', GLOB_BRACE);
+        if (is_array($svg_files)) {
+            foreach ($svg_files as $path) {
+                if (is_readable($path)) {
+                    return plugins_url('assets/' . basename($path), __FILE__);
+                }
             }
         }
 
