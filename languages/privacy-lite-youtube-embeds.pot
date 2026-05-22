@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
@@ -43,6 +43,9 @@ msgid "Privacy Lite YouTube Embeds"
 msgstr ""
 
 msgid "Privacy Lite YouTube"
+msgstr ""
+
+msgid "Fast YouTube embeds. Nothing loads until click."
 msgstr ""
 
 msgid "Privacy behavior"
@@ -100,6 +103,12 @@ msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnai
 msgstr ""
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr ""
+
+msgid "Support development"
+msgstr ""
+
+msgid "Buy me a coffee on Ko-fi"
 msgstr ""
 
 msgid "Play video: %s"
