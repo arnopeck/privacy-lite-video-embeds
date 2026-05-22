@@ -1,0 +1,16 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependencies/build artifacts, if added later
+node_modules/
+vendor/
+dist/
+build/
+
+# WordPress/runtime artifacts
+*.log
+*.tmp
+*.cache
