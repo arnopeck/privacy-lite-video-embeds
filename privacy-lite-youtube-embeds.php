@@ -160,18 +160,21 @@ final class Privacy_Lite_YouTube_Embeds {
         }
         ?>
         <div class="wrap">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; max-width:1120px;">
-                <h1 style="margin-bottom:16px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1120px; margin-bottom:16px;">
+                <div>
+                    <h1 style="margin:0 0 6px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
+                    <p style="margin:0; color:#646970; font-size:14px;"><?php echo esc_html__('Fast YouTube embeds. Nothing loads until click.', 'privacy-lite-youtube-embeds'); ?></p>
+                </div>
                 <?php $this->render_support_badge(); ?>
             </div>
             <?php $this->render_admin_tool_notice(); ?>
-            <div class="notice notice-info inline" style="max-width:1120px;">
+            <div class="notice notice-info inline" style="max-width:1120px; margin-top:0;">
                 <p><strong><?php echo esc_html__('Privacy behavior', 'privacy-lite-youtube-embeds'); ?></strong></p>
                 <p><?php echo esc_html__('Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder.', 'privacy-lite-youtube-embeds'); ?></p>
                 <p><?php echo esc_html__('To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.', 'privacy-lite-youtube-embeds'); ?></p>
             </div>
 
-            <form method="post" action="options.php">
+            <form method="post" action="options.php" style="max-width:1120px;">
                 <?php
                 settings_fields('plye_settings_group');
                 do_settings_sections('plye_settings');
@@ -179,40 +182,42 @@ final class Privacy_Lite_YouTube_Embeds {
                 ?>
             </form>
 
-            <hr>
-            <h2><?php echo esc_html__('Thumbnail tools', 'privacy-lite-youtube-embeds'); ?></h2>
-            <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-youtube-embeds'); ?></p>
+            <hr style="max-width:1120px; margin:26px 0 16px;">
+            <div style="max-width:1120px;">
+                <h2><?php echo esc_html__('Thumbnail tools', 'privacy-lite-youtube-embeds'); ?></h2>
+                <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-youtube-embeds'); ?></p>
 
-            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom:1em;">
-                <input type="hidden" name="action" value="plye_scan_thumbnails">
-                <?php wp_nonce_field('plye_scan_thumbnails'); ?>
-                <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-youtube-embeds'), 'secondary', 'submit', false); ?>
-                <p class="description">
+                <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom:1em;">
+                    <input type="hidden" name="action" value="plye_scan_thumbnails">
+                    <?php wp_nonce_field('plye_scan_thumbnails'); ?>
+                    <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-youtube-embeds'), 'secondary', 'submit', false); ?>
+                    <p class="description">
+                        <?php
+                        printf(
+                            esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-youtube-embeds'),
+                            self::MAX_SCAN_POSTS
+                        );
+                        ?>
+                    </p>
+                </form>
+
+                <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+                    <input type="hidden" name="action" value="plye_clear_thumbnails">
+                    <?php wp_nonce_field('plye_clear_thumbnails'); ?>
                     <?php
-                    printf(
-                        esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-youtube-embeds'),
-                        self::MAX_SCAN_POSTS
+                    submit_button(
+                        __('Clear local thumbnail cache', 'privacy-lite-youtube-embeds'),
+                        'delete',
+                        'submit',
+                        false,
+                        [
+                            'onclick' => "return confirm('" . esc_js(__('Delete all locally cached YouTube thumbnails?', 'privacy-lite-youtube-embeds')) . "');",
+                        ]
                     );
                     ?>
-                </p>
-            </form>
-
-            <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-                <input type="hidden" name="action" value="plye_clear_thumbnails">
-                <?php wp_nonce_field('plye_clear_thumbnails'); ?>
-                <?php
-                submit_button(
-                    __('Clear local thumbnail cache', 'privacy-lite-youtube-embeds'),
-                    'delete',
-                    'submit',
-                    false,
-                    [
-                        'onclick' => "return confirm('" . esc_js(__('Delete all locally cached YouTube thumbnails?', 'privacy-lite-youtube-embeds')) . "');",
-                    ]
-                );
-                ?>
-                <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-youtube-embeds'); ?></p>
-            </form>
+                    <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-youtube-embeds'); ?></p>
+                </form>
+            </div>
         </div>
         <?php
     }
@@ -240,8 +245,9 @@ final class Privacy_Lite_YouTube_Embeds {
 
     public function render_consent_text_field(): void {
         $settings = $this->settings();
+        $is_disabled = empty($settings['show_consent_text']);
         ?>
-        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
+        <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]" <?php readonly($is_disabled); ?> aria-disabled="<?php echo $is_disabled ? 'true' : 'false'; ?>" style="<?php echo $is_disabled ? 'opacity:.68;' : ''; ?>"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
         <p class="description"><?php echo esc_html__('Displayed only if the consent text option is enabled.', 'privacy-lite-youtube-embeds'); ?></p>
         <?php
     }
@@ -445,14 +451,16 @@ final class Privacy_Lite_YouTube_Embeds {
 
         $logo_url = $this->support_logo_url();
         ?>
-        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:6px 10px; border:1px solid #dcdcde; border-radius:999px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
+        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border:1px solid #dcdcde; border-radius:12px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
             <?php if ($logo_url) : ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr__('Support development on Ko-fi', 'privacy-lite-youtube-embeds'); ?>" style="display:block; width:auto; height:28px; max-width:180px; object-fit:contain;">
-                <span class="screen-reader-text"><?php echo esc_html__('Support development on Ko-fi', 'privacy-lite-youtube-embeds'); ?></span>
+                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:auto; height:34px; max-width:150px; object-fit:contain;">
             <?php else : ?>
                 <span aria-hidden="true" style="font-size:18px; line-height:1;">☕</span>
-                <span style="font-weight:600;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
             <?php endif; ?>
+            <span style="display:flex; flex-direction:column; line-height:1.2;">
+                <span style="font-weight:600; color:#1d2327;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
+                <span style="font-size:12px; color:#646970;"><?php echo esc_html__('Buy me a coffee on Ko-fi', 'privacy-lite-youtube-embeds'); ?></span>
+            </span>
         </a>
         <?php
     }
