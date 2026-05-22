@@ -1,180 +1,113 @@
+# Italian translation for Privacy Lite YouTube Embeds.
 # Copyright (C) 2026 Arno Peck
 # This file is distributed under the GPL-2.0-or-later.
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Privacy Lite YouTube Embeds 0.1.2\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-"
-"Embeds/issues\n"
+"Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2026-05-22 13:08+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Italian\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: ChatGPT\n"
 "X-Domain: privacy-lite-youtube-embeds\n"
 
 msgid "Settings"
 msgstr "Impostazioni"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
-msgstr "Sostituzione della privacy su YouTube"
+msgstr "Sostituzione YouTube orientata alla privacy"
 
-#, fuzzy
-msgid ""
-"Replace YouTube embeds with local thumbnails and load the video player only "
-"after click."
-msgstr ""
-"Sostituisci gli embeds di YouTube con miniature locali e carica il lettore "
-"video solo dopo il clic."
+msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
+msgstr "Sostituisce gli embed YouTube con miniature locali e carica il player video solo dopo il click."
 
-#, fuzzy
+msgid "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
+msgstr "Questo sito usa Privacy Lite YouTube Embeds per mostrare i video YouTube con un segnaposto locale. Prima che un visitatore clicchi sul segnaposto di un video, il browser del visitatore non carica il player YouTube né miniature remote da YouTube. Se il visitatore sceglie di riprodurre un video, il player YouTube viene caricato dal dominio privacy-enhanced youtube-nocookie.com e YouTube/Google potrebbero trattare dati secondo i propri termini e la propria informativa privacy."
+
 msgid "Replacement scope"
-msgstr "Ambito sostitutivo"
+msgstr "Ambito di sostituzione"
 
 msgid "Consent text"
-msgstr "Testo di consenso"
+msgstr "Testo consenso"
 
-#, fuzzy
 msgid "Consent message"
-msgstr "Messaggio di consenso"
+msgstr "Messaggio consenso"
 
-#, fuzzy
 msgid "Autoplay after click"
-msgstr "Riproduzione automatica dopo il clic"
+msgstr "Autoplay dopo il click"
 
-#, fuzzy
 msgid "Privacy Lite YouTube Embeds"
-msgstr "Privacy Lite YouTube Embedded"
+msgstr "Privacy Lite YouTube Embeds"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "Privacy Lite YouTube"
 
-#, fuzzy
 msgid "Privacy behavior"
-msgstr "Comportamento sulla privacy"
+msgstr "Comportamento privacy"
 
-#, fuzzy
-msgid ""
-"Before click, the frontend loads only local HTML, CSS, JavaScript and "
-"locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
-"after the visitor clicks the placeholder."
-msgstr ""
-"Prima del clic, il frontend carica solo HTML, CSS, JavaScript e miniature "
-"cacheate localmente. YouTube viene caricato da youtube-nocookie.com solo "
-"dopo che il visitatore clicca sul segnaposto."
+msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
+msgstr "Prima del click, il frontend carica solo HTML, CSS, JavaScript e miniature salvate localmente. YouTube viene caricato da youtube-nocookie.com solo dopo che il visitatore clicca sul segnaposto."
 
-#, fuzzy
-msgid ""
-"To verify this, open your browser Network panel and reload a page with a "
-"YouTube embed: before the click there should be no requests to youtube.com, "
-"youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr ""
-"Per verificarlo, apri il pannello di rete del browser e ricarica una pagina "
-"con un embed YouTube: prima del clic non dovrebbero esserci richieste di "
-"youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com o "
-"gstatic.com."
+msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
+msgstr "Per verificarlo, apri il pannello Network del browser e ricarica una pagina con un embed YouTube: prima del click non dovrebbero esserci richieste verso youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com o gstatic.com."
 
-#, fuzzy
 msgid "Thumbnail tools"
-msgstr "Strumenti per miniature"
+msgstr "Strumenti miniature"
 
-#, fuzzy
-msgid ""
-"Use these tools for existing content, troubleshooting, or after changing "
-"many YouTube embeds."
-msgstr ""
-"Usa questi strumenti per contenuti esistenti, troubleshooting o dopo aver "
-"modificato molti embed di YouTube."
+msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
+msgstr "Usa questi strumenti per contenuti esistenti, risoluzione problemi o dopo aver modificato molti embed YouTube."
 
-#, fuzzy
 msgid "Scan content and generate missing thumbnails"
-msgstr "Scansiona i contenuti e genera miniature mancanti"
+msgstr "Scansiona contenuti e genera le miniature mancanti"
 
-#, fuzzy
-msgid ""
-"Scans up to %d published public posts/pages per run and downloads missing "
-"local thumbnails."
-msgstr ""
-"Scansiona fino a %d post/pagine pubbliche pubblicate per ogni run e scarica "
-"miniature locali mancanti."
+msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
+msgstr "Scansiona fino a %d post/pagine pubbliche pubblicate per esecuzione e scarica le miniature locali mancanti."
 
-#, fuzzy
 msgid "Clear local thumbnail cache"
-msgstr "Cancella la cache locale delle miniature"
+msgstr "Svuota cache miniature locale"
 
-#, fuzzy
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "Eliminare tutte le miniature di YouTube memorizzate localmente?"
+msgstr "Eliminare tutte le miniature YouTube salvate localmente?"
 
-#, fuzzy
-msgid ""
-"Deletes locally cached thumbnail files and clears failed-download retry "
-"markers. Thumbnails will be regenerated when content is scanned, saved, or "
-"viewed."
-msgstr ""
-"Elimina i file miniatura memorizzati localmente nella cache e cancella i "
-"marker di ritentativi di download fallito. Le miniature verranno rigenerate "
-"quando il contenuto verrà scansionato, salvato o visualizzato."
+msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
+msgstr "Elimina i file delle miniature salvati localmente e cancella i marker dei download falliti. Le miniature saranno rigenerate quando i contenuti vengono scansionati, salvati o visualizzati."
 
-#, fuzzy
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr "Solo i blocchi di incorporamento su YouTube di Gutenberg"
+msgstr "Solo blocchi embed YouTube Gutenberg"
 
-#, fuzzy
 msgid "All YouTube videos found in content"
-msgstr "Tutti i video su YouTube si trovano nei contenuti"
+msgstr "Tutti i video YouTube trovati nel contenuto"
 
-#, fuzzy
-msgid ""
-"Use “All” to also replace classic oEmbeds and manually pasted YouTube "
-"iframes."
-msgstr ""
-"Usa \"All\" per sostituire anche gli oEmbedded classici e gli iframe YouTube "
-"incollati manualmente."
+msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
+msgstr "Usa “Tutti” per sostituire anche oEmbed classici e iframe YouTube incollati manualmente."
 
-#, fuzzy
 msgid "Show a short privacy message inside the placeholder."
-msgstr "Mostra un breve messaggio sulla privacy all'interno del segnaposto."
+msgstr "Mostra un breve messaggio privacy dentro il segnaposto."
 
-#, fuzzy
 msgid "Displayed only if the consent text option is enabled."
-msgstr "Visualizzato solo se l'opzione del testo di consenso è attivata."
+msgstr "Mostrato solo se l’opzione testo consenso è attiva."
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr ""
-"Avvia la riproduzione immediatamente dopo che l'utente clicca sul segnaposto."
+msgstr "Avvia la riproduzione subito dopo il click dell’utente sul segnaposto."
 
-#, fuzzy
 msgid "You do not have permission to run this tool."
-msgstr "Non hai il permesso di eseguire questo strumento."
+msgstr "Non hai i permessi per eseguire questo strumento."
 
-#, fuzzy
-msgid ""
-"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
-"%3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr ""
-"Scansione completata. Post scansionati: %1$d. Video trovati: %2$d. Miniature "
-"esistenti: %3$d. Generate: %4$d. Non riuscito o non disponibile: %5$d."
+msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr "Scansione completata. Contenuti scansionati: %1$d. Video trovati: %2$d. Miniature esistenti: %3$d. Generate: %4$d. Fallite o non disponibili: %5$d."
 
-#, fuzzy
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "Cache delle miniature locali cancellate. File cancellati: %d."
+msgstr "Cache miniature locale svuotata. File eliminati: %d."
 
-#, fuzzy
 msgid "Play video: %s"
-msgstr "Riproduci il video: %s"
+msgstr "Riproduci video: %s"
 
-#, fuzzy
 msgid "Play YouTube video"
-msgstr "Riproduci il video su YouTube"
+msgstr "Riproduci video YouTube"
 
-#, fuzzy
 msgid "The video is loaded from YouTube only after your click."
-msgstr "Il video viene caricato da YouTube solo dopo il clic."
+msgstr "Il video viene caricato da YouTube solo dopo il tuo click."
