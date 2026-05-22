@@ -15,6 +15,11 @@ The YouTube player is created only after user interaction and uses `https://www.
 
 > Important: this plugin is a technical privacy/performance aid. It does not constitute legal advice and does not by itself guarantee compliance with privacy laws. Site owners remain responsible for their own privacy notices, consent setup, and legal assessment.
 
+## Requirements
+
+- **WordPress:** 6.0 or later. In the WordPress.org `readme.txt` format this is expressed as `Requires at least: 6.0`.
+- **PHP:** 7.4 or later.
+
 ## Features in v1.0.0
 
 - Replaces Gutenberg YouTube embed blocks.
