@@ -453,9 +453,9 @@ final class Privacy_Lite_YouTube_Embeds {
 
         $logo_url = $this->support_logo_url();
         ?>
-        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:2px; padding:8px 15px 8px 0; border:1px solid #dcdcde; border-radius:12px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
+        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:2px; padding:5px 15px 5px 0; border:1px solid #dcdcde; border-radius:12px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
             <?php if ($logo_url) : ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:38px; height:38px; object-fit:contain; flex:0 0 auto;">
+                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:60px; height:60px; object-fit:contain; flex:0 0 auto;">
             <?php else : ?>
                 <span aria-hidden="true" style="display:inline-flex; align-items:center; justify-content:center; width:45px; height:45px; border-radius:999px; background:#fff7ed; font-size:21px; line-height:1; flex:0 0 auto;">☕</span>
             <?php endif; ?>
