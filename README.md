@@ -157,8 +157,6 @@ uninstall.php
 assets/
   privacy-lite-youtube-embeds.css
   privacy-lite-youtube-embeds.js
-docs/
-  wordpress-org-assets.md
 languages/
   privacy-lite-youtube-embeds.pot
   privacy-lite-youtube-embeds-it_IT.po
@@ -166,36 +164,6 @@ languages/
 
 ## Translations
 
-A `.pot` template and an Italian `.po` file are included.
-
-Recommended first translations:
-
-- `it_IT`
-- `de_DE`
-- `fr_FR`
-- `es_ES`
+A `.pot` template and translation source files are included in `/languages/`.
 
 To use local translations before wordpress.org language packs are available, compile the relevant `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
-
-## WordPress.org visual direction
-
-Main copy:
-
-```text
-Privacy Lite YouTube Embeds
-Fast YouTube embeds. Nothing loads until click.
-```
-
-The visual direction should focus on performance: a lightweight video placeholder, no unnecessary scripts before click, and YouTube loaded only on demand. Avoid using the official YouTube logo or trademark-heavy visual elements.
-
-See `docs/wordpress-org-assets.md` for the working visual specification.
-
-## Planned improvements
-
-Possible next steps:
-
-- Better handling of YouTube Shorts aspect ratio.
-- Admin list of detected YouTube videos and thumbnail status.
-- More granular control for iframe parameters.
-- Optional integration hooks for consent platforms.
-- WP-CLI command for thumbnail regeneration.
