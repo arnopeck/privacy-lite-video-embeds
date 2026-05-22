@@ -3,7 +3,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Privacy Lite YouTube Embeds 0.1.2\n"
+"Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: \n"
@@ -22,6 +22,9 @@ msgid "YouTube privacy replacement"
 msgstr ""
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
+msgstr ""
+
+msgid "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
 msgstr ""
 
 msgid "Replacement scope"
