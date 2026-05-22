@@ -96,11 +96,6 @@ Open a page containing a YouTube embed and use your browser DevTools.
 4. Click the placeholder.
 5. Confirm that the iframe is created and loads from `youtube-nocookie.com`.
 
-== Screenshots ==
-
-1. Frontend YouTube placeholder with local thumbnail and play button.
-2. Plugin settings page with privacy behavior notes and thumbnail tools.
-
 == Changelog ==
 
 = 1.0.0 =
