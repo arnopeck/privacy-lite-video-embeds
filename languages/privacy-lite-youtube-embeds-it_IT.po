@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-Embeds/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: 2026-05-22 13:08+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: ChatGPT\n"
+"X-Generator: Poedit\n"
 "X-Domain: privacy-lite-youtube-embeds\n"
 
 msgid "Settings"
@@ -45,6 +45,9 @@ msgstr "Privacy Lite YouTube Embeds"
 
 msgid "Privacy Lite YouTube"
 msgstr "Privacy Lite YouTube"
+
+msgid "Fast YouTube embeds. Nothing loads until click."
+msgstr "Embed YouTube veloci. Non viene caricato nulla fino al click."
 
 msgid "Privacy behavior"
 msgstr "Comportamento privacy"
@@ -102,6 +105,12 @@ msgstr "Scansione completata. Contenuti scansionati: %1$d. Video trovati: %2$d. 
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "Cache miniature locale svuotata. File eliminati: %d."
+
+msgid "Support development"
+msgstr "Supporta lo sviluppo"
+
+msgid "Buy me a coffee on Ko-fi"
+msgstr "Offrimi un caffè su Ko-fi"
 
 msgid "Play video: %s"
 msgstr "Riproduci video: %s"
