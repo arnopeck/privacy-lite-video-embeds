@@ -197,6 +197,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     <p class="description">
                         <?php
                         printf(
+                            /* translators: %d: maximum number of published public posts/pages scanned per run. */
                             esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-youtube-embeds'),
                             self::MAX_SCAN_POSTS
                         );
@@ -414,6 +415,7 @@ final class Privacy_Lite_YouTube_Embeds {
                 <p>
                     <?php
                     printf(
+                        /* translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails. */
                         esc_html__('Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d.', 'privacy-lite-youtube-embeds'),
                         $posts,
                         $videos,
@@ -435,6 +437,7 @@ final class Privacy_Lite_YouTube_Embeds {
                 <p>
                     <?php
                     printf(
+                        /* translators: %d: number of deleted local thumbnail files. */
                         esc_html__('Local thumbnail cache cleared. Deleted files: %d.', 'privacy-lite-youtube-embeds'),
                         $deleted
                     );
@@ -541,7 +544,12 @@ final class Privacy_Lite_YouTube_Embeds {
     private function render_placeholder(string $video_id, string $title = ''): string {
         $settings = $this->settings();
         $thumb = $this->get_local_thumbnail($video_id);
-        $label = $title ? sprintf(__('Play video: %s', 'privacy-lite-youtube-embeds'), $title) : __('Play YouTube video', 'privacy-lite-youtube-embeds');
+        if ($title) {
+            /* translators: %s: video title. */
+            $label = sprintf(__('Play video: %s', 'privacy-lite-youtube-embeds'), $title);
+        } else {
+            $label = __('Play YouTube video', 'privacy-lite-youtube-embeds');
+        }
         $classes = $thumb ? 'plye-video' : 'plye-video plye-video--no-thumb';
 
         ob_start();
