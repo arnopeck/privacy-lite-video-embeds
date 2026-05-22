@@ -445,19 +445,21 @@ final class Privacy_Lite_YouTube_Embeds {
 
         $logo_url = $this->support_logo_url();
         ?>
-        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:8px 12px; border:1px solid #dcdcde; border-radius:999px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
+        <a href="<?php echo esc_url($support_url); ?>" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:6px 10px; border:1px solid #dcdcde; border-radius:999px; background:#fff; color:#1d2327; text-decoration:none; box-shadow:0 1px 2px rgba(0,0,0,.04); white-space:nowrap;">
             <?php if ($logo_url) : ?>
-                <img src="<?php echo esc_url($logo_url); ?>" alt="" style="display:block; width:22px; height:22px; object-fit:contain;">
+                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr__('Support development on Ko-fi', 'privacy-lite-youtube-embeds'); ?>" style="display:block; width:auto; height:28px; max-width:180px; object-fit:contain;">
+                <span class="screen-reader-text"><?php echo esc_html__('Support development on Ko-fi', 'privacy-lite-youtube-embeds'); ?></span>
             <?php else : ?>
                 <span aria-hidden="true" style="font-size:18px; line-height:1;">☕</span>
+                <span style="font-weight:600;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
             <?php endif; ?>
-            <span style="font-weight:600;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
         </a>
         <?php
     }
 
     private function support_logo_url(): string {
         $candidates = [
+            'support_me_on_kofi_badge_beige.png',
             'ko-fi.png',
             'kofi.png',
             'ko-fi-logo.png',
