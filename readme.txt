@@ -8,11 +8,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Replaces YouTube embeds with local placeholders and loads the youtube-nocookie player only after user interaction.
+Fast YouTube embeds. Nothing loads until click.
 
 == Description ==
 
 Privacy Lite YouTube Embeds replaces YouTube embeds with lightweight local placeholders.
+
+Fast YouTube embeds. Nothing loads until click.
 
 Before the visitor clicks, the frontend loads only local resources from the site:
 
