@@ -21,6 +21,7 @@ if (!defined('ABSPATH')) {
 final class Privacy_Lite_YouTube_Embeds {
     private const VERSION = '1.0.0';
     private const OPTION_NAME = 'plye_settings';
+    private const FAILED_KEYS_OPTION = 'plye_failed_thumbnail_keys';
     private const THUMB_DIR = 'privacy-lite-youtube-embeds';
     private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
     private const MAX_SCAN_POSTS = 50;
@@ -32,7 +33,6 @@ final class Privacy_Lite_YouTube_Embeds {
         if (null === self::$instance) {
             self::$instance = new self();
         }
-
         return self::$instance;
     }
 
@@ -77,29 +77,15 @@ final class Privacy_Lite_YouTube_Embeds {
             return;
         }
 
-        wp_enqueue_style(
-            'privacy-lite-youtube-embeds',
-            plugins_url('assets/privacy-lite-youtube-embeds.css', __FILE__),
-            [],
-            self::VERSION
-        );
-
-        wp_enqueue_script(
-            'privacy-lite-youtube-embeds',
-            plugins_url('assets/privacy-lite-youtube-embeds.js', __FILE__),
-            [],
-            self::VERSION,
-            true
-        );
+        wp_enqueue_style('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.css', __FILE__), [], self::VERSION);
+        wp_enqueue_script('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.js', __FILE__), [], self::VERSION, true);
     }
 
     public function add_plugin_action_links(array $links): array {
-        $settings_url = admin_url('options-general.php?page=privacy-lite-youtube-embeds');
         array_unshift(
             $links,
-            '<a href="' . esc_url($settings_url) . '">' . esc_html__('Settings', 'privacy-lite-youtube-embeds') . '</a>'
+            '<a href="' . esc_url(admin_url('options-general.php?page=privacy-lite-youtube-embeds')) . '">' . esc_html__('Settings', 'privacy-lite-youtube-embeds') . '</a>'
         );
-
         return $links;
     }
 
@@ -199,7 +185,7 @@ final class Privacy_Lite_YouTube_Embeds {
                         printf(
                             /* translators: %d: maximum number of published public posts/pages scanned per run. */
                             esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-youtube-embeds'),
-                            self::MAX_SCAN_POSTS
+                            esc_html((string) self::MAX_SCAN_POSTS)
                         );
                         ?>
                     </p>
@@ -391,8 +377,7 @@ final class Privacy_Lite_YouTube_Embeds {
             return;
         }
 
-        $video_ids = $this->get_video_ids_for_post_content($post->post_content);
-        foreach (array_slice($video_ids, 0, 10) as $video_id) {
+        foreach (array_slice($this->get_video_ids_for_post_content($post->post_content), 0, 10) as $video_id) {
             $this->get_local_thumbnail($video_id);
         }
     }
@@ -417,11 +402,11 @@ final class Privacy_Lite_YouTube_Embeds {
                     printf(
                         /* translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails. */
                         esc_html__('Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d.', 'privacy-lite-youtube-embeds'),
-                        $posts,
-                        $videos,
-                        $existing,
-                        $generated,
-                        $failed
+                        esc_html((string) $posts),
+                        esc_html((string) $videos),
+                        esc_html((string) $existing),
+                        esc_html((string) $generated),
+                        esc_html((string) $failed)
                     );
                     ?>
                 </p>
@@ -439,7 +424,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     printf(
                         /* translators: %d: number of deleted local thumbnail files. */
                         esc_html__('Local thumbnail cache cleared. Deleted files: %d.', 'privacy-lite-youtube-embeds'),
-                        $deleted
+                        esc_html((string) $deleted)
                     );
                     ?>
                 </p>
@@ -473,23 +458,13 @@ final class Privacy_Lite_YouTube_Embeds {
     private function support_logo_url(): string {
         $filename = 'coffee-love-icon.svg';
         $path = plugin_dir_path(__FILE__) . 'assets/' . $filename;
-
-        if (is_readable($path)) {
-            return plugins_url('assets/' . $filename, __FILE__);
-        }
-
-        return '';
+        return is_readable($path) ? plugins_url('assets/' . $filename, __FILE__) : '';
     }
 
     private function support_url(): string {
-        $url = self::DEFAULT_SUPPORT_URL;
-        if (defined('PLYE_SUPPORT_URL')) {
-            $url = (string) PLYE_SUPPORT_URL;
-        }
+        $url = defined('PLYE_SUPPORT_URL') ? (string) PLYE_SUPPORT_URL : self::DEFAULT_SUPPORT_URL;
         $url = (string) apply_filters('plye_support_url', $url);
-        $url = esc_url_raw($url, ['https']);
-
-        return $url ?: '';
+        return esc_url_raw($url, ['https']) ?: '';
     }
 
     private function scan_content_for_thumbnails(int $limit): array {
@@ -537,24 +512,23 @@ final class Privacy_Lite_YouTube_Embeds {
         }
 
         wp_reset_postdata();
-
         return $result;
     }
 
     private function render_placeholder(string $video_id, string $title = ''): string {
         $settings = $this->settings();
         $thumb = $this->get_local_thumbnail($video_id);
+
         if ($title) {
             /* translators: %s: video title. */
             $label = sprintf(__('Play video: %s', 'privacy-lite-youtube-embeds'), $title);
         } else {
             $label = __('Play YouTube video', 'privacy-lite-youtube-embeds');
         }
-        $classes = $thumb ? 'plye-video' : 'plye-video plye-video--no-thumb';
 
         ob_start();
         ?>
-        <div class="<?php echo esc_attr($classes); ?>" data-plye-video-id="<?php echo esc_attr($video_id); ?>" data-plye-autoplay="<?php echo $settings['autoplay'] ? '1' : '0'; ?>">
+        <div class="<?php echo esc_attr($thumb ? 'plye-video' : 'plye-video plye-video--no-thumb'); ?>" data-plye-video-id="<?php echo esc_attr($video_id); ?>" data-plye-autoplay="<?php echo $settings['autoplay'] ? '1' : '0'; ?>">
             <button class="plye-video__button" type="button" aria-label="<?php echo esc_attr($label); ?>">
                 <?php if ($thumb) : ?>
                     <img class="plye-video__thumb" src="<?php echo esc_url($thumb['url']); ?>" alt="" loading="lazy" decoding="async">
@@ -569,7 +543,6 @@ final class Privacy_Lite_YouTube_Embeds {
             </button>
         </div>
         <?php
-
         return trim((string) ob_get_clean());
     }
 
@@ -594,22 +567,18 @@ final class Privacy_Lite_YouTube_Embeds {
         }
 
         if (!$this->download_thumbnail($video_id, $file['path']) || !is_readable($file['path'])) {
-            set_transient($this->failed_thumbnail_transient_key($video_id), 1, self::FAILED_THUMB_TTL);
+            $this->set_failed_thumbnail_marker($video_id);
             return null;
         }
 
         delete_transient($this->failed_thumbnail_transient_key($video_id));
-
         return $file;
     }
 
     private function download_thumbnail(string $video_id, string $destination): bool {
-        $candidates = ['maxresdefault.jpg', 'sddefault.jpg', 'hqdefault.jpg'];
-
-        foreach ($candidates as $candidate) {
-            $url = sprintf('https://img.youtube.com/vi/%s/%s', rawurlencode($video_id), $candidate);
+        foreach (['maxresdefault.jpg', 'sddefault.jpg', 'hqdefault.jpg'] as $candidate) {
             $response = wp_safe_remote_get(
-                $url,
+                sprintf('https://img.youtube.com/vi/%s/%s', rawurlencode($video_id), $candidate),
                 [
                     'timeout' => 8,
                     'redirection' => 3,
@@ -640,11 +609,30 @@ final class Privacy_Lite_YouTube_Embeds {
         return false;
     }
 
+    private function set_failed_thumbnail_marker(string $video_id): void {
+        $key = $this->failed_thumbnail_transient_key($video_id);
+        set_transient($key, 1, self::FAILED_THUMB_TTL);
+
+        $keys = get_option(self::FAILED_KEYS_OPTION, []);
+        $keys = is_array($keys) ? array_map('sanitize_key', $keys) : [];
+        $keys[] = $key;
+        update_option(self::FAILED_KEYS_OPTION, array_values(array_unique($keys)), false);
+    }
+
+    private function clear_failed_thumbnail_transients(): void {
+        $keys = get_option(self::FAILED_KEYS_OPTION, []);
+        if (is_array($keys)) {
+            foreach ($keys as $key) {
+                delete_transient(sanitize_key((string) $key));
+            }
+        }
+        delete_option(self::FAILED_KEYS_OPTION);
+    }
+
     private function get_video_ids_for_post_content(string $content): array {
         if ('gutenberg' === $this->settings()['scope'] && function_exists('parse_blocks')) {
             return $this->get_video_ids_from_blocks(parse_blocks($content));
         }
-
         return $this->extract_video_ids($content);
     }
 
@@ -725,11 +713,9 @@ final class Privacy_Lite_YouTube_Embeds {
             return null;
         }
 
-        $filename = $video_id . '.jpg';
-
         return [
-            'path' => trailingslashit($upload_dir['basedir']) . self::THUMB_DIR . '/' . $filename,
-            'url' => trailingslashit($upload_dir['baseurl']) . self::THUMB_DIR . '/' . $filename,
+            'path' => trailingslashit($upload_dir['basedir']) . self::THUMB_DIR . '/' . $video_id . '.jpg',
+            'url' => trailingslashit($upload_dir['baseurl']) . self::THUMB_DIR . '/' . $video_id . '.jpg',
         ];
     }
 
@@ -752,25 +738,9 @@ final class Privacy_Lite_YouTube_Embeds {
         return $deleted;
     }
 
-    private function clear_failed_thumbnail_transients(): void {
-        global $wpdb;
-
-        $like = $wpdb->esc_like('_transient_plye_thumb_fail_') . '%';
-        $timeout_like = $wpdb->esc_like('_transient_timeout_plye_thumb_fail_') . '%';
-
-        $wpdb->query(
-            $wpdb->prepare(
-                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
-                $like,
-                $timeout_like
-            )
-        );
-    }
-
     private function public_post_types(): array {
         $post_types = get_post_types(['public' => true], 'names');
         unset($post_types['attachment']);
-
         return array_values($post_types);
     }
 
