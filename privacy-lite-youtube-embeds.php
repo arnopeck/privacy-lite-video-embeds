@@ -761,7 +761,7 @@ final class Privacy_Lite_YouTube_Embeds {
         $deleted = 0;
 
         foreach (is_array($files) ? $files : [] as $file) {
-            if (is_file($file) && @unlink($file)) {
+            if (is_file($file) && wp_delete_file($file)) {
                 $deleted++;
             }
         }
