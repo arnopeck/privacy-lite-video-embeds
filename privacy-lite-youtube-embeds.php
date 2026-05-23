@@ -27,6 +27,7 @@ final class Privacy_Lite_YouTube_Embeds {
     private const MAX_SCAN_POSTS = 50;
     private const DEFAULT_SUPPORT_URL = 'https://ko-fi.com/luminescenza';
     private const DEFAULT_PLAY_BUTTON_COLOR = '#ff0033';
+    private const ADMIN_NOTICE_NONCE_ACTION = 'plye_admin_notice';
 
     private static ?self $instance = null;
 
@@ -38,7 +39,6 @@ final class Privacy_Lite_YouTube_Embeds {
     }
 
     private function __construct() {
-        add_action('plugins_loaded', [$this, 'load_textdomain']);
         add_action('admin_init', [$this, 'register_settings']);
         add_action('admin_init', [$this, 'add_privacy_policy_suggestion']);
         add_action('admin_menu', [$this, 'add_settings_page']);
@@ -52,14 +52,6 @@ final class Privacy_Lite_YouTube_Embeds {
         add_filter('render_block', [$this, 'filter_render_block'], 20, 2);
         add_filter('embed_oembed_html', [$this, 'filter_oembed_html'], 20, 4);
         add_filter('the_content', [$this, 'filter_content_iframes'], 20);
-    }
-
-    public function load_textdomain(): void {
-        load_plugin_textdomain(
-            'privacy-lite-youtube-embeds',
-            false,
-            dirname(plugin_basename(__FILE__)) . '/languages'
-        );
     }
 
     public static function activate(): void {
@@ -317,6 +309,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     'plye_existing' => absint($result['existing']),
                     'plye_generated' => absint($result['generated']),
                     'plye_failed' => absint($result['failed']),
+                    '_wpnonce' => wp_create_nonce(self::ADMIN_NOTICE_NONCE_ACTION),
                 ],
                 admin_url('options-general.php')
             )
@@ -339,6 +332,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     'page' => 'privacy-lite-youtube-embeds',
                     'plye_notice' => 'clear',
                     'plye_deleted' => absint($deleted),
+                    '_wpnonce' => wp_create_nonce(self::ADMIN_NOTICE_NONCE_ACTION),
                 ],
                 admin_url('options-general.php')
             )
@@ -414,7 +408,12 @@ final class Privacy_Lite_YouTube_Embeds {
     }
 
     private function render_admin_tool_notice(): void {
-        if (empty($_GET['plye_notice'])) {
+        if (empty($_GET['plye_notice']) || empty($_GET['_wpnonce'])) {
+            return;
+        }
+
+        $nonce = sanitize_text_field(wp_unslash((string) $_GET['_wpnonce']));
+        if (!wp_verify_nonce($nonce, self::ADMIN_NOTICE_NONCE_ACTION)) {
             return;
         }
 
