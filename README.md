@@ -37,6 +37,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Uses the privacy-enhanced `youtube-nocookie.com` embed domain.
 - Optional consent/privacy text in the placeholder.
 - Optional autoplay after click.
+- Customizable overlay play button color.
 - Accessible button markup with keyboard support.
 - Settings link from the WordPress plugins screen.
 - Admin tool to scan content and generate missing thumbnails.
@@ -65,6 +66,8 @@ Available options:
   - Custom editable message
 - **Autoplay after click**
   - Start playback immediately after the visitor clicks the placeholder
+- **Play button color**
+  - Choose the overlay play button color shown before the video is loaded
 
 ## Thumbnail tools
 
@@ -116,14 +119,14 @@ After click, the plugin creates an iframe using:
 
 `https://www.youtube-nocookie.com/embed/VIDEO_ID`
 
-The plugin also adds suggested wording to WordPress' privacy policy guide so site owners can adapt their policy text.
+The plugin also adds suggested wording to WordPress privacy policy guide so site owners can adapt their policy text.
 
 ## How to test privacy behavior
 
 Open a page containing a YouTube embed and use your browser DevTools.
 
 1. Open DevTools > Network.
-2. Enable “Preserve log” if useful.
+2. Enable Preserve log if useful.
 3. Reload the page.
 4. Before clicking the placeholder, check that there are no requests to:
    - `youtube.com`
@@ -155,6 +158,7 @@ README.md
 LICENSE.txt
 uninstall.php
 assets/
+  coffee-love-icon.svg
   privacy-lite-youtube-embeds.css
   privacy-lite-youtube-embeds.js
 languages/
@@ -167,3 +171,11 @@ languages/
 A `.pot` template and translation source files are included in `/languages/`.
 
 To use local translations before wordpress.org language packs are available, compile the relevant `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
+
+## License
+
+Privacy Lite YouTube Embeds is licensed under the GNU General Public License v2.0 or later (`GPL-2.0-or-later`).
+
+The same GPL-compatible licensing approach applies to the plugin code, included local assets, and WordPress.org assets created for this project, unless a specific file states otherwise.
+
+See `LICENSE.txt` for the full GPL v2 license text.
