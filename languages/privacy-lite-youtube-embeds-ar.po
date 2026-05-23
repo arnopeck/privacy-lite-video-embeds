@@ -20,18 +20,15 @@ msgstr ""
 msgid "Settings"
 msgstr "الإعدادات"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
 msgstr "بديل يوتيوب لخصوصية اللعبة"
 
-#, fuzzy
 msgid ""
 "Replace YouTube embeds with local thumbnails and load the video player only "
 "after click."
 msgstr ""
 "استبدل يوتيوب المدمجة بصور مصغرة محلية وقم بتحميل مشغل الفيديو فقط بعد النقر."
 
-#, fuzzy
 msgid ""
 "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
 "local placeholder. Before a visitor clicks a video placeholder, the visitor "
@@ -46,35 +43,27 @@ msgstr ""
 "يوتيوب من نطاق youtube-nocookie.com المعززة للخصوصية، وقد تعالج يوتيوب/جوجل "
 "البيانات وفقا لشروطها وسياسة الخصوصية الخاصة بها."
 
-#, fuzzy
 msgid "Replacement scope"
 msgstr "منظار استبدال"
 
-#, fuzzy
 msgid "Consent text"
 msgstr "نص الموافقة"
 
-#, fuzzy
 msgid "Consent message"
 msgstr "رسالة الموافقة"
 
-#, fuzzy
 msgid "Autoplay after click"
 msgstr "التشغيل التلقائي بعد النقر"
 
-#, fuzzy
 msgid "Privacy Lite YouTube Embeds"
 msgstr "تضمينات Privacy Lite على يوتيوب"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "يوتيوب Privacy Lite"
 
-#, fuzzy
 msgid "Privacy behavior"
 msgstr "سلوك الخصوصية"
 
-#, fuzzy
 msgid ""
 "Before click, the frontend loads only local HTML, CSS, JavaScript and "
 "locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
@@ -84,7 +73,6 @@ msgstr ""
 "المصغرة المخزنة محليا. يتم تحميل يوتيوب من youtube-nocookie.com فقط بعد أن "
 "ينقر الزائر على المفتاح المؤقت."
 
-#, fuzzy
 msgid ""
 "To verify this, open your browser Network panel and reload a page with a "
 "YouTube embed: before the click there should be no requests to youtube.com, "
@@ -94,11 +82,9 @@ msgstr ""
 "يوتيوب: قبل النقر يجب ألا تكون هناك طلبات ل youtube.com أو youtube-"
 "nocookie.com أو ytimg.com أو googlevideo.com أو google.com أو gstatic.com."
 
-#, fuzzy
 msgid "Thumbnail tools"
 msgstr "أدوات الصور المصغرة"
 
-#, fuzzy
 msgid ""
 "Use these tools for existing content, troubleshooting, or after changing "
 "many YouTube embeds."
@@ -106,11 +92,9 @@ msgstr ""
 "استخدم هذه الأدوات للمحتوى الحالي، أو لحل المشكلة، أو بعد تغيير العديد من "
 "التضمين في يوتيوب."
 
-#, fuzzy
 msgid "Scan content and generate missing thumbnails"
 msgstr "مسح المحتوى وإنشاء صور مصغرة مفقودة"
 
-#, fuzzy
 msgid ""
 "Scans up to %d published public posts/pages per run and downloads missing "
 "local thumbnails."
@@ -118,15 +102,12 @@ msgstr ""
 "يمسح حتى %d منشورات/صفحات عامة منشورة في كل جولة ويحمل الصور المصغرة المحلية "
 "المفقودة."
 
-#, fuzzy
 msgid "Clear local thumbnail cache"
 msgstr "مسح ذاكرة التخزين المؤقت المحلية المصغرة"
 
-#, fuzzy
 msgid "Delete all locally cached YouTube thumbnails?"
 msgstr "هل أحذف جميع الصور المصغرة المخزنة محليا على يوتيوب؟"
 
-#, fuzzy
 msgid ""
 "Deletes locally cached thumbnail files and clears failed-download retry "
 "markers. Thumbnails will be regenerated when content is scanned, saved, or "
@@ -136,15 +117,12 @@ msgstr ""
 "التي فشل في التنزيل. سيتم إعادة توليد الصور المصغرة عند مسح المحتوى ضوئيا أو "
 "حفظه أو مشاهدته."
 
-#, fuzzy
 msgid "Only Gutenberg YouTube embed blocks"
 msgstr "فقط كتل تضمين جوتنبرغ على يوتيوب"
 
-#, fuzzy
 msgid "All YouTube videos found in content"
 msgstr "جميع فيديوهات يوتيوب الموجودة في المحتوى"
 
-#, fuzzy
 msgid ""
 "Use “All” to also replace classic oEmbeds and manually pasted YouTube "
 "iframes."
@@ -152,23 +130,18 @@ msgstr ""
 "استخدم \"الكل\" أيضا لاستبدال oEmbeds الكلاسيكية وإطارات يوتيوب اليدوية التي "
 "تم لصقها يدويا."
 
-#, fuzzy
 msgid "Show a short privacy message inside the placeholder."
 msgstr "عرض رسالة خصوصية قصيرة داخل الملف المؤقت."
 
-#, fuzzy
 msgid "Displayed only if the consent text option is enabled."
 msgstr "يعرض فقط إذا كان خيار نص الموافقة مفعلا."
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr "ابدأ التشغيل فور النقر على المفتاح المؤقت."
 
-#, fuzzy
 msgid "You do not have permission to run this tool."
 msgstr "ليس لديك إذن لتشغيل هذه الأداة."
 
-#, fuzzy
 msgid ""
 "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
 "%3$d. Generated: %4$d. Failed or unavailable: %5$d."
@@ -177,26 +150,20 @@ msgstr ""
 "%2$d. الصور المصغرة الموجودة: %3$d. تم الإنشاء فيها: %4$d. فشل أو غير متوفر: "
 "%5$d."
 
-#, fuzzy
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "تم مسح ذاكرة الصور المصغرة المحلية. الملفات المحذوفة: %d."
 
-#, fuzzy
 msgid "Play video: %s"
 msgstr "تشغيل الفيديو: %s"
 
-#, fuzzy
 msgid "Play YouTube video"
 msgstr "شغل فيديو على يوتيوب"
 
-#, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "يتم تحميل الفيديو من يوتيوب فقط بعد النقر عليك."
 
-#, fuzzy
 msgid "Play button color"
 msgstr "لون زر التشغيل"
 
-#, fuzzy
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "اختر زر التشغيل التراكب الذي يظهر قبل تحميل الفيديو."

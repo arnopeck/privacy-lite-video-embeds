@@ -20,11 +20,9 @@ msgstr ""
 msgid "Settings"
 msgstr "设置"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
 msgstr "YouTube隐私替代"
 
-#, fuzzy
 msgid ""
 "Replace YouTube embeds with local thumbnails and load the video player only "
 "after click."
@@ -63,7 +61,6 @@ msgstr "点击后自动播放"
 msgid "Privacy Lite YouTube Embeds"
 msgstr "Privacy Lite YouTube 嵌入"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "隐私轻量版 YouTube"
 
@@ -150,7 +147,6 @@ msgstr "在占位符内显示简短的隐私信息。"
 msgid "Displayed only if the consent text option is enabled."
 msgstr "仅在启用同意文本选项时显示。"
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr "用户点击占位符后立即开始播放。"
 
@@ -174,7 +170,6 @@ msgstr "本地缩略图缓存已清除。删除文件：%d。"
 msgid "Play video: %s"
 msgstr "播放视频：%s"
 
-#, fuzzy
 msgid "Play YouTube video"
 msgstr "播放YouTube视频"
 
@@ -185,6 +180,5 @@ msgstr "视频只有在你点击后才会从YouTube加载。"
 msgid "Play button color"
 msgstr "播放按钮的颜色"
 
-#, fuzzy
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "选择加载视频前显示的覆盖播放按钮颜色。"

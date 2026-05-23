@@ -20,17 +20,14 @@ msgstr ""
 msgid "Settings"
 msgstr "設定"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
 msgstr "YouTube 隱私替代方案"
 
-#, fuzzy
 msgid ""
 "Replace YouTube embeds with local thumbnails and load the video player only "
 "after click."
 msgstr "用本地縮圖取代 YouTube 嵌入影片，然後只在點擊後才載入影片播放器。"
 
-#, fuzzy
 msgid ""
 "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
 "local placeholder. Before a visitor clicks a video placeholder, the visitor "
@@ -44,35 +41,27 @@ msgstr ""
 "圖。若訪客選擇播放影片，YouTube 播放器會從隱私強化的 youtube-nocookie.com 網"
 "域載入，YouTube 或 Google 可能會依據自身條款與隱私政策處理資料。"
 
-#, fuzzy
 msgid "Replacement scope"
 msgstr "替換範圍"
 
-#, fuzzy
 msgid "Consent text"
 msgstr "同意書文本"
 
-#, fuzzy
 msgid "Consent message"
 msgstr "同意訊息"
 
-#, fuzzy
 msgid "Autoplay after click"
 msgstr "點擊後自動播放"
 
-#, fuzzy
 msgid "Privacy Lite YouTube Embeds"
 msgstr "Privacy Lite YouTube 嵌入"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "隱私輕量版 YouTube"
 
-#, fuzzy
 msgid "Privacy behavior"
 msgstr "隱私行為"
 
-#, fuzzy
 msgid ""
 "Before click, the frontend loads only local HTML, CSS, JavaScript and "
 "locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
@@ -81,7 +70,6 @@ msgstr ""
 "點擊前，前端只會載入本地 HTML、CSS、JavaScript 以及本地快取的縮圖。YouTube 只"
 "有在訪客點擊佔位符後才會從 youtube-nocookie.com 載入。"
 
-#, fuzzy
 msgid ""
 "To verify this, open your browser Network panel and reload a page with a "
 "YouTube embed: before the click there should be no requests to youtube.com, "
@@ -91,35 +79,28 @@ msgstr ""
 "應有 youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、"
 "google.com 或 gstatic.com 的請求。"
 
-#, fuzzy
 msgid "Thumbnail tools"
 msgstr "縮圖工具"
 
-#, fuzzy
 msgid ""
 "Use these tools for existing content, troubleshooting, or after changing "
 "many YouTube embeds."
 msgstr "這些工具用於現有內容、故障排除，或是修改許多 YouTube 嵌入影片後。"
 
-#, fuzzy
 msgid "Scan content and generate missing thumbnails"
 msgstr "掃描內容並產生缺少的縮圖"
 
-#, fuzzy
 msgid ""
 "Scans up to %d published public posts/pages per run and downloads missing "
 "local thumbnails."
 msgstr "每次遊玩最多掃描%d篇公開文章/頁面，並下載缺少本地縮圖的文章。"
 
-#, fuzzy
 msgid "Clear local thumbnail cache"
 msgstr "清除本地縮圖快取"
 
-#, fuzzy
 msgid "Delete all locally cached YouTube thumbnails?"
 msgstr "刪除所有本地快取的 YouTube 縮圖？"
 
-#, fuzzy
 msgid ""
 "Deletes locally cached thumbnail files and clears failed-download retry "
 "markers. Thumbnails will be regenerated when content is scanned, saved, or "
@@ -128,37 +109,29 @@ msgstr ""
 "刪除本地快取的縮圖檔案，並清除失敗下載的重試標記。縮圖在掃描、儲存或瀏覽內容"
 "時會重新生成。"
 
-#, fuzzy
 msgid "Only Gutenberg YouTube embed blocks"
 msgstr "只有 Gutenberg YouTube 能嵌入區塊"
 
-#, fuzzy
 msgid "All YouTube videos found in content"
 msgstr "所有 YouTube 影片皆收錄於內容中"
 
-#, fuzzy
 msgid ""
 "Use “All” to also replace classic oEmbeds and manually pasted YouTube "
 "iframes."
 msgstr "使用「全部」來替換經典的 oEmbed 和手動貼上的 YouTube iframe。"
 
-#, fuzzy
 msgid "Show a short privacy message inside the placeholder."
 msgstr "在佔位符內顯示一段簡短的隱私訊息。"
 
-#, fuzzy
 msgid "Displayed only if the consent text option is enabled."
 msgstr "僅在啟用同意文字選項時顯示。"
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr "使用者點擊佔位符後立即開始播放。"
 
-#, fuzzy
 msgid "You do not have permission to run this tool."
 msgstr "你沒有權限執行這個工具。"
 
-#, fuzzy
 msgid ""
 "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
 "%3$d. Generated: %4$d. Failed or unavailable: %5$d."
@@ -166,26 +139,20 @@ msgstr ""
 "掃描完成。掃描的貼文：%1$d。找到影片：%2$d。現有縮圖：%3$d。產生：%4$d。失敗"
 "或無法使用：%5$d。"
 
-#, fuzzy
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "本地縮圖快取已清除。刪除檔案：%d。"
 
-#, fuzzy
 msgid "Play video: %s"
 msgstr "播放影片：%s"
 
-#, fuzzy
 msgid "Play YouTube video"
 msgstr "播放 YouTube 影片"
 
-#, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "影片只有在你點擊後才會從 YouTube 載入。"
 
-#, fuzzy
 msgid "Play button color"
 msgstr "播放按鈕顏色"
 
-#, fuzzy
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "選擇影片載入前顯示的覆蓋播放按鈕顏色。"

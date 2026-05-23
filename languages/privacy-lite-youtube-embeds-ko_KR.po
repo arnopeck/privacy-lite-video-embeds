@@ -20,11 +20,9 @@ msgstr ""
 msgid "Settings"
 msgstr "설정"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
 msgstr "유튜브 프라이버시 대체"
 
-#, fuzzy
 msgid ""
 "Replace YouTube embeds with local thumbnails and load the video player only "
 "after click."
@@ -32,7 +30,6 @@ msgstr ""
 "유튜브 임베드를 로컬 썸네일로 교체하고, 클릭 후에만 비디오 플레이어를 불러오"
 "세요."
 
-#, fuzzy
 msgid ""
 "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
 "local placeholder. Before a visitor clicks a video placeholder, the visitor "
@@ -48,35 +45,27 @@ msgstr ""
 "nocookie.com 도메인에서 불러오며, YouTube/Google은 자체 약관과 개인정보처리방"
 "침에 따라 데이터를 처리할 수 있습니다."
 
-#, fuzzy
 msgid "Replacement scope"
 msgstr "교체 범위"
 
-#, fuzzy
 msgid "Consent text"
 msgstr "동의서 텍스트"
 
-#, fuzzy
 msgid "Consent message"
 msgstr "동의 메시지"
 
-#, fuzzy
 msgid "Autoplay after click"
 msgstr "클릭 후 자동 재생"
 
-#, fuzzy
 msgid "Privacy Lite YouTube Embeds"
 msgstr "프라이버시 라이트 유튜브 임베드"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "프라이버시 라이트 유튜브"
 
-#, fuzzy
 msgid "Privacy behavior"
 msgstr "프라이버시 행동"
 
-#, fuzzy
 msgid ""
 "Before click, the frontend loads only local HTML, CSS, JavaScript and "
 "locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
@@ -86,7 +75,6 @@ msgstr ""
 "합니다. 유튜브는 방문자가 플레이스홀더를 클릭한 후에야 youtube-nocookie.com "
 "에서 로드됩니다."
 
-#, fuzzy
 msgid ""
 "To verify this, open your browser Network panel and reload a page with a "
 "YouTube embed: before the click there should be no requests to youtube.com, "
@@ -96,11 +84,9 @@ msgstr ""
 "를 다시 불러오세요: 클릭 전에 youtube.com, youtube-nocookie.com, ytimg.com, "
 "googlevideo.com, google.com 또는 gstatic.com 요청이 없어야 합니다."
 
-#, fuzzy
 msgid "Thumbnail tools"
 msgstr "썸네일 도구"
 
-#, fuzzy
 msgid ""
 "Use these tools for existing content, troubleshooting, or after changing "
 "many YouTube embeds."
@@ -108,11 +94,9 @@ msgstr ""
 "기존 콘텐츠, 문제 해결, 또는 많은 유튜브 임베드를 변경한 후 이 도구들을 활용"
 "하세요."
 
-#, fuzzy
 msgid "Scan content and generate missing thumbnails"
 msgstr "콘텐츠를 스캔하고 누락된 썸네일을 생성합니다"
 
-#, fuzzy
 msgid ""
 "Scans up to %d published public posts/pages per run and downloads missing "
 "local thumbnails."
@@ -120,15 +104,12 @@ msgstr ""
 "한 번에 공개된 게시글/페이지 최대 %d개까지 스캔하고, 누락된 지역 썸네일을 다"
 "운로드합니다."
 
-#, fuzzy
 msgid "Clear local thumbnail cache"
 msgstr "로컬 썸네일 캐시 정리"
 
-#, fuzzy
 msgid "Delete all locally cached YouTube thumbnails?"
 msgstr "모든 로컬 캐시된 유튜브 썸네일을 삭제하나요?"
 
-#, fuzzy
 msgid ""
 "Deletes locally cached thumbnail files and clears failed-download retry "
 "markers. Thumbnails will be regenerated when content is scanned, saved, or "
@@ -137,15 +118,12 @@ msgstr ""
 "로컬 캐시된 썸네일 파일을 삭제하고 실패한 다운로드 재시도 마커를 지웁니다. 썸"
 "네일은 스캔, 저장 또는 조회 시 재생성됩니다."
 
-#, fuzzy
 msgid "Only Gutenberg YouTube embed blocks"
 msgstr "유튜브 블록을 삽입하는 것은 Gutenberg뿐입니다"
 
-#, fuzzy
 msgid "All YouTube videos found in content"
 msgstr "콘텐츠에 포함된 모든 유튜브 영상"
 
-#, fuzzy
 msgid ""
 "Use “All” to also replace classic oEmbeds and manually pasted YouTube "
 "iframes."
@@ -153,23 +131,18 @@ msgstr ""
 "\"All\"을 사용해 전통적인 oEmbed와 수동으로 붙여넣은 YouTube iframe도 교체하"
 "세요."
 
-#, fuzzy
 msgid "Show a short privacy message inside the placeholder."
 msgstr "플레이스홀더 안에 짧은 개인정보 보호 메시지를 표시하세요."
 
-#, fuzzy
 msgid "Displayed only if the consent text option is enabled."
 msgstr "동의 텍스트 옵션이 활성화된 경우에만 표시됩니다."
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr "사용자가 플레이스홀더를 클릭한 직후 바로 재생을 시작하세요."
 
-#, fuzzy
 msgid "You do not have permission to run this tool."
 msgstr "이 도구를 사용할 권한이 없습니다."
 
-#, fuzzy
 msgid ""
 "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
 "%3$d. Generated: %4$d. Failed or unavailable: %5$d."
@@ -177,26 +150,20 @@ msgstr ""
 "스캔 완료. 읽은 게시물: %1$d. 동영상 발견: %2$d. 기존 썸네일: %3$d. 생성됨: "
 "%4$d. 실패 또는 사용 불가: %5$d."
 
-#, fuzzy
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "로컬 썸네일 캐시가 정리되었습니다. 삭제된 파일: %d."
 
-#, fuzzy
 msgid "Play video: %s"
 msgstr "영상 재생: %s"
 
-#, fuzzy
 msgid "Play YouTube video"
 msgstr "유튜브 영상 재생"
 
-#, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "영상은 클릭 후에만 유튜브에서 로드됩니다."
 
-#, fuzzy
 msgid "Play button color"
 msgstr "재생 버튼 색상"
 
-#, fuzzy
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "영상이 로드되기 전에 표시되는 오버레이 재생 버튼 색상을 선택하세요."

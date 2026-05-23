@@ -20,11 +20,9 @@ msgstr ""
 msgid "Settings"
 msgstr "Réglages"
 
-#, fuzzy
 msgid "YouTube privacy replacement"
 msgstr "Remplacement de la confidentialité YouTube"
 
-#, fuzzy
 msgid ""
 "Replace YouTube embeds with local thumbnails and load the video player only "
 "after click."
@@ -32,7 +30,6 @@ msgstr ""
 "Remplacez les incrustations YouTube par des vignettes locales et ne chargez "
 "le lecteur vidéo qu’après un clic."
 
-#, fuzzy
 msgid ""
 "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
 "local placeholder. Before a visitor clicks a video placeholder, the visitor "
@@ -49,34 +46,27 @@ msgstr ""
 "par la confidentialité et YouTube/Google peut traiter les données selon "
 "leurs propres conditions et politique de confidentialité."
 
-#, fuzzy
 msgid "Replacement scope"
 msgstr "Portée de remplacement"
 
 msgid "Consent text"
 msgstr "Texte de consentement"
 
-#, fuzzy
 msgid "Consent message"
 msgstr "Message de consentement"
 
-#, fuzzy
 msgid "Autoplay after click"
 msgstr "Lecture automatique après clic"
 
-#, fuzzy
 msgid "Privacy Lite YouTube Embeds"
 msgstr "Privacy Lite YouTube Embeds"
 
-#, fuzzy
 msgid "Privacy Lite YouTube"
 msgstr "Privacy Lite YouTube"
 
-#, fuzzy
 msgid "Privacy behavior"
 msgstr "Comportement en matière de vie privée"
 
-#, fuzzy
 msgid ""
 "Before click, the frontend loads only local HTML, CSS, JavaScript and "
 "locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
@@ -87,7 +77,6 @@ msgstr ""
 "depuis youtube-nocookie.com qu’après que le visiteur ait cliqué sur le "
 "Placeholder."
 
-#, fuzzy
 msgid ""
 "To verify this, open your browser Network panel and reload a page with a "
 "YouTube embed: before the click there should be no requests to youtube.com, "
@@ -98,11 +87,9 @@ msgstr ""
 "aucune requête pour youtube.com, youtube-nocookie.com, ytimg.com, "
 "googlevideo.com, google.com ou gstatic.com."
 
-#, fuzzy
 msgid "Thumbnail tools"
 msgstr "Outils miniatures"
 
-#, fuzzy
 msgid ""
 "Use these tools for existing content, troubleshooting, or after changing "
 "many YouTube embeds."
@@ -110,11 +97,9 @@ msgstr ""
 "Utilisez ces outils pour le contenu existant, le dépannage, ou après avoir "
 "modifié de nombreux embeds YouTube."
 
-#, fuzzy
 msgid "Scan content and generate missing thumbnails"
 msgstr "Scannez le contenu et générez les vignettes manquantes"
 
-#, fuzzy
 msgid ""
 "Scans up to %d published public posts/pages per run and downloads missing "
 "local thumbnails."
@@ -122,15 +107,12 @@ msgstr ""
 "Scanne jusqu’à %d publications/pages publiques publiées par run et "
 "télécharge les miniatures locales manquantes."
 
-#, fuzzy
 msgid "Clear local thumbnail cache"
 msgstr "Effacer le cache miniature local"
 
-#, fuzzy
 msgid "Delete all locally cached YouTube thumbnails?"
 msgstr "Supprimer toutes les vignettes YouTube mises en cache localement ?"
 
-#, fuzzy
 msgid ""
 "Deletes locally cached thumbnail files and clears failed-download retry "
 "markers. Thumbnails will be regenerated when content is scanned, saved, or "
@@ -140,15 +122,12 @@ msgstr ""
 "marqueurs de tentative de téléchargement échoué. Les vignettes seront "
 "régénérées lorsque le contenu sera scanné, sauvegardé ou visionné."
 
-#, fuzzy
 msgid "Only Gutenberg YouTube embed blocks"
 msgstr "Seuls les blocs d’intégration YouTube de Gutenberg"
 
-#, fuzzy
 msgid "All YouTube videos found in content"
 msgstr "Toutes les vidéos YouTube se trouvent dans le contenu"
 
-#, fuzzy
 msgid ""
 "Use “All” to also replace classic oEmbeds and manually pasted YouTube "
 "iframes."
@@ -156,26 +135,21 @@ msgstr ""
 "Utilisez « Tous » pour remplacer aussi les oEmbeds classiques et les iframes "
 "YouTube collés manuellement."
 
-#, fuzzy
 msgid "Show a short privacy message inside the placeholder."
 msgstr ""
 "Affichez un court message de confidentialité à l’intérieur du placeholder."
 
-#, fuzzy
 msgid "Displayed only if the consent text option is enabled."
 msgstr "Affiché uniquement si l’option de texte de consentement est activée."
 
-#, fuzzy
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr ""
 "Commencez la lecture immédiatement après que l’utilisateur ait cliqué sur le "
 "placeholder."
 
-#, fuzzy
 msgid "You do not have permission to run this tool."
 msgstr "Vous n’avez pas la permission d’exécuter cet outil."
 
-#, fuzzy
 msgid ""
 "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
 "%3$d. Generated: %4$d. Failed or unavailable: %5$d."
@@ -184,26 +158,21 @@ msgstr ""
 "Vignettes existantes : %3$d. Générées : %4$d. Échouées ou indisponibles : "
 "%5$d."
 
-#, fuzzy
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "Le cache miniature local effacé. Fichiers supprimés : %d."
 
 msgid "Play video: %s"
 msgstr "Lire la vidéo : %s"
 
-#, fuzzy
 msgid "Play YouTube video"
 msgstr "Lire la vidéo YouTube"
 
-#, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "La vidéo n’est téléchargée depuis YouTube qu’après votre clic."
 
-#, fuzzy
 msgid "Play button color"
 msgstr "Couleur du bouton de lecture"
 
-#, fuzzy
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr ""
 "Choisissez la couleur du bouton de lecture en superposition affichée avant "
