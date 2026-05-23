@@ -1,6 +1,5 @@
 .plye-video {
-  --plye-play-color: #ff0000;
-  --plye-play-color-hover: var(--plye-play-color);
+  --plye-play-color: #ff0033;
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -91,7 +90,7 @@
 .plye-video__button:hover .plye-video__play,
 .plye-video__button:focus-visible .plye-video__play {
   transform: translate(-50%, -50%) scale(1.04);
-  filter: brightness(0.9);
+  filter: brightness(0.88);
 }
 
 .plye-video__consent {
