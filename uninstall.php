@@ -10,31 +10,27 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 }
 
 function plye_uninstall_delete_thumbnail_cache(): void {
-    $upload_dir = wp_upload_dir();
-    if (empty($upload_dir['basedir'])) {
+    $plye_upload_dir = wp_upload_dir();
+    if (empty($plye_upload_dir['basedir'])) {
         return;
     }
 
-    $dir = trailingslashit($upload_dir['basedir']) . 'privacy-lite-youtube-embeds';
-    $files = is_dir($dir) && is_readable($dir) ? glob(trailingslashit($dir) . '*.jpg') : [];
+    $plye_dir = trailingslashit($plye_upload_dir['basedir']) . 'privacy-lite-youtube-embeds';
+    $plye_files = is_dir($plye_dir) && is_readable($plye_dir) ? glob(trailingslashit($plye_dir) . '*.jpg') : [];
 
-    foreach (is_array($files) ? $files : [] as $file) {
-        if (is_file($file)) {
-            @unlink($file);
+    foreach (is_array($plye_files) ? $plye_files : [] as $plye_file) {
+        if (is_file($plye_file)) {
+            wp_delete_file($plye_file);
         }
-    }
-
-    if (is_dir($dir)) {
-        @rmdir($dir);
     }
 }
 
 function plye_uninstall_delete_failed_transients(): void {
-    $keys = get_option('plye_failed_thumbnail_keys', []);
+    $plye_keys = get_option('plye_failed_thumbnail_keys', []);
 
-    if (is_array($keys)) {
-        foreach ($keys as $key) {
-            delete_transient(sanitize_key((string) $key));
+    if (is_array($plye_keys)) {
+        foreach ($plye_keys as $plye_key) {
+            delete_transient(sanitize_key((string) $plye_key));
         }
     }
 
@@ -48,9 +44,9 @@ function plye_uninstall_for_current_site(): void {
 }
 
 if (is_multisite()) {
-    $site_ids = get_sites(['fields' => 'ids']);
-    foreach ($site_ids as $site_id) {
-        switch_to_blog((int) $site_id);
+    $plye_site_ids = get_sites(['fields' => 'ids']);
+    foreach ($plye_site_ids as $plye_site_id) {
+        switch_to_blog((int) $plye_site_id);
         plye_uninstall_for_current_site();
         restore_current_blog();
     }
