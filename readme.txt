@@ -43,6 +43,7 @@ Important: this plugin is a technical privacy/performance aid. It does not const
 * Uses `youtube-nocookie.com` for the iframe player.
 * Optional privacy/consent text in the placeholder.
 * Optional autoplay after click.
+* Customizable overlay play button color.
 * Accessible button markup with keyboard support.
 * Admin tool to scan content and generate missing thumbnails.
 * Admin tool to clear the local thumbnail cache.
@@ -85,6 +86,10 @@ Yes. The settings page includes a replacement scope option:
 * Only Gutenberg YouTube embed blocks
 * All YouTube videos found in content
 
+= Can I change the play button color? =
+
+Yes. The settings page includes a color picker for the overlay play button shown before the video is loaded.
+
 = What happens if a thumbnail cannot be downloaded? =
 
 The plugin displays a local CSS fallback placeholder. Failed thumbnail download attempts are cached for 12 hours to avoid repeated server-side requests.
@@ -101,8 +106,8 @@ Open a page containing a YouTube embed and use your browser DevTools.
 
 == Screenshots ==
 
-1. Plugin settings page with privacy behavior notes, replacement options and thumbnail tools.
-2. Frontend YouTube placeholder before click, using a local thumbnail and play button.
+1. Plugin settings page with privacy behavior notes, replacement options, play button color and thumbnail tools.
+2. Frontend YouTube placeholder before click, using a local thumbnail and customizable play button.
 
 == Changelog ==
 
@@ -112,6 +117,7 @@ Open a page containing a YouTube embed and use your browser DevTools.
 * Local thumbnail caching.
 * Gutenberg block replacement.
 * Optional replacement of classic oEmbeds and manual iframes.
+* Customizable play button color.
 * Admin thumbnail tools.
 * Privacy policy helper text.
 
