@@ -1,4 +1,6 @@
 .plye-video {
+  --plye-play-color: #ff0000;
+  --plye-play-color-hover: var(--plye-play-color);
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -68,9 +70,9 @@
   height: 54px;
   transform: translate(-50%, -50%);
   border-radius: 18px;
-  background: #ff0033;
+  background: var(--plye-play-color);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
-  transition: transform 160ms ease, background 160ms ease;
+  transition: transform 160ms ease, filter 160ms ease;
 }
 
 .plye-video__play::before {
@@ -89,7 +91,7 @@
 .plye-video__button:hover .plye-video__play,
 .plye-video__button:focus-visible .plye-video__play {
   transform: translate(-50%, -50%) scale(1.04);
-  background: #cc0029;
+  filter: brightness(0.9);
 }
 
 .plye-video__consent {
