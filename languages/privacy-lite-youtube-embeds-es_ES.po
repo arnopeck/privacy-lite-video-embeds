@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-22 16:04+0200\n"
+"PO-Revision-Date: 2026-05-23 13:51+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -120,3 +120,11 @@ msgstr "Reproducir vídeo de YouTube"
 
 msgid "The video is loaded from YouTube only after your click."
 msgstr "El vídeo se carga desde YouTube solo después de tu clic."
+
+#, fuzzy
+msgid "Play button color"
+msgstr "Color del botón de reproducción"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr "Elige el color del botón de reproducción superpuesta que se muestra antes de cargar el vídeo."

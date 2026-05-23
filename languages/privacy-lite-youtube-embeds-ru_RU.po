@@ -198,3 +198,13 @@ msgstr "Воспроизвести видео с YouTube"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "Видео загружается с YouTube только после вашего клика."
+
+#, fuzzy
+msgid "Play button color"
+msgstr "Цвет кнопки воспроизведения"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr ""
+"Выберите цвет кнопки воспроизведения, который отображается перед загрузкой "
+"видео."

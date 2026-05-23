@@ -198,3 +198,13 @@ msgstr "Lire la vidéo YouTube"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "La vidéo n’est téléchargée depuis YouTube qu’après votre clic."
+
+#, fuzzy
+msgid "Play button color"
+msgstr "Couleur du bouton de lecture"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr ""
+"Choisissez la couleur du bouton de lecture en superposition affichée avant "
+"le chargement de la vidéo."

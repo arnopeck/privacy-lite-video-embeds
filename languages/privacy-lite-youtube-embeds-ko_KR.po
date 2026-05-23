@@ -192,3 +192,11 @@ msgstr "유튜브 영상 재생"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "영상은 클릭 후에만 유튜브에서 로드됩니다."
+
+#, fuzzy
+msgid "Play button color"
+msgstr "재생 버튼 색상"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr "영상이 로드되기 전에 표시되는 오버레이 재생 버튼 색상을 선택하세요."

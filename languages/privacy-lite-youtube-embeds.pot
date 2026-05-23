@@ -119,3 +119,10 @@ msgstr ""
 
 msgid "The video is loaded from YouTube only after your click."
 msgstr ""
+
+msgid "Play button color"
+msgstr ""
+
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr ""
+

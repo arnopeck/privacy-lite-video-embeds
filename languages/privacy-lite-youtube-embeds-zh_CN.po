@@ -181,3 +181,10 @@ msgstr "播放YouTube视频"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "视频只有在你点击后才会从YouTube加载。"
+
+msgid "Play button color"
+msgstr "播放按钮的颜色"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr "选择加载视频前显示的覆盖播放按钮颜色。"

@@ -181,3 +181,11 @@ msgstr "播放 YouTube 影片"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "影片只有在你點擊後才會從 YouTube 載入。"
+
+#, fuzzy
+msgid "Play button color"
+msgstr "播放按鈕顏色"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr "選擇影片載入前顯示的覆蓋播放按鈕顏色。"

@@ -192,3 +192,11 @@ msgstr "شغل فيديو على يوتيوب"
 #, fuzzy
 msgid "The video is loaded from YouTube only after your click."
 msgstr "يتم تحميل الفيديو من يوتيوب فقط بعد النقر عليك."
+
+#, fuzzy
+msgid "Play button color"
+msgstr "لون زر التشغيل"
+
+#, fuzzy
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr "اختر زر التشغيل التراكب الذي يظهر قبل تحميل الفيديو."
