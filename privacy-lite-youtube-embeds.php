@@ -26,6 +26,7 @@ final class Privacy_Lite_YouTube_Embeds {
     private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
     private const MAX_SCAN_POSTS = 50;
     private const DEFAULT_SUPPORT_URL = 'https://ko-fi.com/luminescenza';
+    private const DEFAULT_PLAY_BUTTON_COLOR = '#ff0033';
 
     private static ?self $instance = null;
 
@@ -41,6 +42,7 @@ final class Privacy_Lite_YouTube_Embeds {
         add_action('admin_init', [$this, 'register_settings']);
         add_action('admin_init', [$this, 'add_privacy_policy_suggestion']);
         add_action('admin_menu', [$this, 'add_settings_page']);
+        add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
         add_action('admin_post_plye_scan_thumbnails', [$this, 'handle_scan_thumbnails']);
         add_action('admin_post_plye_clear_thumbnails', [$this, 'handle_clear_thumbnails']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
@@ -78,7 +80,24 @@ final class Privacy_Lite_YouTube_Embeds {
         }
 
         wp_enqueue_style('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.css', __FILE__), [], self::VERSION);
+        wp_add_inline_style(
+            'privacy-lite-youtube-embeds',
+            '.plye-video{--plye-play-color:' . esc_html($this->settings()['play_button_color']) . ';}'
+        );
         wp_enqueue_script('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.js', __FILE__), [], self::VERSION, true);
+    }
+
+    public function enqueue_admin_assets(string $hook_suffix): void {
+        if ('settings_page_privacy-lite-youtube-embeds' !== $hook_suffix) {
+            return;
+        }
+
+        wp_enqueue_style('wp-color-picker');
+        wp_enqueue_script('wp-color-picker');
+        wp_add_inline_script(
+            'wp-color-picker',
+            'jQuery(function($){$(".plye-color-picker").wpColorPicker();});'
+        );
     }
 
     public function add_plugin_action_links(array $links): array {
@@ -113,6 +132,7 @@ final class Privacy_Lite_YouTube_Embeds {
         add_settings_field('show_consent_text', __('Consent text', 'privacy-lite-youtube-embeds'), [$this, 'render_consent_toggle_field'], 'plye_settings', 'plye_main_section');
         add_settings_field('consent_text', __('Consent message', 'privacy-lite-youtube-embeds'), [$this, 'render_consent_text_field'], 'plye_settings', 'plye_main_section');
         add_settings_field('autoplay', __('Autoplay after click', 'privacy-lite-youtube-embeds'), [$this, 'render_autoplay_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('play_button_color', __('Play button color', 'privacy-lite-youtube-embeds'), [$this, 'render_play_button_color_field'], 'plye_settings', 'plye_main_section');
     }
 
     public function add_privacy_policy_suggestion(): void {
@@ -251,6 +271,14 @@ final class Privacy_Lite_YouTube_Embeds {
         <?php
     }
 
+    public function render_play_button_color_field(): void {
+        $settings = $this->settings();
+        ?>
+        <input type="text" class="plye-color-picker" name="<?php echo esc_attr(self::OPTION_NAME); ?>[play_button_color]" value="<?php echo esc_attr($settings['play_button_color']); ?>" data-default-color="<?php echo esc_attr(self::DEFAULT_PLAY_BUTTON_COLOR); ?>">
+        <p class="description"><?php echo esc_html__('Choose the overlay play button color shown before the video is loaded.', 'privacy-lite-youtube-embeds'); ?></p>
+        <?php
+    }
+
     public function sanitize_settings($input): array {
         $defaults = $this->default_settings();
         $input = is_array($input) ? $input : [];
@@ -260,11 +288,14 @@ final class Privacy_Lite_YouTube_Embeds {
             $scope = $defaults['scope'];
         }
 
+        $play_button_color = isset($input['play_button_color']) ? sanitize_hex_color((string) $input['play_button_color']) : '';
+
         return [
             'scope' => $scope,
             'show_consent_text' => !empty($input['show_consent_text']),
             'consent_text' => isset($input['consent_text']) ? sanitize_textarea_field((string) $input['consent_text']) : $defaults['consent_text'],
             'autoplay' => !empty($input['autoplay']),
+            'play_button_color' => $play_button_color ?: $defaults['play_button_color'],
         ];
     }
 
@@ -770,6 +801,7 @@ final class Privacy_Lite_YouTube_Embeds {
             'show_consent_text' => true,
             'consent_text' => __('The video is loaded from YouTube only after your click.', 'privacy-lite-youtube-embeds'),
             'autoplay' => true,
+            'play_button_color' => self::DEFAULT_PLAY_BUTTON_COLOR,
         ];
     }
 }
