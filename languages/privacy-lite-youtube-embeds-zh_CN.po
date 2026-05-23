@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-"
-"Embeds/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-"
+"embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
@@ -58,6 +58,9 @@ msgstr "Privacy Lite YouTube 嵌入"
 
 msgid "Privacy Lite YouTube"
 msgstr "隐私轻量版 YouTube"
+
+msgid "Fast YouTube embeds. Nothing loads until click."
+msgstr "快速上传YouTube视频。直到点击之前，什么都加载不了。"
 
 msgid "Privacy behavior"
 msgstr "隐私行为"
@@ -142,6 +145,12 @@ msgstr ""
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "本地缩略图缓存已清除。删除文件：%d。"
+
+msgid "Support development"
+msgstr "支持开发"
+
+msgid "Buy me a coffee on Ko-fi"
+msgstr "请我喝杯咖啡，在Ko-fi上"
 
 msgid "Play video: %s"
 msgstr "播放视频：%s"

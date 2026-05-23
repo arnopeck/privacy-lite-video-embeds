@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/Privacy-Lite-YouTube-"
-"Embeds/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-"
+"embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
@@ -63,6 +63,9 @@ msgstr "Встроенные устройства Privacy Lite на YouTube"
 
 msgid "Privacy Lite YouTube"
 msgstr "Privacy Lite YouTube"
+
+msgid "Fast YouTube embeds. Nothing loads until click."
+msgstr "Быстрые вставки на YouTube. Ничего не загружается, пока не кликнет."
 
 msgid "Privacy behavior"
 msgstr "Поведение в области конфиденциальности"
@@ -160,6 +163,12 @@ msgstr ""
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
 msgstr "Локальный кэш миниатюр очищен. Удаленные файлы: %d."
+
+msgid "Support development"
+msgstr "Разработка поддержки"
+
+msgid "Buy me a coffee on Ko-fi"
+msgstr "Купи мне кофе на Ko-fi"
 
 msgid "Play video: %s"
 msgstr "Воспроизвести видео: %s"
