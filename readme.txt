@@ -112,16 +112,9 @@ Open a page containing a YouTube embed and use your browser DevTools.
 == Changelog ==
 
 = 1.0.0 =
-* Initial public release candidate.
-* Local YouTube placeholders.
-* Local thumbnail caching.
-* Gutenberg block replacement.
-* Optional replacement of classic oEmbeds and manual iframes.
-* Customizable play button color.
-* Admin thumbnail tools.
-* Privacy policy helper text.
+* Initial plugin implementation.
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial public release candidate.
+Initial plugin implementation.
