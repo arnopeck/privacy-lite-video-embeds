@@ -1,8 +1,8 @@
 <?php
 /**
- * Uninstall cleanup for Privacy Lite YouTube Embeds.
+ * Uninstall cleanup for Privacy Lite Video Embeds for YouTube.
  *
- * @package Privacy_Lite_YouTube_Embeds
+ * @package Privacy_Lite_Video_Embeds
  */
 
 if (!defined('WP_UNINSTALL_PLUGIN')) {
@@ -15,7 +15,7 @@ function plye_uninstall_delete_thumbnail_cache(): void {
         return;
     }
 
-    $plye_dir = trailingslashit($plye_upload_dir['basedir']) . 'privacy-lite-youtube-embeds';
+    $plye_dir = trailingslashit($plye_upload_dir['basedir']) . 'privacy-lite-video-embeds';
     $plye_files = is_dir($plye_dir) && is_readable($plye_dir) ? glob(trailingslashit($plye_dir) . '*.jpg') : [];
 
     foreach (is_array($plye_files) ? $plye_files : [] as $plye_file) {

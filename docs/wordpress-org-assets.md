@@ -30,7 +30,7 @@ assets/banner-772x250.png
 Main copy:
 
 ```text
-Privacy Lite YouTube Embeds
+Privacy Lite Video Embeds for YouTube
 Fast YouTube embeds. Nothing loads until click.
 ```
 
@@ -85,7 +85,7 @@ Icon concept:
 
 ## Preferred text hierarchy for banner
 
-1. Plugin name: `Privacy Lite YouTube Embeds`
+1. Plugin name: `Privacy Lite Video Embeds for YouTube`
 2. Main promise: `Fast YouTube embeds. Nothing loads until click.`
 3. Optional support line: `Local thumbnails · No unnecessary scripts · Load on click`
 

@@ -1,8 +1,8 @@
-# Privacy Lite YouTube Embeds
+# Privacy Lite Video Embeds for YouTube
 
-Privacy Lite YouTube Embeds replaces YouTube embeds with lightweight local placeholders.
+Privacy Lite Video Embeds for YouTube replaces YouTube embeds with lightweight local placeholders.
 
-**Fast YouTube embeds. Nothing loads until click.**
+**Fast video embeds for YouTube. Nothing loads until click.**
 
 The goal is simple: before the visitor clicks, the page should not load YouTube/Google resources in the browser.
 
@@ -31,7 +31,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Downloads YouTube thumbnails server-side into the WordPress uploads directory.
 - Pre-generates local thumbnails when a post is saved, where possible.
 - Avoids repeated failed thumbnail downloads for 12 hours.
-- Serves thumbnails locally from `/wp-content/uploads/privacy-lite-youtube-embeds/`.
+- Serves thumbnails locally from `/wp-content/uploads/privacy-lite-video-embeds/`.
 - Falls back to a local CSS placeholder when no thumbnail can be downloaded.
 - Loads YouTube only after click.
 - Uses the privacy-enhanced `youtube-nocookie.com` embed domain.
@@ -53,7 +53,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 
 Go to:
 
-`Settings > Privacy Lite YouTube`
+`Settings > Privacy Lite Video`
 
 Available options:
 
@@ -83,7 +83,7 @@ This is useful for existing sites with old YouTube embeds already published befo
 
 Deletes locally cached thumbnail files from:
 
-`wp-content/uploads/privacy-lite-youtube-embeds/`
+`wp-content/uploads/privacy-lite-video-embeds/`
 
 It also clears failed-download retry markers.
 
@@ -95,7 +95,7 @@ The plugin does not print remote YouTube thumbnails in the frontend.
 
 When a YouTube video is found, the plugin attempts to download a thumbnail server-side from YouTube and saves it locally in:
 
-`wp-content/uploads/privacy-lite-youtube-embeds/`
+`wp-content/uploads/privacy-lite-video-embeds/`
 
 It tries, in order:
 
@@ -140,9 +140,9 @@ Open a page containing a YouTube embed and use your browser DevTools.
 
 ## Installation
 
-1. Upload the plugin folder to `wp-content/plugins/privacy-lite-youtube-embeds/`.
-2. Activate **Privacy Lite YouTube Embeds** in WordPress.
-3. Configure the options under `Settings > Privacy Lite YouTube`.
+1. Upload the plugin folder to `wp-content/plugins/privacy-lite-video-embeds/`.
+2. Activate **Privacy Lite Video Embeds for YouTube** in WordPress.
+3. Configure the options under `Settings > Privacy Lite Video`.
 4. For existing sites, run the thumbnail scanner once or more from the settings page.
 
 ## Development notes
@@ -152,18 +152,18 @@ The implementation intentionally avoids build tools and dependencies.
 File structure:
 
 ```text
-privacy-lite-youtube-embeds.php
+privacy-lite-video-embeds.php
 readme.txt
 README.md
 LICENSE.txt
 uninstall.php
 assets/
   coffee-love-icon.svg
-  privacy-lite-youtube-embeds.css
-  privacy-lite-youtube-embeds.js
+  privacy-lite-video-embeds.css
+  privacy-lite-video-embeds.js
 languages/
-  privacy-lite-youtube-embeds.pot
-  privacy-lite-youtube-embeds-it_IT.po
+  privacy-lite-video-embeds.pot
+  privacy-lite-video-embeds-it_IT.po
 ```
 
 ## Translations
@@ -174,7 +174,7 @@ To use local translations before wordpress.org language packs are available, com
 
 ## License
 
-Privacy Lite YouTube Embeds is licensed under the GNU General Public License v2.0 or later (`GPL-2.0-or-later`).
+Privacy Lite Video Embeds for YouTube is licensed under the GNU General Public License v2.0 or later (`GPL-2.0-or-later`).
 
 The same GPL-compatible licensing approach applies to the plugin code, included local assets, and WordPress.org assets created for this project, unless a specific file states otherwise.
 

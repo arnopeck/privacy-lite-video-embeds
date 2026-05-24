@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Privacy Lite YouTube Embeds
- * Plugin URI: https://github.com/arnopeck/privacy-lite-youtube-embeds
- * Description: Replaces YouTube embeds with local thumbnails and loads the youtube-nocookie player only after user interaction.
+ * Plugin Name: Privacy Lite Video Embeds for YouTube
+ * Plugin URI: https://github.com/arnopeck/privacy-lite-video-embeds
+ * Description: Replaces video embeds from YouTube with local thumbnails and loads the youtube-nocookie player only after user interaction.
  * Version: 1.0.0
  * Author: Arno Peck
  * Author URI: https://github.com/arnopeck
- * Text Domain: privacy-lite-youtube-embeds
+ * Text Domain: privacy-lite-video-embeds
  * Domain Path: /languages
  * Requires at least: 6.0
  * Requires PHP: 7.4
@@ -18,11 +18,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-final class Privacy_Lite_YouTube_Embeds {
+final class Privacy_Lite_Video_Embeds {
     private const VERSION = '1.0.0';
     private const OPTION_NAME = 'plye_settings';
     private const FAILED_KEYS_OPTION = 'plye_failed_thumbnail_keys';
-    private const THUMB_DIR = 'privacy-lite-youtube-embeds';
+    private const THUMB_DIR = 'privacy-lite-video-embeds';
     private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
     private const MAX_SCAN_POSTS = 50;
     private const DEFAULT_SUPPORT_URL = 'https://ko-fi.com/luminescenza';
@@ -71,16 +71,16 @@ final class Privacy_Lite_YouTube_Embeds {
             return;
         }
 
-        wp_enqueue_style('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.css', __FILE__), [], self::VERSION);
+        wp_enqueue_style('privacy-lite-video-embeds', plugins_url('assets/privacy-lite-video-embeds.css', __FILE__), [], self::VERSION);
         wp_add_inline_style(
-            'privacy-lite-youtube-embeds',
+            'privacy-lite-video-embeds',
             '.plye-video{--plye-play-color:' . esc_html($this->settings()['play_button_color']) . ';}'
         );
-        wp_enqueue_script('privacy-lite-youtube-embeds', plugins_url('assets/privacy-lite-youtube-embeds.js', __FILE__), [], self::VERSION, true);
+        wp_enqueue_script('privacy-lite-video-embeds', plugins_url('assets/privacy-lite-video-embeds.js', __FILE__), [], self::VERSION, true);
     }
 
     public function enqueue_admin_assets(string $hook_suffix): void {
-        if ('settings_page_privacy-lite-youtube-embeds' !== $hook_suffix) {
+        if ('settings_page_privacy-lite-video-embeds' !== $hook_suffix) {
             return;
         }
 
@@ -95,7 +95,7 @@ final class Privacy_Lite_YouTube_Embeds {
     public function add_plugin_action_links(array $links): array {
         array_unshift(
             $links,
-            '<a href="' . esc_url(admin_url('options-general.php?page=privacy-lite-youtube-embeds')) . '">' . esc_html__('Settings', 'privacy-lite-youtube-embeds') . '</a>'
+            '<a href="' . esc_url(admin_url('options-general.php?page=privacy-lite-video-embeds')) . '">' . esc_html__('Settings', 'privacy-lite-video-embeds') . '</a>'
         );
         return $links;
     }
@@ -113,18 +113,18 @@ final class Privacy_Lite_YouTube_Embeds {
 
         add_settings_section(
             'plye_main_section',
-            __('YouTube privacy replacement', 'privacy-lite-youtube-embeds'),
+            __('Video privacy replacement', 'privacy-lite-video-embeds'),
             function (): void {
-                echo '<p>' . esc_html__('Replace YouTube embeds with local thumbnails and load the video player only after click.', 'privacy-lite-youtube-embeds') . '</p>';
+                echo '<p>' . esc_html__('Replace video embeds from YouTube with local thumbnails and load the video player only after click.', 'privacy-lite-video-embeds') . '</p>';
             },
             'plye_settings'
         );
 
-        add_settings_field('scope', __('Replacement scope', 'privacy-lite-youtube-embeds'), [$this, 'render_scope_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('show_consent_text', __('Consent text', 'privacy-lite-youtube-embeds'), [$this, 'render_consent_toggle_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('consent_text', __('Consent message', 'privacy-lite-youtube-embeds'), [$this, 'render_consent_text_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('autoplay', __('Autoplay after click', 'privacy-lite-youtube-embeds'), [$this, 'render_autoplay_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('play_button_color', __('Play button color', 'privacy-lite-youtube-embeds'), [$this, 'render_play_button_color_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('scope', __('Replacement scope', 'privacy-lite-video-embeds'), [$this, 'render_scope_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('show_consent_text', __('Consent text', 'privacy-lite-video-embeds'), [$this, 'render_consent_toggle_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('consent_text', __('Consent message', 'privacy-lite-video-embeds'), [$this, 'render_consent_text_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('autoplay', __('Autoplay after click', 'privacy-lite-video-embeds'), [$this, 'render_autoplay_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('play_button_color', __('Play button color', 'privacy-lite-video-embeds'), [$this, 'render_play_button_color_field'], 'plye_settings', 'plye_main_section');
     }
 
     public function add_privacy_policy_suggestion(): void {
@@ -134,20 +134,20 @@ final class Privacy_Lite_YouTube_Embeds {
 
         $content = wp_kses_post(
             __(
-                'This site uses Privacy Lite YouTube Embeds to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy.',
-                'privacy-lite-youtube-embeds'
+                'This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy.',
+                'privacy-lite-video-embeds'
             )
         );
 
-        wp_add_privacy_policy_content('Privacy Lite YouTube Embeds', wpautop($content));
+        wp_add_privacy_policy_content('Privacy Lite Video Embeds for YouTube', wpautop($content));
     }
 
     public function add_settings_page(): void {
         add_options_page(
-            __('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'),
-            __('Privacy Lite YouTube', 'privacy-lite-youtube-embeds'),
+            __('Privacy Lite Video Embeds for YouTube', 'privacy-lite-video-embeds'),
+            __('Privacy Lite Video', 'privacy-lite-video-embeds'),
             'manage_options',
-            'privacy-lite-youtube-embeds',
+            'privacy-lite-video-embeds',
             [$this, 'render_settings_page']
         );
     }
@@ -159,16 +159,16 @@ final class Privacy_Lite_YouTube_Embeds {
         ?>
         <div class="wrap">
             <div style="max-width:1120px; margin-bottom:16px;">
-                <h1 style="margin:0 0 6px;"><?php echo esc_html__('Privacy Lite YouTube Embeds', 'privacy-lite-youtube-embeds'); ?></h1>
-                <p style="margin:0; color:#646970; font-size:14px;"><?php echo esc_html__('Fast YouTube embeds. Nothing loads until click.', 'privacy-lite-youtube-embeds'); ?></p>
+                <h1 style="margin:0 0 6px;"><?php echo esc_html__('Privacy Lite Video Embeds for YouTube', 'privacy-lite-video-embeds'); ?></h1>
+                <p style="margin:0; color:#646970; font-size:14px;"><?php echo esc_html__('Fast video embeds for YouTube. Nothing loads until click.', 'privacy-lite-video-embeds'); ?></p>
             </div>
 
             <?php $this->render_admin_tool_notice(); ?>
 
             <div class="notice notice-info inline" style="max-width:1120px; margin-top:0;">
-                <p><strong><?php echo esc_html__('Privacy behavior', 'privacy-lite-youtube-embeds'); ?></strong></p>
-                <p><?php echo esc_html__('Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder.', 'privacy-lite-youtube-embeds'); ?></p>
-                <p><?php echo esc_html__('To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.', 'privacy-lite-youtube-embeds'); ?></p>
+                <p><strong><?php echo esc_html__('Privacy behavior', 'privacy-lite-video-embeds'); ?></strong></p>
+                <p><?php echo esc_html__('Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder.', 'privacy-lite-video-embeds'); ?></p>
+                <p><?php echo esc_html__('To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.', 'privacy-lite-video-embeds'); ?></p>
             </div>
 
             <div style="max-width:1120px; margin:12px 0 18px; display:flex; justify-content:flex-end;">
@@ -185,18 +185,18 @@ final class Privacy_Lite_YouTube_Embeds {
 
             <hr style="max-width:1120px; margin:26px 0 16px;">
             <div style="max-width:1120px;">
-                <h2><?php echo esc_html__('Thumbnail tools', 'privacy-lite-youtube-embeds'); ?></h2>
-                <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-youtube-embeds'); ?></p>
+                <h2><?php echo esc_html__('Thumbnail tools', 'privacy-lite-video-embeds'); ?></h2>
+                <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-video-embeds'); ?></p>
 
                 <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom:1em;">
                     <input type="hidden" name="action" value="plye_scan_thumbnails">
                     <?php wp_nonce_field('plye_scan_thumbnails'); ?>
-                    <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-youtube-embeds'), 'secondary', 'submit', false); ?>
+                    <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-video-embeds'), 'secondary', 'submit', false); ?>
                     <p class="description">
                         <?php
                         printf(
                             /* translators: %d: maximum number of published public posts/pages scanned per run. */
-                            esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-youtube-embeds'),
+                            esc_html__('Scans up to %d published public posts/pages per run and downloads missing local thumbnails.', 'privacy-lite-video-embeds'),
                             esc_html((string) self::MAX_SCAN_POSTS)
                         );
                         ?>
@@ -208,16 +208,16 @@ final class Privacy_Lite_YouTube_Embeds {
                     <?php wp_nonce_field('plye_clear_thumbnails'); ?>
                     <?php
                     submit_button(
-                        __('Clear local thumbnail cache', 'privacy-lite-youtube-embeds'),
+                        __('Clear local thumbnail cache', 'privacy-lite-video-embeds'),
                         'delete',
                         'submit',
                         false,
                         [
-                            'onclick' => "return confirm('" . esc_js(__('Delete all locally cached YouTube thumbnails?', 'privacy-lite-youtube-embeds')) . "');",
+                            'onclick' => "return confirm('" . esc_js(__('Delete all locally cached YouTube thumbnails?', 'privacy-lite-video-embeds')) . "');",
                         ]
                     );
                     ?>
-                    <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-youtube-embeds'); ?></p>
+                    <p class="description"><?php echo esc_html__('Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed.', 'privacy-lite-video-embeds'); ?></p>
                 </form>
             </div>
         </div>
@@ -228,10 +228,10 @@ final class Privacy_Lite_YouTube_Embeds {
         $settings = $this->settings();
         ?>
         <select name="<?php echo esc_attr(self::OPTION_NAME); ?>[scope]">
-            <option value="gutenberg" <?php selected($settings['scope'], 'gutenberg'); ?>><?php echo esc_html__('Only Gutenberg YouTube embed blocks', 'privacy-lite-youtube-embeds'); ?></option>
-            <option value="all" <?php selected($settings['scope'], 'all'); ?>><?php echo esc_html__('All YouTube videos found in content', 'privacy-lite-youtube-embeds'); ?></option>
+            <option value="gutenberg" <?php selected($settings['scope'], 'gutenberg'); ?>><?php echo esc_html__('Only Gutenberg YouTube embed blocks', 'privacy-lite-video-embeds'); ?></option>
+            <option value="all" <?php selected($settings['scope'], 'all'); ?>><?php echo esc_html__('All YouTube videos found in content', 'privacy-lite-video-embeds'); ?></option>
         </select>
-        <p class="description"><?php echo esc_html__('Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes.', 'privacy-lite-youtube-embeds'); ?></p>
+        <p class="description"><?php echo esc_html__('Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes.', 'privacy-lite-video-embeds'); ?></p>
         <?php
     }
 
@@ -240,7 +240,7 @@ final class Privacy_Lite_YouTube_Embeds {
         ?>
         <label>
             <input type="checkbox" name="<?php echo esc_attr(self::OPTION_NAME); ?>[show_consent_text]" value="1" <?php checked($settings['show_consent_text']); ?>>
-            <?php echo esc_html__('Show a short privacy message inside the placeholder.', 'privacy-lite-youtube-embeds'); ?>
+            <?php echo esc_html__('Show a short privacy message inside the placeholder.', 'privacy-lite-video-embeds'); ?>
         </label>
         <?php
     }
@@ -249,7 +249,7 @@ final class Privacy_Lite_YouTube_Embeds {
         $settings = $this->settings();
         ?>
         <textarea class="large-text" rows="3" name="<?php echo esc_attr(self::OPTION_NAME); ?>[consent_text]"><?php echo esc_textarea($settings['consent_text']); ?></textarea>
-        <p class="description"><?php echo esc_html__('Displayed only if the consent text option is enabled.', 'privacy-lite-youtube-embeds'); ?></p>
+        <p class="description"><?php echo esc_html__('Displayed only if the consent text option is enabled.', 'privacy-lite-video-embeds'); ?></p>
         <?php
     }
 
@@ -258,7 +258,7 @@ final class Privacy_Lite_YouTube_Embeds {
         ?>
         <label>
             <input type="checkbox" name="<?php echo esc_attr(self::OPTION_NAME); ?>[autoplay]" value="1" <?php checked($settings['autoplay']); ?>>
-            <?php echo esc_html__('Start playback immediately after the user clicks the placeholder.', 'privacy-lite-youtube-embeds'); ?>
+            <?php echo esc_html__('Start playback immediately after the user clicks the placeholder.', 'privacy-lite-video-embeds'); ?>
         </label>
         <?php
     }
@@ -267,7 +267,7 @@ final class Privacy_Lite_YouTube_Embeds {
         $settings = $this->settings();
         ?>
         <input type="text" class="plye-color-picker" name="<?php echo esc_attr(self::OPTION_NAME); ?>[play_button_color]" value="<?php echo esc_attr($settings['play_button_color']); ?>" data-default-color="<?php echo esc_attr(self::DEFAULT_PLAY_BUTTON_COLOR); ?>">
-        <p class="description"><?php echo esc_html__('Choose the overlay play button color shown before the video is loaded.', 'privacy-lite-youtube-embeds'); ?></p>
+        <p class="description"><?php echo esc_html__('Choose the overlay play button color shown before the video is loaded.', 'privacy-lite-video-embeds'); ?></p>
         <?php
     }
 
@@ -293,7 +293,7 @@ final class Privacy_Lite_YouTube_Embeds {
 
     public function handle_scan_thumbnails(): void {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-youtube-embeds'));
+            wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-video-embeds'));
         }
 
         check_admin_referer('plye_scan_thumbnails');
@@ -302,7 +302,7 @@ final class Privacy_Lite_YouTube_Embeds {
         wp_safe_redirect(
             add_query_arg(
                 [
-                    'page' => 'privacy-lite-youtube-embeds',
+                    'page' => 'privacy-lite-video-embeds',
                     'plye_notice' => 'scan',
                     'plye_posts' => absint($result['posts_scanned']),
                     'plye_videos' => absint($result['videos_found']),
@@ -319,7 +319,7 @@ final class Privacy_Lite_YouTube_Embeds {
 
     public function handle_clear_thumbnails(): void {
         if (!current_user_can('manage_options')) {
-            wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-youtube-embeds'));
+            wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-video-embeds'));
         }
 
         check_admin_referer('plye_clear_thumbnails');
@@ -329,7 +329,7 @@ final class Privacy_Lite_YouTube_Embeds {
         wp_safe_redirect(
             add_query_arg(
                 [
-                    'page' => 'privacy-lite-youtube-embeds',
+                    'page' => 'privacy-lite-video-embeds',
                     'plye_notice' => 'clear',
                     'plye_deleted' => absint($deleted),
                     '_wpnonce' => wp_create_nonce(self::ADMIN_NOTICE_NONCE_ACTION),
@@ -431,7 +431,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     <?php
                     printf(
                         /* translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails. */
-                        esc_html__('Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d.', 'privacy-lite-youtube-embeds'),
+                        esc_html__('Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d.', 'privacy-lite-video-embeds'),
                         esc_html((string) $posts),
                         esc_html((string) $videos),
                         esc_html((string) $existing),
@@ -453,7 +453,7 @@ final class Privacy_Lite_YouTube_Embeds {
                     <?php
                     printf(
                         /* translators: %d: number of deleted local thumbnail files. */
-                        esc_html__('Local thumbnail cache cleared. Deleted files: %d.', 'privacy-lite-youtube-embeds'),
+                        esc_html__('Local thumbnail cache cleared. Deleted files: %d.', 'privacy-lite-video-embeds'),
                         esc_html((string) $deleted)
                     );
                     ?>
@@ -478,8 +478,8 @@ final class Privacy_Lite_YouTube_Embeds {
                 <span aria-hidden="true" style="display:inline-flex; align-items:center; justify-content:center; width:45px; height:45px; border-radius:999px; background:#fff7ed; font-size:21px; line-height:1; flex:0 0 auto;">☕</span>
             <?php endif; ?>
             <span style="display:flex; flex-direction:column; line-height:1.2;">
-                <span style="font-weight:600; color:#1d2327;"><?php echo esc_html__('Support development', 'privacy-lite-youtube-embeds'); ?></span>
-                <span style="font-size:12px; color:#646970;"><?php echo esc_html__('Buy me a coffee on Ko-fi', 'privacy-lite-youtube-embeds'); ?></span>
+                <span style="font-weight:600; color:#1d2327;"><?php echo esc_html__('Support development', 'privacy-lite-video-embeds'); ?></span>
+                <span style="font-size:12px; color:#646970;"><?php echo esc_html__('Buy me a coffee on Ko-fi', 'privacy-lite-video-embeds'); ?></span>
             </span>
         </a>
         <?php
@@ -551,9 +551,9 @@ final class Privacy_Lite_YouTube_Embeds {
 
         if ($title) {
             /* translators: %s: video title. */
-            $label = sprintf(__('Play video: %s', 'privacy-lite-youtube-embeds'), $title);
+            $label = sprintf(__('Play video: %s', 'privacy-lite-video-embeds'), $title);
         } else {
-            $label = __('Play YouTube video', 'privacy-lite-youtube-embeds');
+            $label = __('Play YouTube video', 'privacy-lite-video-embeds');
         }
 
         ob_start();
@@ -612,7 +612,7 @@ final class Privacy_Lite_YouTube_Embeds {
                 [
                     'timeout' => 8,
                     'redirection' => 3,
-                    'user-agent' => 'Privacy Lite YouTube Embeds/' . self::VERSION . '; ' . home_url('/'),
+                    'user-agent' => 'Privacy Lite Video Embeds for YouTube/' . self::VERSION . '; ' . home_url('/'),
                 ]
             );
 
@@ -798,12 +798,12 @@ final class Privacy_Lite_YouTube_Embeds {
         return [
             'scope' => 'all',
             'show_consent_text' => true,
-            'consent_text' => __('The video is loaded from YouTube only after your click.', 'privacy-lite-youtube-embeds'),
+            'consent_text' => __('The video is loaded from YouTube only after your click.', 'privacy-lite-video-embeds'),
             'autoplay' => true,
             'play_button_color' => self::DEFAULT_PLAY_BUTTON_COLOR,
         ];
     }
 }
 
-register_activation_hook(__FILE__, ['Privacy_Lite_YouTube_Embeds', 'activate']);
-Privacy_Lite_YouTube_Embeds::instance();
+register_activation_hook(__FILE__, ['Privacy_Lite_Video_Embeds', 'activate']);
+Privacy_Lite_Video_Embeds::instance();

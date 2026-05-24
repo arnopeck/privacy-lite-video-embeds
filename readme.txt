@@ -1,4 +1,4 @@
-=== Privacy Lite YouTube Embeds ===
+=== Privacy Lite Video Embeds for YouTube ===
 Contributors: arnopeck
 Donate link: https://ko-fi.com/luminescenza
 Tags: youtube, embeds, privacy, performance, lazy load
@@ -9,13 +9,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Fast YouTube embeds. Nothing loads until click.
+Fast video embeds for YouTube. Nothing loads until click.
 
 == Description ==
 
-Privacy Lite YouTube Embeds replaces YouTube embeds with lightweight local placeholders.
+Privacy Lite Video Embeds for YouTube replaces YouTube embeds with lightweight local placeholders.
 
-Fast YouTube embeds. Nothing loads until click.
+Fast video embeds for YouTube. Nothing loads until click.
 
 Before the visitor clicks, the frontend loads only local resources from the site:
 
@@ -37,7 +37,7 @@ Important: this plugin is a technical privacy/performance aid. It does not const
 * Replaces classic oEmbed output when scope is set to "All".
 * Replaces manually pasted YouTube iframes when scope is set to "All".
 * Downloads YouTube thumbnails server-side into the WordPress uploads directory.
-* Serves thumbnails locally from `/wp-content/uploads/privacy-lite-youtube-embeds/`.
+* Serves thumbnails locally from `/wp-content/uploads/privacy-lite-video-embeds/`.
 * Falls back to a local CSS placeholder when no thumbnail can be downloaded.
 * Loads YouTube only after click.
 * Uses `youtube-nocookie.com` for the iframe player.
@@ -51,9 +51,9 @@ Important: this plugin is a technical privacy/performance aid. It does not const
 
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/privacy-lite-youtube-embeds/`, or install it from the WordPress plugin screen when available.
-2. Activate **Privacy Lite YouTube Embeds**.
-3. Go to **Settings > Privacy Lite YouTube**.
+1. Upload the plugin folder to `/wp-content/plugins/privacy-lite-video-embeds/`, or install it from the WordPress plugin screen when available.
+2. Activate **Privacy Lite Video Embeds for YouTube**.
+3. Go to **Settings > Privacy Lite Video**.
 4. Choose the replacement scope and placeholder options.
 5. For existing sites, run **Scan content and generate missing thumbnails** from the settings page.
 

@@ -3,8 +3,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-embeds/issues\n"
+"Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"X-Domain: privacy-lite-youtube-embeds\n"
+"X-Domain: privacy-lite-video-embeds\n"
 
 msgid "Settings"
 msgstr ""
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
 msgstr ""
 
-msgid "This site uses Privacy Lite YouTube Embeds to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
+msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
 msgstr ""
 
 msgid "Replacement scope"
@@ -39,10 +39,10 @@ msgstr ""
 msgid "Autoplay after click"
 msgstr ""
 
-msgid "Privacy Lite YouTube Embeds"
+msgid "Privacy Lite Video Embeds for YouTube"
 msgstr ""
 
-msgid "Privacy Lite YouTube"
+msgid "Privacy Lite Video"
 msgstr ""
 
 msgid "Fast YouTube embeds. Nothing loads until click."

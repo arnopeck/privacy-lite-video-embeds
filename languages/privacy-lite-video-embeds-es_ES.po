@@ -1,9 +1,9 @@
-# Spanish translation for Privacy Lite YouTube Embeds.
+# Spanish translation for Privacy Lite Video Embeds for YouTube.
 # Copyright (C) 2026 Arno Peck
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Privacy Lite YouTube Embeds 1.0.0\n"
+"Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-youtube-"
 "embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"X-Domain: privacy-lite-youtube-embeds\n"
+"X-Domain: privacy-lite-video-embeds\n"
 
 msgid "Settings"
 msgstr "Ajustes"
@@ -31,14 +31,14 @@ msgstr ""
 "reproductor de vídeo solo después del clic."
 
 msgid ""
-"This site uses Privacy Lite YouTube Embeds to display YouTube videos with a "
+"This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a "
 "local placeholder. Before a visitor clicks a video placeholder, the visitor "
 "browser does not load the YouTube player or remote YouTube thumbnails. If "
 "the visitor chooses to play a video, the YouTube player is loaded from the "
 "privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process "
 "data according to their own terms and privacy policy."
 msgstr ""
-"Este sitio utiliza Privacy Lite YouTube Embeds para mostrar vídeos de "
+"Este sitio utiliza Privacy Lite Video Embeds for YouTube para mostrar vídeos de "
 "YouTube con un marcador local. Antes de que un visitante haga clic en el "
 "marcador de un vídeo, su navegador no carga el reproductor de YouTube ni "
 "miniaturas remotas de YouTube. Si el visitante decide reproducir un vídeo, "
@@ -58,11 +58,11 @@ msgstr "Mensaje de consentimiento"
 msgid "Autoplay after click"
 msgstr "Reproducción automática tras el clic"
 
-msgid "Privacy Lite YouTube Embeds"
-msgstr "Privacy Lite YouTube Embeds"
+msgid "Privacy Lite Video Embeds for YouTube"
+msgstr "Privacy Lite Video Embeds for YouTube"
 
-msgid "Privacy Lite YouTube"
-msgstr "Privacy Lite YouTube"
+msgid "Privacy Lite Video"
+msgstr "Privacy Lite Video"
 
 msgid "Fast YouTube embeds. Nothing loads until click."
 msgstr "Inserciones de YouTube rápidas. Nada se carga hasta el clic."
