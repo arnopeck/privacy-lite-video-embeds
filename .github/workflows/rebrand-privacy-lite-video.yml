@@ -28,8 +28,8 @@ jobs:
           replace_text() {
             local search="$1"
             local replace="$2"
-              | xargs -r sed -i "s/${search}/${replace}/g" || true
             grep -rl --exclude-dir=.git --exclude-dir=.github --exclude='*.mo' --exclude='*.png' --exclude='*.jpg' --exclude='*.jpeg' --exclude='*.gif' --exclude='*.webp' --exclude='*.svg' "$search" . \
+              | xargs -r sed -i "s/${search}/${replace}/g" || true
           }
 
           if [ -f "${OLD_SLUG}.php" ]; then
