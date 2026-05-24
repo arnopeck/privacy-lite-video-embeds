@@ -2,9 +2,6 @@ name: Temporary rebrand to Privacy Lite Video Embeds
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/rebrand-privacy-lite-video.yml'
 
 permissions:
   contents: write
@@ -28,7 +25,13 @@ jobs:
           OLD_NAME="Privacy Lite YouTube Embeds"
           NEW_NAME="Privacy Lite Video Embeds for YouTube"
 
-          # Rename primary files first.
+          replace_text() {
+            local search="$1"
+            local replace="$2"
+            grep -rl --exclude-dir=.git --exclude='*.mo' --exclude='*.png' --exclude='*.jpg' --exclude='*.jpeg' --exclude='*.gif' --exclude='*.webp' --exclude='*.svg' "$search" . \
+              | xargs -r sed -i "s/${search}/${replace}/g" || true
+          }
+
           if [ -f "${OLD_SLUG}.php" ]; then
             git mv "${OLD_SLUG}.php" "${NEW_SLUG}.php"
           fi
@@ -47,25 +50,16 @@ jobs:
             done
           fi
 
-          # Replace slug/text-domain, display name, class name, handles and docs.
-          grep -rl --exclude-dir=.git --exclude='*.mo' "$OLD_SLUG" . | xargs -r sed -i "s/${OLD_SLUG}/${NEW_SLUG}/g"
-          grep -rl --exclude-dir=.git --exclude='*.mo' "$OLD_NAME" . | xargs -r sed -i "s/${OLD_NAME}/${NEW_NAME}/g"
-          grep -rl --exclude-dir=.git --exclude='*.mo' "Privacy Lite YouTube" . | xargs -r sed -i "s/Privacy Lite YouTube/Privacy Lite Video/g"
-          grep -rl --exclude-dir=.git --exclude='*.mo' "Privacy_Lite_YouTube_Embeds" . | xargs -r sed -i "s/Privacy_Lite_YouTube_Embeds/Privacy_Lite_Video_Embeds/g"
+          replace_text "$OLD_SLUG" "$NEW_SLUG"
+          replace_text "$OLD_NAME" "$NEW_NAME"
+          replace_text "Privacy Lite YouTube" "Privacy Lite Video"
+          replace_text "Privacy_Lite_YouTube_Embeds" "Privacy_Lite_Video_Embeds"
 
-          # Make visible copy more natural after the global replacements.
           sed -i "s/Fast YouTube embeds\. Nothing loads until click\./Fast video embeds for YouTube. Nothing loads until click./g" "${NEW_SLUG}.php" README.md readme.txt || true
           sed -i "s/Replaces YouTube embeds with local thumbnails/Replaces video embeds from YouTube with local thumbnails/g" "${NEW_SLUG}.php" README.md readme.txt || true
           sed -i "s/YouTube privacy replacement/Video privacy replacement/g" "${NEW_SLUG}.php" || true
           sed -i "s/Replace YouTube embeds with local thumbnails/Replace video embeds from YouTube with local thumbnails/g" "${NEW_SLUG}.php" || true
-
-          # Ensure header URI points to the public renamed repository.
           sed -i "s#Plugin URI: https://github.com/arnopeck/${OLD_SLUG}#Plugin URI: https://github.com/arnopeck/${NEW_SLUG}#g" "${NEW_SLUG}.php" || true
-
-          # Remove this temporary workflow from the final rebrand commit.
-          git rm .github/workflows/rebrand-privacy-lite-video.yml
-          rmdir .github/workflows 2>/dev/null || true
-          rmdir .github 2>/dev/null || true
 
           git status --short
 
