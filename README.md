@@ -6,6 +6,8 @@ Privacy Lite Video Embeds for YouTube replaces YouTube embeds with lightweight l
 
 The goal is simple: before the visitor clicks, the page should not load YouTube/Google resources in the browser.
 
+> Trademark note: this is a third-party plugin and is not affiliated with, endorsed by, or sponsored by YouTube or Google.
+
 Before click, the frontend loads only local resources from the site:
 
 - local HTML markup;
@@ -120,6 +122,10 @@ After click, the plugin creates an iframe using:
 `https://www.youtube-nocookie.com/embed/VIDEO_ID`
 
 The plugin also adds suggested wording to WordPress privacy policy guide so site owners can adapt their policy text.
+
+## Trademark note
+
+This is a third-party plugin and is not affiliated with, endorsed by, or sponsored by YouTube or Google.
 
 ## How to test privacy behavior
 
