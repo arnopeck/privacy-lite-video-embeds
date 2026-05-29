@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:03+0200\n"
+"PO-Revision-Date: 2026-05-29 13:10+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -20,97 +20,97 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 msgid "Click-to-load video embeds"
-msgstr "Click-to-Load-Video-Einbettungen"
+msgstr "Video-Einbettungen per Klick laden"
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "Ersetze YouTube Embeds durch lokale Thumbnails und lade den Videoplayer erst nach einem Klick."
+msgstr "Ersetzt YouTube-Einbettungen durch lokale Vorschaubilder und lädt den Videoplayer erst nach einem Klick."
 
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "Diese Seite verwendet Privacy Lite Video Embeds für YouTube, um YouTube-Videos mit einem lokalen Platzhalter anzuzeigen. Bevor ein Besucher auf einen Video-Platzhalter klickt, lädt der Besucherbrowser weder den YouTube-Player noch entfernte YouTube-Thumbnails mehr. Wenn der Besucher ein Video abspielt, wird der YouTube-Player aus der datenschutzerweiterten youtube-nocookie.com-Domain geladen und YouTube/Google können die Daten gemäß ihren eigenen Bedingungen und Datenschutzrichtlinien verarbeiten."
+msgstr "Diese Website verwendet Privacy Lite Video Embeds for YouTube, um YouTube-Videos mit einem lokalen Platzhalter anzuzeigen. Bevor ein Besucher auf einen Video-Platzhalter klickt, lädt der Browser des Besuchers weder den YouTube-Player noch entfernte YouTube-Vorschaubilder. Wenn der Besucher ein Video abspielen möchte, wird der YouTube-Player von der datenschutzfreundlicheren Domain youtube-nocookie.com geladen, und YouTube/Google kann Daten gemäß den eigenen Nutzungsbedingungen und der eigenen Datenschutzerklärung verarbeiten."
 
 msgid "Replacement scope"
-msgstr "Ersatz-Scope"
+msgstr "Ersetzungsumfang"
 
 msgid "Consent text"
 msgstr "Einwilligungstext"
 
 msgid "Consent message"
-msgstr "Einverständniserklärung"
+msgstr "Einwilligungsnachricht"
 
 msgid "Autoplay after click"
-msgstr "Autoplay nach dem Klick"
+msgstr "Autoplay nach Klick"
 
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "Privacy Lite Video Embeds für YouTube"
+msgstr "Privacy Lite Video Embeds for YouTube"
 
 msgid "Privacy Lite Video"
 msgstr "Privacy Lite Video"
 
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "Schnelle YouTube-Einbettungen. Nichts lädt, bis man klickt."
+msgstr "Schnelle YouTube-Einbettungen. Bis zum Klick wird nichts geladen."
 
 msgid "Privacy behavior"
 msgstr "Datenschutzverhalten"
 
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "Vor dem Klicken lädt das Frontend nur lokale HTML-, CSS-, JavaScript- und lokal zwischengespeicherte Vorschaubilder. YouTube wird erst von youtube-nocookie.com geladen, nachdem der Besucher auf den Platzhalter geklickt hat."
+msgstr "Vor dem Klick lädt das Frontend nur lokales HTML, CSS, JavaScript und lokal zwischengespeicherte Vorschaubilder. YouTube wird erst von youtube-nocookie.com geladen, nachdem der Besucher auf den Platzhalter geklickt hat."
 
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "Um dies zu überprüfen, öffnen Sie das Netzwerkpanel Ihres Browsers und laden Sie eine Seite mit einem YouTube-Embed neu: Vor dem Klick sollte es keine Anfragen an youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com oder gstatic.com geben."
+msgstr "Um dies zu überprüfen, öffnen Sie das Netzwerk-Panel Ihres Browsers und laden Sie eine Seite mit einer YouTube-Einbettung neu: Vor dem Klick sollte es keine Anfragen an youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com oder gstatic.com geben."
 
 msgid "Thumbnail tools"
-msgstr "Thumbnail-Werkzeuge"
+msgstr "Vorschaubild-Werkzeuge"
 
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "Nutze diese Tools für bestehende Inhalte, Fehlersuche oder nachdem du viele YouTube-Embeds geändert hast."
+msgstr "Verwenden Sie diese Werkzeuge für vorhandene Inhalte, zur Fehlerbehebung oder nachdem Sie viele YouTube-Einbettungen geändert haben."
 
 msgid "Scan content and generate missing thumbnails"
-msgstr "Inhalt scannen und fehlende Vorschaubilder erstellen"
+msgstr "Inhalte scannen und fehlende Vorschaubilder erzeugen"
 
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "Scannt bis zu %d veröffentlichte öffentliche Beiträge/Seiten pro Durchlauf und Downloads, bei denen lokale Vorschaubilder fehlen."
+msgstr "Scannt pro Durchlauf bis zu %d veröffentlichte öffentliche Beiträge/Seiten und lädt fehlende lokale Vorschaubilder herunter."
 
 msgid "Clear local thumbnail cache"
-msgstr "Lösche den lokalen Miniatur-Cache"
+msgstr "Lokalen Vorschaubild-Cache leeren"
 
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "Alle lokal zwischengespeicherten YouTube-Thumbnails löschen?"
+msgstr "Alle lokal zwischengespeicherten YouTube-Vorschaubilder löschen?"
 
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "Löscht lokal zwischengespeicherte Vorschaudateien und löscht die Marker für fehlgeschlagene Download-Neuversuche. Thumbnails werden neu generiert, wenn Inhalte gescannt, gespeichert oder angesehen werden."
+msgstr "Löscht lokal zwischengespeicherte Vorschaubild-Dateien und entfernt Wiederholungsmarkierungen für fehlgeschlagene Downloads. Vorschaubilder werden neu erzeugt, wenn Inhalte gescannt, gespeichert oder angezeigt werden."
 
 msgid "Only Gutenberg YouTube embed blocks"
 msgstr "Nur Gutenberg-YouTube-Einbettungsblöcke"
 
 msgid "All YouTube videos found in content"
-msgstr "Alle YouTube-Videos finden sich in Inhalten"
+msgstr "Alle in Inhalten gefundenen YouTube-Videos"
 
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "Verwenden Sie auch \"All\", um klassische oEmbeds und manuell eingefügte YouTube-iframes zu ersetzen."
+msgstr "Verwenden Sie „Alle“, um auch klassische oEmbeds und manuell eingefügte YouTube-iframes zu ersetzen."
 
 msgid "Show a short privacy message inside the placeholder."
-msgstr "Zeigen Sie eine kurze Privatsphäre-Nachricht im Platzhalter an."
+msgstr "Eine kurze Datenschutznachricht im Platzhalter anzeigen."
 
 msgid "Displayed only if the consent text option is enabled."
-msgstr "Wird nur angezeigt, wenn die Zustimmungs-Textoption aktiviert ist."
+msgstr "Wird nur angezeigt, wenn die Option für den Einwilligungstext aktiviert ist."
 
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "Starte die Wiedergabe sofort, nachdem der Nutzer auf den Platzhalter geklickt hat."
+msgstr "Die Wiedergabe direkt starten, nachdem der Benutzer auf den Platzhalter geklickt hat."
 
 msgid "You do not have permission to run this tool."
-msgstr "Du hast keine Erlaubnis, dieses Tool zu verwenden."
+msgstr "Sie haben keine Berechtigung, dieses Werkzeug auszuführen."
 
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "Scan abgeschlossen. Eingescannte Beiträge: %1$d. Videos gefunden: %2$d. Vorhandene Vorschaubilder: %3$d. Generiert: %4$d. Fehlgeschlagen oder nicht verfügbar: %5$d."
+msgstr "Scan abgeschlossen. Gescannte Beiträge: %1$d. Gefundene Videos: %2$d. Vorhandene Vorschaubilder: %3$d. Erzeugt: %4$d. Fehlgeschlagen oder nicht verfügbar: %5$d."
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "Lokaler Thumbnail-Cache gelöscht. Gelöschte Dateien: %d."
+msgstr "Lokaler Vorschaubild-Cache geleert. Gelöschte Dateien: %d."
 
 msgid "Support development"
-msgstr "Unterstützungsentwicklung"
+msgstr "Entwicklung unterstützen"
 
 msgid "Buy me a coffee on Ko-fi"
-msgstr "Kauf mir einen Kaffee auf Ko-fi"
+msgstr "Spendieren Sie mir einen Kaffee auf Ko-fi"
 
 msgid "Play video: %s"
 msgstr "Video abspielen: %s"
@@ -119,10 +119,10 @@ msgid "Play YouTube video"
 msgstr "YouTube-Video abspielen"
 
 msgid "The video is loaded from YouTube only after your click."
-msgstr "Das Video wird erst nach deinem Klick von YouTube geladen."
+msgstr "Das Video wird erst nach Ihrem Klick von YouTube geladen."
 
 msgid "Play button color"
-msgstr "Farbe für Schaltflächen"
+msgstr "Farbe des Wiedergabe-Buttons"
 
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr "Wähle die angezeigte Farbe des Overlay-Play-Buttons, bevor das Video geladen wird."
+msgstr "Wählen Sie die Farbe des überlagerten Wiedergabe-Buttons, der vor dem Laden des Videos angezeigt wird."

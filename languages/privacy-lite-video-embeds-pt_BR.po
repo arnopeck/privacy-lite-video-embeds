@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:05+0200\n"
+"PO-Revision-Date: 2026-05-29 13:10+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -20,16 +20,16 @@ msgid "Settings"
 msgstr "Configurações"
 
 msgid "Click-to-load video embeds"
-msgstr "Embeds de vídeo com clique para carregar"
+msgstr "Incorporações de vídeo carregadas ao clicar"
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "Substitua os embeds do YouTube por miniaturas locais e carregue o player de vídeo apenas após um clique."
+msgstr "Substitui incorporações do YouTube por miniaturas locais e carrega o player de vídeo somente após o clique."
 
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "Este site utiliza Embeds de Vídeo Privacy Lite para o YouTube exibir vídeos do YouTube com um marcador local. Antes que um visitante clique em um marcador de vídeo, o navegador de visitantes não carrega o player do YouTube nem as miniaturas remotas do YouTube. Se o visitante optar por reproduzir um vídeo, o player do YouTube é carregado a partir do domínio youtube-nocookie.com aprimorado pela privacidade e o YouTube/Google pode processar os dados de acordo com seus próprios termos e política de privacidade."
+msgstr "Este site usa Privacy Lite Video Embeds for YouTube para exibir vídeos do YouTube com um espaço reservado local. Antes de um visitante clicar no espaço reservado do vídeo, o navegador do visitante não carrega o player do YouTube nem miniaturas remotas do YouTube. Se o visitante optar por reproduzir um vídeo, o player do YouTube será carregado do domínio youtube-nocookie.com, com privacidade aprimorada, e o YouTube/Google poderá processar dados de acordo com seus próprios termos e política de privacidade."
 
 msgid "Replacement scope"
-msgstr "Escopo de substituição"
+msgstr "Escopo da substituição"
 
 msgid "Consent text"
 msgstr "Texto de consentimento"
@@ -38,91 +38,91 @@ msgid "Consent message"
 msgstr "Mensagem de consentimento"
 
 msgid "Autoplay after click"
-msgstr "Toque automático após o clique"
+msgstr "Reprodução automática após o clique"
 
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "Embeds de vídeo Privacy Lite para YouTube"
+msgstr "Privacy Lite Video Embeds for YouTube"
 
 msgid "Privacy Lite Video"
-msgstr "Vídeo Privacy Lite"
+msgstr "Privacy Lite Video"
 
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "Embeds rápidos no YouTube. Nada carrega até clicar."
+msgstr "Incorporações rápidas do YouTube. Nada é carregado até o clique."
 
 msgid "Privacy behavior"
 msgstr "Comportamento de privacidade"
 
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "Antes do clique, a interface carrega apenas HTML local, CSS, JavaScript e miniaturas em cache local. O YouTube é carregado a partir de youtube-nocookie.com somente depois que o visitante clica no marcador de lugar."
+msgstr "Antes do clique, o frontend carrega apenas HTML, CSS, JavaScript locais e miniaturas em cache local. O YouTube é carregado de youtube-nocookie.com somente depois que o visitante clica no espaço reservado."
 
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "Para verificar isso, abra o painel de rede do navegador e recarregue uma página com uma incorporação do YouTube: antes do clique não deve haver solicitações para youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com ou gstatic.com."
+msgstr "Para verificar isso, abra o painel Network do navegador e recarregue uma página com uma incorporação do YouTube: antes do clique, não deve haver solicitações para youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com ou gstatic.com."
 
 msgid "Thumbnail tools"
-msgstr "Ferramentas de miniatura"
+msgstr "Ferramentas de miniaturas"
 
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "Use essas ferramentas para conteúdo existente, solução de problemas ou depois de alterar muitos embeds do YouTube."
+msgstr "Use estas ferramentas para conteúdo existente, solução de problemas ou depois de alterar muitas incorporações do YouTube."
 
 msgid "Scan content and generate missing thumbnails"
-msgstr "Escanear conteúdo e gerar miniaturas faltantes"
+msgstr "Verificar conteúdo e gerar miniaturas ausentes"
 
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "Escaneia até %d postagens/páginas públicas publicadas por run e baixa miniaturas locais que faltam."
+msgstr "Verifica até %d posts/páginas públicos publicados por execução e baixa miniaturas locais ausentes."
 
 msgid "Clear local thumbnail cache"
-msgstr "Limpar o cache local de miniaturas"
+msgstr "Limpar cache local de miniaturas"
 
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "Deletar todas as miniaturas do YouTube armazenadas localmente em cache?"
+msgstr "Excluir todas as miniaturas do YouTube em cache local?"
 
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "Exclui arquivos de miniaturas localmente cacheadas e apaga marcadores de retentativa de download falhado. As miniaturas serão regeneradas quando o conteúdo for escaneado, salvo ou visualizado."
+msgstr "Exclui arquivos de miniaturas em cache local e limpa marcadores de nova tentativa de downloads com falha. As miniaturas serão regeneradas quando o conteúdo for verificado, salvo ou visualizado."
 
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr "Apenas o YouTube do Gutenberg incorpora blocos"
+msgstr "Somente blocos de incorporação do YouTube do Gutenberg"
 
 msgid "All YouTube videos found in content"
 msgstr "Todos os vídeos do YouTube encontrados no conteúdo"
 
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "Use \"Todos\" para também substituir os clássicos oEmbeds e iframes do YouTube colados manualmente."
+msgstr "Use “Todos” para também substituir oEmbeds clássicos e iframes do YouTube colados manualmente."
 
 msgid "Show a short privacy message inside the placeholder."
-msgstr "Mostre uma mensagem curta de privacidade dentro do marcador de lugar."
+msgstr "Mostra uma mensagem curta de privacidade dentro do espaço reservado."
 
 msgid "Displayed only if the consent text option is enabled."
 msgstr "Exibido somente se a opção de texto de consentimento estiver ativada."
 
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "Inicie a reprodução imediatamente após o usuário clicar no marcador de lugar."
+msgstr "Inicia a reprodução imediatamente após o usuário clicar no espaço reservado."
 
 msgid "You do not have permission to run this tool."
-msgstr "Você não tem permissão para executar essa ferramenta."
+msgstr "Você não tem permissão para executar esta ferramenta."
 
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "Varredura completa. Postagens escaneadas: %1$d. Vídeos encontrados: %2$d. Miniaturas existentes: %3$d. Geradas: %4$d. Falhadas ou indisponíveis: %5$d."
+msgstr "Verificação concluída. Posts verificados: %1$d. Vídeos encontrados: %2$d. Miniaturas existentes: %3$d. Geradas: %4$d. Com falha ou indisponíveis: %5$d."
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "Cache local de miniaturas limpo. Arquivos deletados: %d."
+msgstr "Cache local de miniaturas limpo. Arquivos excluídos: %d."
 
 msgid "Support development"
-msgstr "Apoiar o desenvolvimento"
+msgstr "Apoie o desenvolvimento"
 
 msgid "Buy me a coffee on Ko-fi"
-msgstr "Me paga um café no Ko-fi"
+msgstr "Pague-me um café no Ko-fi"
 
 msgid "Play video: %s"
 msgstr "Reproduzir vídeo: %s"
 
 msgid "Play YouTube video"
-msgstr "Reproduza vídeo no YouTube"
+msgstr "Reproduzir vídeo do YouTube"
 
 msgid "The video is loaded from YouTube only after your click."
-msgstr "O vídeo só é carregado do YouTube após o clique."
+msgstr "O vídeo é carregado do YouTube somente após o seu clique."
 
 msgid "Play button color"
-msgstr "Cor do botão Play"
+msgstr "Cor do botão de reprodução"
 
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr "Escolha a cor do botão de overlay play mostrada antes do vídeo ser carregado."
+msgstr "Escolha a cor do botão de reprodução sobreposto exibido antes do vídeo ser carregado."

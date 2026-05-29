@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:05+0200\n"
+"PO-Revision-Date: 2026-05-29 13:10+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Chinese (Traditional)\n"
 "Language: zh_TW\n"
@@ -20,19 +20,19 @@ msgid "Settings"
 msgstr "設定"
 
 msgid "Click-to-load video embeds"
-msgstr "點擊載入影片嵌入"
+msgstr "點擊載入的影片嵌入"
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "用本地縮圖取代 YouTube 嵌入影片，然後只在點擊後才載入影片播放器。"
+msgstr "以本機縮圖取代 YouTube 嵌入，並且只在點擊後載入影片播放器。"
 
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "本網站使用 Privacy Lite Video Embeds for YouTube，透過本地佔位顯示 YouTube 影片。在訪客點擊影片佔位符之前，訪客瀏覽器不會載入 YouTube 播放器或遠端 YouTube 縮圖。若訪客選擇播放影片，YouTube 播放器會從隱私強化的 youtube-nocookie.com 網域載入，YouTube 或 Google 可能會依據自身條款與隱私政策處理資料。"
+msgstr "本站使用 Privacy Lite Video Embeds for YouTube，透過本機預留位置顯示 YouTube 影片。在訪客點擊影片預留位置之前，訪客的瀏覽器不會載入 YouTube 播放器或遠端 YouTube 縮圖。如果訪客選擇播放影片，YouTube 播放器會從加強隱私的 youtube-nocookie.com 網域載入，YouTube/Google 可能會依照其自身條款與隱私權政策處理資料。"
 
 msgid "Replacement scope"
 msgstr "替換範圍"
 
 msgid "Consent text"
-msgstr "同意書文本"
+msgstr "同意文字"
 
 msgid "Consent message"
 msgstr "同意訊息"
@@ -41,76 +41,76 @@ msgid "Autoplay after click"
 msgstr "點擊後自動播放"
 
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "YouTube 的 Privacy Lite 影片嵌入"
+msgstr "Privacy Lite Video Embeds for YouTube"
 
 msgid "Privacy Lite Video"
-msgstr "隱私輕量版影片"
+msgstr "Privacy Lite Video"
 
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "快速的 YouTube 嵌入影片。直到點擊前什麼都載入不了。"
+msgstr "快速 YouTube 嵌入。點擊前不會載入任何內容。"
 
 msgid "Privacy behavior"
 msgstr "隱私行為"
 
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "點擊前，前端只會載入本地 HTML、CSS、JavaScript 以及本地快取的縮圖。YouTube 只有在訪客點擊佔位符後才會從 youtube-nocookie.com 載入。"
+msgstr "點擊前，前端只會載入本機 HTML、CSS、JavaScript 和本機快取的縮圖。只有在訪客點擊預留位置後，YouTube 才會從 youtube-nocookie.com 載入。"
 
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "為了驗證這點，打開瀏覽器的網路面板，重新載入帶有 YouTube 嵌入的頁面：點擊前不應有 youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、google.com 或 gstatic.com 的請求。"
+msgstr "若要驗證這一點，請開啟瀏覽器的 Network 面板，並重新載入含有 YouTube 嵌入的頁面：點擊前不應有傳送至 youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、google.com 或 gstatic.com 的請求。"
 
 msgid "Thumbnail tools"
 msgstr "縮圖工具"
 
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "這些工具用於現有內容、故障排除，或是修改許多 YouTube 嵌入影片後。"
+msgstr "這些工具可用於現有內容、疑難排解，或在變更多個 YouTube 嵌入後使用。"
 
 msgid "Scan content and generate missing thumbnails"
 msgstr "掃描內容並產生缺少的縮圖"
 
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "每次遊玩最多掃描%d篇公開文章/頁面，並下載缺少本地縮圖的文章。"
+msgstr "每次執行最多掃描 %d 篇已發佈的公開文章/頁面，並下載缺少的本機縮圖。"
 
 msgid "Clear local thumbnail cache"
-msgstr "清除本地縮圖快取"
+msgstr "清除本機縮圖快取"
 
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "刪除所有本地快取的 YouTube 縮圖？"
+msgstr "刪除所有本機快取的 YouTube 縮圖？"
 
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "刪除本地快取的縮圖檔案，並清除失敗下載的重試標記。縮圖在掃描、儲存或瀏覽內容時會重新生成。"
+msgstr "刪除本機快取的縮圖檔案，並清除下載失敗的重試標記。內容被掃描、儲存或檢視時，縮圖將重新產生。"
 
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr "只有 Gutenberg YouTube 能嵌入區塊"
+msgstr "僅 Gutenberg YouTube 嵌入區塊"
 
 msgid "All YouTube videos found in content"
-msgstr "所有 YouTube 影片皆收錄於內容中"
+msgstr "內容中找到的所有 YouTube 影片"
 
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "使用「全部」來替換經典的 oEmbed 和手動貼上的 YouTube iframe。"
+msgstr "使用「全部」也會替換傳統 oEmbed 和手動貼上的 YouTube iframe。"
 
 msgid "Show a short privacy message inside the placeholder."
-msgstr "在佔位符內顯示一段簡短的隱私訊息。"
+msgstr "在預留位置內顯示一則簡短的隱私訊息。"
 
 msgid "Displayed only if the consent text option is enabled."
 msgstr "僅在啟用同意文字選項時顯示。"
 
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "使用者點擊佔位符後立即開始播放。"
+msgstr "使用者點擊預留位置後立即開始播放。"
 
 msgid "You do not have permission to run this tool."
-msgstr "你沒有權限執行這個工具。"
+msgstr "你沒有執行此工具的權限。"
 
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "掃描完成。掃描的貼文：%1$d。找到影片：%2$d。現有縮圖：%3$d。產生：%4$d。失敗或無法使用：%5$d。"
+msgstr "掃描完成。已掃描文章：%1$d。找到影片：%2$d。現有縮圖：%3$d。已產生：%4$d。失敗或不可用：%5$d。"
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "本地縮圖快取已清除。刪除檔案：%d。"
+msgstr "本機縮圖快取已清除。已刪除檔案：%d。"
 
 msgid "Support development"
 msgstr "支持開發"
 
 msgid "Buy me a coffee on Ko-fi"
-msgstr "請我喝杯咖啡，在Ko-fi上"
+msgstr "在 Ko-fi 上請我喝杯咖啡"
 
 msgid "Play video: %s"
 msgstr "播放影片：%s"
@@ -119,7 +119,7 @@ msgid "Play YouTube video"
 msgstr "播放 YouTube 影片"
 
 msgid "The video is loaded from YouTube only after your click."
-msgstr "影片只有在你點擊後才會從 YouTube 載入。"
+msgstr "影片只會在你點擊後才從 YouTube 載入。"
 
 msgid "Play button color"
 msgstr "播放按鈕顏色"

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:04+0200\n"
+"PO-Revision-Date: 2026-05-29 13:10+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20,109 +20,109 @@ msgid "Settings"
 msgstr "設定"
 
 msgid "Click-to-load video embeds"
-msgstr "クリックで読み込みするビデオ埋め込み"
+msgstr "クリックして読み込む動画埋め込み"
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "YouTubeの埋め込み映像をローカルサムネイルに置き換え、クリック後にのみ動画プレーヤーを読み込みます。"
+msgstr "YouTube 埋め込みをローカルのサムネイルに置き換え、クリック後にのみ動画プレーヤーを読み込みます。"
 
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "このサイトは、Privacy Lite Video Embeds for YouTubeを使い、ローカルのプレースホルダーでYouTube動画を表示します。訪問者が動画のプレースホルダーをクリックする前に、訪問者ブラウザはYouTubeプレーヤーやリモートのYouTubeサムネイルを読み込みません。訪問者が動画を再生を選択すると、YouTubeプレーヤーはプライバシー強化されたドメインから読み込み youtube-nocookie.com、YouTubeやGoogleはそれぞれの利用規約やプライバシーポリシーに従ってデータを処理することがあります。"
+msgstr "このサイトでは Privacy Lite Video Embeds for YouTube を使用し、ローカルのプレースホルダーで YouTube 動画を表示します。訪問者が動画のプレースホルダーをクリックする前は、訪問者のブラウザーは YouTube プレーヤーやリモートの YouTube サムネイルを読み込みません。訪問者が動画の再生を選択すると、YouTube プレーヤーはプライバシー強化ドメイン youtube-nocookie.com から読み込まれ、YouTube/Google は自社の利用規約およびプライバシーポリシーに従ってデータを処理する場合があります。"
 
 msgid "Replacement scope"
-msgstr "代替スコープ"
+msgstr "置換範囲"
 
 msgid "Consent text"
-msgstr "同意文"
+msgstr "同意テキスト"
 
 msgid "Consent message"
 msgstr "同意メッセージ"
 
 msgid "Autoplay after click"
-msgstr "クリック後の自動再生"
+msgstr "クリック後に自動再生"
 
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "YouTube用のPrivacy Liteビデオ埋め込み"
+msgstr "Privacy Lite Video Embeds for YouTube"
 
 msgid "Privacy Lite Video"
-msgstr "プライバシーライトビデオ"
+msgstr "Privacy Lite Video"
 
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "YouTubeの埋め込みが速いです。クリックするまで何も読み込まれません。"
+msgstr "高速な YouTube 埋め込み。クリックするまで何も読み込みません。"
 
 msgid "Privacy behavior"
-msgstr "プライバシーの行動"
+msgstr "プライバシー動作"
 
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "クリック前には、フロントエンドはローカルのHTML、CSS、JavaScript、そしてローカルキャッシュされたサムネイルのみを読み込みます。YouTubeは訪問者がプレースホルダーをクリックした後 youtube-nocookie.com から読み込みます。"
+msgstr "クリック前は、フロントエンドはローカルの HTML、CSS、JavaScript とローカルにキャッシュされたサムネイルのみを読み込みます。訪問者がプレースホルダーをクリックした後にのみ、YouTube が youtube-nocookie.com から読み込まれます。"
 
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "これを確認するために、ブラウザのネットワークパネルを開き、YouTube埋め込みのあるページを再読み込みしてください。クリック前に youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、google.com、gstatic.com のリクエストは一切ありません。"
+msgstr "これを確認するには、ブラウザーの Network パネルを開き、YouTube 埋め込みがあるページを再読み込みします。クリック前には youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、google.com、gstatic.com へのリクエストがないはずです。"
 
 msgid "Thumbnail tools"
 msgstr "サムネイルツール"
 
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "既存のコンテンツやトラブルシューティング、または多くのYouTube埋め込み映像を変更した後にこれらのツールを活用しましょう。"
+msgstr "既存のコンテンツ、トラブルシューティング、多数の YouTube 埋め込みを変更した後にこれらのツールを使用します。"
 
 msgid "Scan content and generate missing thumbnails"
-msgstr "コンテンツをスキャンし、サムネイルが欠けている部分を生成します"
+msgstr "コンテンツをスキャンして不足しているサムネイルを生成"
 
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "1回のプレイで公開された公開投稿やページを最大%dスキャンし、ローカルサムネイルが欠けているものをダウンロードします。"
+msgstr "1回の実行で公開済みの公開投稿/ページを最大 %d 件スキャンし、不足しているローカルサムネイルをダウンロードします。"
 
 msgid "Clear local thumbnail cache"
 msgstr "ローカルサムネイルキャッシュをクリア"
 
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "ローカルにキャッシュされているYouTubeのサムネイルをすべて削除する?"
+msgstr "ローカルにキャッシュされたすべての YouTube サムネイルを削除しますか?"
 
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "ローカルにキャッシュされたサムネイルファイルを削除し、失敗したダウンロードの再試行マーカーを消去します。サムネイルは、スキャン、保存、閲覧時に再生成されます。"
+msgstr "ローカルにキャッシュされたサムネイルファイルを削除し、ダウンロード失敗時の再試行マーカーをクリアします。サムネイルはコンテンツがスキャン、保存、表示されたときに再生成されます。"
 
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr "GutenbergのYouTubeだけがブロックを埋め込んでいます"
+msgstr "Gutenberg の YouTube 埋め込みブロックのみ"
 
 msgid "All YouTube videos found in content"
-msgstr "コンテンツに含まれるすべてのYouTube動画"
+msgstr "コンテンツ内で見つかったすべての YouTube 動画"
 
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "「All」を使って、クラシックなoEmbedや手動で貼り付けたYouTubeのiframeも置き換えてください。"
+msgstr "クラシック oEmbed と手動で貼り付けた YouTube iframe も置換するには「すべて」を使用します。"
 
 msgid "Show a short privacy message inside the placeholder."
-msgstr "プレースホルダー内に短いプライバシーメッセージを表示してください。"
+msgstr "プレースホルダー内に短いプライバシーメッセージを表示します。"
 
 msgid "Displayed only if the consent text option is enabled."
-msgstr "同意テキストオプションが有効の場合のみ表示されます。"
+msgstr "同意テキストオプションが有効な場合にのみ表示されます。"
 
 msgid "Start playback immediately after the user clicks the placeholder."
 msgstr "ユーザーがプレースホルダーをクリックした直後に再生を開始します。"
 
 msgid "You do not have permission to run this tool."
-msgstr "このツールを実行する権限はありません。"
+msgstr "このツールを実行する権限がありません。"
 
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "スキャン完了。スキャンされた投稿:%1$d. 動画が見つかった:%2$d。既存のサムネイル:%3$d。生成済み:%4$d。失敗または利用不可:%5$d。"
+msgstr "スキャン完了。スキャンした投稿: %1$d。見つかった動画: %2$d。既存のサムネイル: %3$d。生成済み: %4$d。失敗または利用不可: %5$d。"
 
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "ローカルサムネイルキャッシュがクリアされました。削除されたファイル:%d。"
+msgstr "ローカルサムネイルキャッシュをクリアしました。削除されたファイル: %d。"
 
 msgid "Support development"
-msgstr "サポート開発"
+msgstr "開発を支援"
 
 msgid "Buy me a coffee on Ko-fi"
-msgstr "Ko-fiでコーヒーをおごって"
+msgstr "Ko-fi でコーヒーをおごる"
 
 msgid "Play video: %s"
-msgstr "動画再生:%s"
+msgstr "動画を再生: %s"
 
 msgid "Play YouTube video"
-msgstr "YouTube動画を再生"
+msgstr "YouTube 動画を再生"
 
 msgid "The video is loaded from YouTube only after your click."
-msgstr "動画はクリック後にのみYouTubeから読み込みます。"
+msgstr "動画はクリック後にのみ YouTube から読み込まれます。"
 
 msgid "Play button color"
 msgstr "再生ボタンの色"
 
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr "動画が読み込まれる前に表示されるオーバーレイ再生ボタンの色を選びます。"
+msgstr "動画が読み込まれる前に表示されるオーバーレイ再生ボタンの色を選択します。"
