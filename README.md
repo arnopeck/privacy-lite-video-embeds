@@ -46,7 +46,7 @@ The YouTube player is created only after user interaction and uses `https://www.
 - Admin tool to clear the local thumbnail cache.
 - Privacy verification notes in the settings page.
 - WordPress privacy policy helper text.
-- Translation source files in `/languages/`.
+- Translation template in `/languages/`.
 - WordPress.org-compatible `readme.txt`.
 - GPL license file.
 - Uninstall cleanup for options, failed-download transients and local thumbnail files.
@@ -169,14 +169,13 @@ assets/
   privacy-lite-video-embeds.js
 languages/
   privacy-lite-video-embeds.pot
-  privacy-lite-video-embeds-it_IT.po
 ```
 
 ## Translations
 
-A `.pot` template and translation source files are included in `/languages/`.
+A `.pot` template is included in `/languages/`.
 
-To use local translations before wordpress.org language packs are available, compile the relevant `.po` file into a `.mo` file with Poedit or a similar gettext tool and place it in the `languages/` directory.
+Before shipping local translations, generate fresh `.po` files from the current `.pot` file and compile them into `.mo` files with Poedit or a similar gettext tool.
 
 ## License
 
