@@ -17,79 +17,112 @@ msgstr ""
 "X-Domain: privacy-lite-video-embeds\n"
 
 msgid "Settings"
-msgstr "Réglages"
+msgstr ""
 
 msgid "YouTube privacy replacement"
-msgstr "Remplacement YouTube axé sur la confidentialité"
+msgstr ""
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "Remplace les intégrations YouTube par des miniatures locales et charge le lecteur vidéo uniquement après le clic."
+msgstr ""
+
+msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
+msgstr ""
 
 msgid "Replacement scope"
-msgstr "Portée du remplacement"
+msgstr ""
 
 msgid "Consent text"
-msgstr "Texte de consentement"
+msgstr ""
 
 msgid "Consent message"
-msgstr "Message de consentement"
+msgstr ""
 
 msgid "Autoplay after click"
-msgstr "Lecture automatique après le clic"
+msgstr ""
 
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "Privacy Lite Video Embeds for YouTube"
+msgstr ""
 
 msgid "Privacy Lite Video"
-msgstr "Privacy Lite Video"
+msgstr ""
 
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "Intégrations YouTube rapides. Rien ne se charge avant le clic."
+msgstr ""
 
 msgid "Privacy behavior"
-msgstr "Comportement de confidentialité"
+msgstr ""
+
+msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
+msgstr ""
+
+msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
+msgstr ""
 
 msgid "Thumbnail tools"
-msgstr "Outils de miniatures"
+msgstr ""
+
+msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
+msgstr ""
 
 msgid "Scan content and generate missing thumbnails"
-msgstr "Analyser le contenu et générer les miniatures manquantes"
+msgstr ""
+
+msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
+msgstr ""
 
 msgid "Clear local thumbnail cache"
-msgstr "Vider le cache local des miniatures"
+msgstr ""
 
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "Supprimer toutes les miniatures YouTube mises en cache localement ?"
+msgstr ""
+
+msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
+msgstr ""
 
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr "Uniquement les blocs d’intégration YouTube Gutenberg"
+msgstr ""
 
 msgid "All YouTube videos found in content"
-msgstr "Toutes les vidéos YouTube trouvées dans le contenu"
+msgstr ""
+
+msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
+msgstr ""
 
 msgid "Show a short privacy message inside the placeholder."
-msgstr "Afficher un court message de confidentialité dans l’emplacement réservé."
+msgstr ""
 
 msgid "Displayed only if the consent text option is enabled."
-msgstr "Affiché uniquement si l’option de texte de consentement est activée."
+msgstr ""
+
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr ""
 
 msgid "You do not have permission to run this tool."
-msgstr "Vous n’avez pas l’autorisation d’exécuter cet outil."
+msgstr ""
+
+msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr ""
 
 msgid "Support development"
-msgstr "Soutenir le développement"
+msgstr ""
 
 msgid "Buy me a coffee on Ko-fi"
-msgstr "Offrez-moi un café sur Ko-fi"
+msgstr ""
 
 msgid "Play video: %s"
-msgstr "Lire la vidéo : %s"
+msgstr ""
 
 msgid "Play YouTube video"
-msgstr "Lire la vidéo YouTube"
+msgstr ""
 
 msgid "The video is loaded from YouTube only after your click."
-msgstr "La vidéo est chargée depuis YouTube uniquement après votre clic."
+msgstr ""
 
 msgid "Play button color"
-msgstr "Couleur du bouton de lecture"
+msgstr ""
+
+msgid "Choose the overlay play button color shown before the video is loaded."
+msgstr ""
