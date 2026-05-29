@@ -113,7 +113,7 @@ final class Privacy_Lite_Video_Embeds {
 
         add_settings_section(
             'plye_main_section',
-            __('Video privacy replacement', 'privacy-lite-video-embeds'),
+            __('Click-to-load video embeds', 'privacy-lite-video-embeds'),
             function (): void {
                 echo '<p>' . esc_html__('Replace video embeds from YouTube with local thumbnails and load the video player only after click.', 'privacy-lite-video-embeds') . '</p>';
             },

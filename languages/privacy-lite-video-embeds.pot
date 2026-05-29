@@ -18,7 +18,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-msgid "YouTube privacy replacement"
+msgid "Click-to-load video embeds"
 msgstr ""
 
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."

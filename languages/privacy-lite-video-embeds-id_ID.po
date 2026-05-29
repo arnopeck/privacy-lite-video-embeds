@@ -6,87 +6,123 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 12:00+0200\n"
+"PO-Revision-Date: 2026-05-29 13:04+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: ChatGPT\n"
+"X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
 msgid "Settings"
-msgstr ""
-msgid "YouTube privacy replacement"
-msgstr ""
+msgstr "Pengaturan"
+
+msgid "Click-to-load video embeds"
+msgstr "Penyematan video klik untuk memuat"
+
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr ""
+msgstr "Ganti penyematan YouTube dengan thumbnail lokal dan muat pemutar video hanya setelah klik."
+
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr ""
+msgstr "Situs ini menggunakan Privacy Lite Video Embeds untuk YouTube untuk menampilkan video YouTube dengan placeholder lokal. Sebelum pengunjung mengklik placeholder video, browser pengunjung tidak memuat pemutar YouTube atau thumbnail YouTube jarak jauh. Jika pengunjung memilih untuk memutar video, pemutar YouTube akan dimuat dari domain youtube-nocookie.com yang ditingkatkan privasi dan YouTube/Google dapat memproses data sesuai dengan persyaratan dan kebijakan privasi mereka sendiri."
+
 msgid "Replacement scope"
-msgstr ""
+msgstr "Ruang lingkup penggantian"
+
 msgid "Consent text"
-msgstr ""
+msgstr "Teks persetujuan"
+
 msgid "Consent message"
-msgstr ""
+msgstr "Pesan izin"
+
 msgid "Autoplay after click"
-msgstr ""
+msgstr "Putar otomatis setelah klik"
+
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr ""
+msgstr "Penyematan Video Privacy Lite untuk YouTube"
+
 msgid "Privacy Lite Video"
-msgstr ""
+msgstr "Privacy Lite Video"
+
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr ""
+msgstr "Penyematan YouTube yang cepat. Tidak ada yang dimuat sampai klik."
+
 msgid "Privacy behavior"
-msgstr ""
+msgstr "Perilaku privasi"
+
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr ""
+msgstr "Sebelum mengklik, frontend hanya memuat HTML lokal, CSS, JavaScript, dan thumbnail yang di-cache secara lokal. YouTube dimuat dari youtube-nocookie.com hanya setelah pengunjung mengklik placeholder."
+
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr ""
+msgstr "Untuk memverifikasi ini, buka panel jaringan browser Anda dan muat ulang halaman dengan sematan YouTube: sebelum klik seharusnya tidak ada permintaan untuk youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com, atau gstatic.com."
+
 msgid "Thumbnail tools"
-msgstr ""
+msgstr "Alat thumbnail"
+
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr ""
+msgstr "Gunakan alat ini untuk konten yang ada, pemecahan masalah, atau setelah mengubah banyak penyematan YouTube."
+
 msgid "Scan content and generate missing thumbnails"
-msgstr ""
+msgstr "Memindai konten dan membuat thumbnail yang hilang"
+
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr ""
+msgstr "Memindai hingga %d postingan/halaman publik yang diterbitkan per eksekusi dan mengunduh thumbnail lokal yang hilang."
+
 msgid "Clear local thumbnail cache"
-msgstr ""
+msgstr "Hapus cache thumbnail lokal"
+
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr ""
+msgstr "Menghapus semua thumbnail YouTube yang di-cache secara lokal?"
+
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr ""
+msgstr "Menghapus file thumbnail yang di-cache secara lokal dan menghapus penanda coba ulang yang gagal diunduh. Thumbnail akan dibuat ulang saat konten dipindai, disimpan, atau dilihat."
+
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr ""
+msgstr "Hanya blok sematan YouTube Gutenberg"
+
 msgid "All YouTube videos found in content"
-msgstr ""
+msgstr "Semua video YouTube ditemukan dalam konten"
+
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr ""
+msgstr "Gunakan \"Semua\" untuk juga mengganti oEmbeds klasik dan iframe YouTube yang ditempelkan secara manual."
+
 msgid "Show a short privacy message inside the placeholder."
-msgstr ""
+msgstr "Tampilkan pesan privasi singkat di dalam placeholder."
+
 msgid "Displayed only if the consent text option is enabled."
-msgstr ""
+msgstr "Ditampilkan hanya jika opsi teks izin diaktifkan."
+
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr ""
+msgstr "Mulai pemutaran segera setelah pengguna mengklik placeholder."
+
 msgid "You do not have permission to run this tool."
-msgstr ""
+msgstr "Anda tidak memiliki izin untuk menjalankan alat ini."
+
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr ""
+msgstr "Pemindaian selesai. Postingan dipindai: %1$d. Video ditemukan: %2$d. Thumbnail yang ada: %3$d. Dihasilkan: %4$d. Gagal atau tidak tersedia: %5$d."
+
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr ""
+msgstr "Cache thumbnail lokal dihapus. File yang dihapus: %d."
+
 msgid "Support development"
-msgstr ""
+msgstr "Mendukung pengembangan"
+
 msgid "Buy me a coffee on Ko-fi"
-msgstr ""
+msgstr "Belikan saya kopi di Ko-fi"
+
 msgid "Play video: %s"
-msgstr ""
+msgstr "Putar video: %s"
+
 msgid "Play YouTube video"
-msgstr ""
+msgstr "Putar video YouTube"
+
 msgid "The video is loaded from YouTube only after your click."
-msgstr ""
+msgstr "Video dimuat dari YouTube hanya setelah Anda mengklik."
+
 msgid "Play button color"
-msgstr ""
+msgstr "Warna tombol putar"
+
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr ""
+msgstr "Pilih warna tombol putar overlay yang ditampilkan sebelum video dimuat."

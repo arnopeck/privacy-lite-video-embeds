@@ -6,87 +6,123 @@ msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
 "POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 12:00+0200\n"
+"PO-Revision-Date: 2026-05-29 13:03+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Bengali\n"
 "Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: ChatGPT\n"
+"X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
 msgid "Settings"
-msgstr ""
-msgid "YouTube privacy replacement"
-msgstr ""
+msgstr "বিন্যাস সমূহ"
+
+msgid "Click-to-load video embeds"
+msgstr "ক্লিক-টু-লোড ভিডিও এম্বেড"
+
 msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr ""
+msgstr "স্থানীয় থাম্বনেইল দিয়ে ইউটিউব এম্বেডগুলি প্রতিস্থাপন করুন এবং ক্লিক করার পরে কেবল ভিডিও প্লেয়ারটি লোড করুন।"
+
 msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr ""
+msgstr "এই সাইটটি স্থানীয় প্লেসহোল্ডারের সাথে ইউটিউব ভিডিওগুলি প্রদর্শন করতে YouTube এর জন্য গোপনীয়তা লাইট ভিডিও এম্বেড ব্যবহার করে। কোনও ভিজিটর কোনও ভিডিও প্লেসহোল্ডারে ক্লিক করার আগে, ভিজিটর ব্রাউজারটি ইউটিউব প্লেয়ার বা দূরবর্তী ইউটিউব থাম্বনেইলগুলি লোড করে না। যদি ভিজিটর কোনও ভিডিও প্লে করতে পছন্দ করে, ইউটিউব প্লেয়ারটি গোপনীয়তা-বর্ধিত youtube-nocookie.com ডোমেন থেকে লোড করা হয় এবং ইউটিউব / গুগল তাদের নিজস্ব শর্তাবলী এবং গোপনীয়তা নীতি অনুসারে ডেটা প্রক্রিয়া করতে পারে।"
+
 msgid "Replacement scope"
-msgstr ""
+msgstr "প্রতিস্থাপনের সুযোগ"
+
 msgid "Consent text"
-msgstr ""
+msgstr "সম্মতি পাঠ্য"
+
 msgid "Consent message"
-msgstr ""
+msgstr "সম্মতি বার্তা"
+
 msgid "Autoplay after click"
-msgstr ""
+msgstr "ক্লিক করার পরে অটোপ্লে করুন"
+
 msgid "Privacy Lite Video Embeds for YouTube"
-msgstr ""
+msgstr "ইউটিউবের জন্য গোপনীয়তা লাইট ভিডিও এম্বেড করা হয়েছে"
+
 msgid "Privacy Lite Video"
-msgstr ""
+msgstr "গোপনীয়তা লাইট ভিডিও"
+
 msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr ""
+msgstr "দ্রুত ইউটিউব এম্বেড। ক্লিক না করা পর্যন্ত কিছুই লোড হয় না।"
+
 msgid "Privacy behavior"
-msgstr ""
+msgstr "গোপনীয়তা আচরণ"
+
 msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr ""
+msgstr "ক্লিক করার আগে, ফ্রন্টএন্ডটি কেবল স্থানীয় এইচটিএমএল, সিএসএস, জাভাস্ক্রিপ্ট এবং স্থানীয়ভাবে ক্যাশেড থাম্বনেইলগুলি লোড করে। ভিজিটর প্লেসহোল্ডারে ক্লিক করার পরেই ইউটিউব youtube-nocookie.com থেকে লোড করা হয়।"
+
 msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr ""
+msgstr "এটি যাচাই করতে, আপনার ব্রাউজার নেটওয়ার্ক প্যানেল খুলুন এবং একটি ইউটিউব এম্বেড সহ একটি পৃষ্ঠা পুনরায় লোড করুন: ক্লিকের আগে youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com বা gstatic.com করার জন্য কোনও অনুরোধ থাকা উচিত নয়।"
+
 msgid "Thumbnail tools"
-msgstr ""
+msgstr "থাম্বনেইল সরঞ্জাম"
+
 msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr ""
+msgstr "বিদ্যমান সামগ্রী, সমস্যা সমাধানের জন্য বা অনেকগুলি ইউটিউব এম্বেড পরিবর্তন করার পরে এই সরঞ্জামগুলি ব্যবহার করুন।"
+
 msgid "Scan content and generate missing thumbnails"
-msgstr ""
+msgstr "সামগ্রী স্ক্যান করুন এবং অনুপস্থিত থাম্বনেইলগুলি তৈরি করুন"
+
 msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr ""
+msgstr "প্রতি রানে %d প্রকাশিত সর্বজনীন পোস্ট/পৃষ্ঠাগুলি স্ক্যান করে এবং অনুপস্থিত স্থানীয় থাম্বনেইলগুলি ডাউনলোড করে।"
+
 msgid "Clear local thumbnail cache"
-msgstr ""
+msgstr "স্থানীয় থাম্বনেইল ক্যাশে পরিষ্কার করুন"
+
 msgid "Delete all locally cached YouTube thumbnails?"
-msgstr ""
+msgstr "স্থানীয়ভাবে ক্যাশে করা সমস্ত YouTube থাম্বনেইল মুছবেন?"
+
 msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr ""
+msgstr "স্থানীয়ভাবে ক্যাশে করা থাম্বনেইল ফাইলগুলি মুছে দেয় এবং ব্যর্থ-ডাউনলোড পুনরায় চেষ্টা চিহ্নিতকারীগুলি পরিষ্কার করে। সামগ্রী স্ক্যান করা, সংরক্ষণ করা বা দেখার সময় থাম্বনেইলগুলি পুনরুত্পাদন করা হবে।"
+
 msgid "Only Gutenberg YouTube embed blocks"
-msgstr ""
+msgstr "শুধুমাত্র গুটেনবার্গ ইউটিউব এম্বেড ব্লক"
+
 msgid "All YouTube videos found in content"
-msgstr ""
+msgstr "সামগ্রীতে সমস্ত YouTube ভিডিও পাওয়া গেছে"
+
 msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr ""
+msgstr "ক্লাসিক ওএম্বেড এবং ম্যানুয়ালি পেস্ট করা ইউটিউব আইফ্রেমগুলি প্রতিস্থাপন করতে \"সমস্ত\" ব্যবহার করুন।"
+
 msgid "Show a short privacy message inside the placeholder."
-msgstr ""
+msgstr "প্লেসহোল্ডারের ভিতরে একটি সংক্ষিপ্ত গোপনীয়তা বার্তা দেখান।"
+
 msgid "Displayed only if the consent text option is enabled."
-msgstr ""
+msgstr "সম্মতি পাঠ্য বিকল্পটি সক্ষম থাকলেই কেবল প্রদর্শিত হয়।"
+
 msgid "Start playback immediately after the user clicks the placeholder."
-msgstr ""
+msgstr "ব্যবহারকারী প্লেসহোল্ডারে ক্লিক করার সাথে সাথেই প্লেব্যাক শুরু করুন।"
+
 msgid "You do not have permission to run this tool."
-msgstr ""
+msgstr "আপনার এই সরঞ্জামটি চালানোর অনুমতি নেই।"
+
 msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr ""
+msgstr "স্ক্যান সম্পূর্ণ। পোস্টগুলি স্ক্যান করা হয়েছে: %1$d. ভিডিওগুলি পাওয়া গেছে: %2$d. বিদ্যমান থাম্বনেইলগুলি: %3$d. উত্পন্ন হয়েছে: %4$d. ব্যর্থ বা অসুলভ: %5$d।"
+
 msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr ""
+msgstr "স্থানীয় থাম্বনেইল ক্যাশে পরিষ্কার করা হয়েছে। মুছে ফেলা ফাইল: %d।"
+
 msgid "Support development"
-msgstr ""
+msgstr "উন্নয়নে সহায়তা করুন"
+
 msgid "Buy me a coffee on Ko-fi"
-msgstr ""
+msgstr "আমাকে কো-ফাইতে একটি কফি কিনে দিন"
+
 msgid "Play video: %s"
-msgstr ""
+msgstr "ভিডিও প্লে করুন: %s"
+
 msgid "Play YouTube video"
-msgstr ""
+msgstr "ইউটিউব ভিডিও প্লে করুন"
+
 msgid "The video is loaded from YouTube only after your click."
-msgstr ""
+msgstr "আপনার ক্লিকের পরেই ভিডিওটি ইউটিউব থেকে লোড করা হয়।"
+
 msgid "Play button color"
-msgstr ""
+msgstr "প্লে বোতামের রঙ"
+
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr ""
+msgstr "ভিডিওটি লোড হওয়ার আগে প্রদর্শিত ওভারলে প্লে বোতামের রঙটি চয়ন করুন।"
