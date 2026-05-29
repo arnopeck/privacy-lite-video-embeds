@@ -4,11 +4,11 @@ This document defines the visual direction for the WordPress.org plugin assets.
 
 ## Main positioning
 
-**Fast YouTube embeds. Nothing loads until click.**
+**Click-to-load video embeds. Nothing loads until click.**
 
 The visual identity should focus on speed, lightness and avoiding unnecessary script loading before user interaction.
 
-Privacy is part of the product, but the main visual message should be performance-first: pages stay light, YouTube is loaded only on demand.
+Privacy is part of the product, but the main visual message should be performance-first: pages stay light, embedded videos are loaded only on demand.
 
 ## Assets to create
 
@@ -30,15 +30,15 @@ assets/banner-772x250.png
 Main copy:
 
 ```text
-Privacy Lite Video Embeds for YouTube
-Fast YouTube embeds. Nothing loads until click.
+Privacy Lite Video Embeds
+Click-to-load video embeds. Nothing loads until click.
 ```
 
 Visual concept:
 
 - clean website/page background;
 - central lightweight video placeholder;
-- clear play button;
+- clear generic play button;
 - small abstract “script blocks” or loading elements paused/disabled before click;
 - visual sense of speed/lightness, such as subtle motion lines or a feather-like lightweight cue;
 - no official YouTube logo;
@@ -85,8 +85,8 @@ Icon concept:
 
 ## Preferred text hierarchy for banner
 
-1. Plugin name: `Privacy Lite Video Embeds for YouTube`
-2. Main promise: `Fast YouTube embeds. Nothing loads until click.`
+1. Plugin name: `Privacy Lite Video Embeds`
+2. Main promise: `Click-to-load video embeds. Nothing loads until click.`
 3. Optional support line: `Local thumbnails · No unnecessary scripts · Load on click`
 
 ## Notes
