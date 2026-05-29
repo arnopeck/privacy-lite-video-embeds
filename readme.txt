@@ -17,6 +17,8 @@ Privacy Lite Video Embeds for YouTube replaces YouTube embeds with lightweight l
 
 Fast video embeds for YouTube. Nothing loads until click.
 
+Trademark note: this is a third-party plugin and is not affiliated with YouTube or Google.
+
 Before the visitor clicks, the frontend loads only local resources from the site:
 
 * local HTML markup;
@@ -74,6 +76,10 @@ Yes, the server may contact `img.youtube.com` to download and cache thumbnails l
 = Does this guarantee GDPR compliance? =
 
 No plugin can guarantee legal compliance on its own. This plugin avoids loading YouTube resources in the visitor browser before interaction, but site owners should still review their privacy notice, cookie/consent setup, and legal obligations.
+
+= Is this an official YouTube or Google plugin? =
+
+No. This is a third-party plugin and is not affiliated with YouTube or Google.
 
 = Which YouTube embed domain is used after click? =
 
