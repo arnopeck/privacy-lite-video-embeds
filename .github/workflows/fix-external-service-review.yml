@@ -1,0 +1,73 @@
+name: Temporary external service review fix
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-external-service-review.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Apply review fixes
+        shell: python
+        run: |
+          from pathlib import Path
+
+          php = Path('privacy-lite-video-embeds.php')
+          php_text = php.read_text(encoding='utf-8')
+          php_text = php_text.replace(
+              "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com.",
+              "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no third-party video player requests initiated by this plugin."
+          )
+          php.write_text(php_text, encoding='utf-8')
+
+          readme = Path('readme.txt')
+          readme_text = readme.read_text(encoding='utf-8')
+          readme_text = readme_text.replace(
+              "Trademark note: this is a third-party plugin and is not affiliated with, endorsed by, or sponsored by with YouTube or Google.",
+              "Trademark note: this is a third-party plugin and is not affiliated with, endorsed by, or sponsored by YouTube or Google."
+          )
+          external_faq = """= Does this plugin call external services? =\n\nYes, because the plugin works with YouTube embeds.\n\nThe plugin may contact `img.youtube.com` server-side to download and cache video thumbnails locally in the WordPress uploads directory. This happens from the website server, not from the visitor browser.\n\nThe visitor browser loads the YouTube player only after the visitor clicks the local placeholder. After click, the iframe is created using the privacy-enhanced `youtube-nocookie.com` embed domain.\n\nNo account or API key is required.\n\n"""
+          if "= Does this plugin call external services? =" not in readme_text:
+              readme_text = readme_text.replace(
+                  "= Does the visitor browser load YouTube before click? =\n",
+                  external_faq + "= Does the visitor browser load YouTube before click? =\n"
+              )
+          readme_text = readme_text.replace(
+              "3. Before clicking the placeholder, check that there are no requests to `youtube.com`, `youtube-nocookie.com`, `ytimg.com`, `googlevideo.com`, `google.com`, or `gstatic.com`.",
+              "3. Before clicking the placeholder, check that this plugin has not initiated third-party video player requests from the visitor browser."
+          )
+          readme.write_text(readme_text, encoding='utf-8')
+
+          github_readme = Path('README.md')
+          github_text = github_readme.read_text(encoding='utf-8')
+          external_section = """## External services\n\nThis plugin works with YouTube embeds.\n\nThe plugin may contact `img.youtube.com` server-side to download and cache video thumbnails locally. This happens from the website server, not from the visitor browser.\n\nThe visitor browser loads the YouTube player only after the visitor clicks the local placeholder. After click, the iframe is created using `youtube-nocookie.com`.\n\nNo account or API key is required.\n\n"""
+          if "## External services" not in github_text:
+              github_text = github_text.replace("## Privacy behavior\n", external_section + "## Privacy behavior\n")
+          github_text = github_text.replace(
+              "4. Before clicking the placeholder, check that there are no requests to:\n   - `youtube.com`\n   - `youtube-nocookie.com`\n   - `ytimg.com`\n   - `googlevideo.com`\n   - `google.com`\n   - `gstatic.com`",
+              "4. Before clicking the placeholder, check that this plugin has not initiated third-party video player requests from the visitor browser."
+          )
+          github_readme.write_text(github_text, encoding='utf-8')
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add privacy-lite-video-embeds.php readme.txt README.md
+          if git diff --cached --quiet; then
+            echo "No review fixes needed."
+            exit 0
+          fi
+          git commit -m "Clarify external service usage for review"
+          git push
