@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
-"POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:03+0200\n"
+"POT-Creation-Date: 2026-06-09 19:55+0200\n"
+"PO-Revision-Date: 2026-06-09 20:00+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -16,113 +16,212 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
+#: privacy-lite-video-embeds.php:98
 msgid "Settings"
 msgstr "सेटिंग्स"
 
+#: privacy-lite-video-embeds.php:116
 msgid "Click-to-load video embeds"
 msgstr "क्लिक-टू-लोड वीडियो एम्बेड"
 
-msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "YouTube एम्बेड को स्थानीय थंबनेल से बदलें और क्लिक करने के बाद ही वीडियो प्लेयर लोड करें।"
+#: privacy-lite-video-embeds.php:118
+msgid ""
+"Replace video embeds from YouTube with local thumbnails and load the video player only after "
+"click."
+msgstr "YouTube से वीडियो एम्बेड को स्थानीय थंबनेल से बदलें और क्लिक करने के बाद ही वीडियो प्लेयर लोड करें।"
 
-msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "यह साइट स्थानीय प्लेसहोल्डर के साथ YouTube वीडियो प्रदर्शित करने के लिए YouTube के लिए गोपनीयता लाइट वीडियो एम्बेड का उपयोग करती है। इससे पहले कि कोई विज़िटर किसी वीडियो प्लेसहोल्डर पर क्लिक करे, विज़िटर ब्राउज़र YouTube प्लेयर या दूरस्थ YouTube थंबनेल लोड नहीं करता है. यदि विज़िटर वीडियो चलाना चुनता है, तो YouTube प्लेयर को गोपनीयता-उन्नत youtube-nocookie.com डोमेन से लोड किया जाता है और YouTube/Google अपनी शर्तों और गोपनीयता नीति के अनुसार डेटा संसाधित कर सकता है।"
-
+#: privacy-lite-video-embeds.php:123
 msgid "Replacement scope"
 msgstr "प्रतिस्थापन का दायरा"
 
+#: privacy-lite-video-embeds.php:124
 msgid "Consent text"
 msgstr "सहमति पाठ"
 
+#: privacy-lite-video-embeds.php:125
 msgid "Consent message"
 msgstr "सहमति संदेश"
 
+#: privacy-lite-video-embeds.php:126
 msgid "Autoplay after click"
 msgstr "क्लिक के बाद ऑटोप्ले"
 
-msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "YouTube के लिए गोपनीयता लाइट वीडियो एम्बेड"
-
-msgid "Privacy Lite Video"
-msgstr "गोपनीयता लाइट वीडियो"
-
-msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "तेज़ YouTube एम्बेड। क्लिक होने तक कुछ भी लोड नहीं होता है।"
-
-msgid "Privacy behavior"
-msgstr "गोपनीयता व्यवहार"
-
-msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "क्लिक करने से पहले, फ्रंटएंड केवल स्थानीय HTML, CSS, JavaScript और स्थानीय रूप से कैश्ड थंबनेल लोड करता है। YouTube youtube-nocookie.com से तभी लोड होता है जब विज़िटर प्लेसहोल्डर पर क्लिक करता है।"
-
-msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "इसे सत्यापित करने के लिए, अपना ब्राउज़र नेटवर्क पैनल खोलें और YouTube एम्बेड के साथ एक पृष्ठ को फिर से लोड करें: क्लिक करने से पहले youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com या gstatic.com करने का कोई अनुरोध नहीं होना चाहिए।"
-
-msgid "Thumbnail tools"
-msgstr "थंबनेल उपकरण"
-
-msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "इन टूल का इस्तेमाल मौजूदा सामग्री, समस्या हल करने या कई YouTube एम्बेड बदलने के बाद करें."
-
-msgid "Scan content and generate missing thumbnails"
-msgstr "सामग्री को स्कैन करें और लापता थंबनेल उत्पन्न करें"
-
-msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "प्रति रन %d प्रकाशित सार्वजनिक पोस्ट/पेज तक स्कैन करता है और स्थानीय थंबनेल गायब हो जाता है।"
-
-msgid "Clear local thumbnail cache"
-msgstr "स्थानीय थंबनेल कैश साफ़ करें"
-
-msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "स्थानीय रूप से कैश्ड किए गए सभी YouTube थंबनेल हटाएं?"
-
-msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "स्थानीय रूप से कैश्ड थंबनेल फ़ाइलों को हटाता है और विफल-डाउनलोड पुन: प्रयास मार्करों को साफ़ करता है। सामग्री को स्कैन करने, सहेजने या देखने पर थंबनेल पुन: उत्पन्न किए जाएंगे।"
-
-msgid "Only Gutenberg YouTube embed blocks"
-msgstr "केवल गुटेनबर्ग YouTube एम्बेड ब्लॉक"
-
-msgid "All YouTube videos found in content"
-msgstr "सामग्री में पाए जाने वाले सभी YouTube वीडियो"
-
-msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "क्लासिक oEmbed और मैन्युअल रूप से चिपकाए गए YouTube iframes को बदलने के लिए \"सभी\" का उपयोग करें।"
-
-msgid "Show a short privacy message inside the placeholder."
-msgstr "प्लेसहोल्डर के अंदर एक छोटा गोपनीयता संदेश दिखाएँ."
-
-msgid "Displayed only if the consent text option is enabled."
-msgstr "केवल तभी प्रदर्शित होता है जब सहमति पाठ विकल्प सक्षम हो।"
-
-msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "उपयोगकर्ता द्वारा प्लेसहोल्डर पर क्लिक करने के तुरंत बाद प्लेबैक प्रारंभ करें।"
-
-msgid "You do not have permission to run this tool."
-msgstr "आपको इस उपकरण को चलाने की अनुमति नहीं है."
-
-msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "स्कैन पूरा करें। स्कैन किए गए पोस्ट: %1$d. वीडियो मिले: %2$d. मौजूदा थंबनेल: %3$d. जनरेटेड: %4$d. विफल या अनुपलब्ध: %5$d."
-
-msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "स्थानीय थंबनेल कैश साफ़ हो गया। हटाई गई फ़ाइलें: %d."
-
-msgid "Support development"
-msgstr "विकास का समर्थन करें"
-
-msgid "Buy me a coffee on Ko-fi"
-msgstr "मेरे लिए को-फाई पर एक कॉफ़ी खरीदो"
-
-msgid "Play video: %s"
-msgstr "वीडियो चलाएं: %s"
-
-msgid "Play YouTube video"
-msgstr "YouTube वीडियो चलाएं"
-
-msgid "The video is loaded from YouTube only after your click."
-msgstr "आपके क्लिक के बाद ही वीडियो YouTube से लोड किया जाता है।"
-
+#: privacy-lite-video-embeds.php:127
 msgid "Play button color"
 msgstr "बटन का रंग चलाएं"
 
+#: privacy-lite-video-embeds.php:137
+msgid ""
+"This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local "
+"placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load "
+"the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the "
+"YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/"
+"Google may process data according to their own terms and privacy policy."
+msgstr ""
+"यह साइट स्थानीय प्लेसहोल्डर के साथ YouTube वीडियो प्रदर्शित करने के लिए YouTube के लिए गोपनीयता लाइट "
+"वीडियो एम्बेड का उपयोग करती है। इससे पहले कि कोई विज़िटर किसी वीडियो प्लेसहोल्डर पर क्लिक करे, विज़िटर "
+"ब्राउज़र YouTube प्लेयर या दूरस्थ YouTube थंबनेल लोड नहीं करता है. यदि विज़िटर वीडियो चलाना चुनता है, तो "
+"YouTube प्लेयर को गोपनीयता-उन्नत youtube-nocookie.com डोमेन से लोड किया जाता है और YouTube/Google "
+"अपनी शर्तों और गोपनीयता नीति के अनुसार डेटा संसाधित कर सकता है।"
+
+#. Plugin Name of the plugin/theme
+#: privacy-lite-video-embeds.php:147 privacy-lite-video-embeds.php:162
+msgid "Privacy Lite Video Embeds for YouTube"
+msgstr "YouTube के लिए गोपनीयता लाइट वीडियो एम्बेड"
+
+#: privacy-lite-video-embeds.php:148
+msgid "Privacy Lite Video"
+msgstr "गोपनीयता लाइट वीडियो"
+
+#: privacy-lite-video-embeds.php:163
+msgid "Fast video embeds for YouTube. Nothing loads until click."
+msgstr "YouTube के लिए तेज़ वीडियो एम्बेड. क्लिक होने तक कुछ भी लोड नहीं होता है।"
+
+#: privacy-lite-video-embeds.php:169
+msgid "Privacy behavior"
+msgstr "गोपनीयता व्यवहार"
+
+#: privacy-lite-video-embeds.php:170
+msgid ""
+"Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached "
+"thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the "
+"placeholder."
+msgstr ""
+"क्लिक करने से पहले, फ्रंटएंड केवल स्थानीय HTML, CSS, JavaScript और स्थानीय रूप से कैश्ड थंबनेल लोड करता है। "
+"YouTube youtube-nocookie.com से तभी लोड होता है जब विज़िटर प्लेसहोल्डर पर क्लिक करता है।"
+
+#: privacy-lite-video-embeds.php:171
+msgid ""
+"To verify this, open your browser Network panel and reload a page with a YouTube embed: "
+"before the click there should be no third-party video player requests initiated by this "
+"plugin."
+msgstr ""
+"इसे सत्यापित करने के लिए, अपना ब्राउज़र नेटवर्क पैनल खोलें और YouTube एम्बेड के साथ एक पृष्ठ को फिर से लोड "
+"करें: क्लिक से पहले इस प्लगइन द्वारा शुरू किए गए कोई तृतीय-पक्ष वीडियो प्लेयर अनुरोध नहीं होना चाहिए।"
+
+#: privacy-lite-video-embeds.php:188
+msgid "Thumbnail tools"
+msgstr "थंबनेल उपकरण"
+
+#: privacy-lite-video-embeds.php:189
+msgid ""
+"Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
+msgstr "इन टूल का इस्तेमाल मौजूदा सामग्री, समस्या हल करने या कई YouTube एम्बेड बदलने के बाद करें."
+
+#: privacy-lite-video-embeds.php:194
+msgid "Scan content and generate missing thumbnails"
+msgstr "सामग्री को स्कैन करें और लापता थंबनेल उत्पन्न करें"
+
+#. translators: %d: maximum number of published public posts/pages scanned per run.
+#: privacy-lite-video-embeds.php:199
+#, php-format
+msgid ""
+"Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
+msgstr "प्रति रन %d प्रकाशित सार्वजनिक पोस्ट/पेज तक स्कैन करता है और स्थानीय थंबनेल गायब हो जाता है।"
+
+#: privacy-lite-video-embeds.php:211
+msgid "Clear local thumbnail cache"
+msgstr "स्थानीय थंबनेल कैश साफ़ करें"
+
+#: privacy-lite-video-embeds.php:216
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "स्थानीय रूप से कैश्ड किए गए सभी YouTube थंबनेल हटाएं?"
+
+#: privacy-lite-video-embeds.php:220
+msgid ""
+"Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails "
+"will be regenerated when content is scanned, saved, or viewed."
+msgstr ""
+"स्थानीय रूप से कैश्ड थंबनेल फ़ाइलों को हटाता है और विफल-डाउनलोड पुन: प्रयास मार्करों को साफ़ करता है। सामग्री "
+"को स्कैन करने, सहेजने या देखने पर थंबनेल पुन: उत्पन्न किए जाएंगे।"
+
+#: privacy-lite-video-embeds.php:231
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "केवल गुटेनबर्ग YouTube एम्बेड ब्लॉक"
+
+#: privacy-lite-video-embeds.php:232
+msgid "All YouTube videos found in content"
+msgstr "सामग्री में पाए जाने वाले सभी YouTube वीडियो"
+
+#: privacy-lite-video-embeds.php:234
+msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
+msgstr ""
+"क्लासिक oEmbed और मैन्युअल रूप से चिपकाए गए YouTube iframes को बदलने के लिए \"सभी\" का उपयोग करें।"
+
+#: privacy-lite-video-embeds.php:243
+msgid "Show a short privacy message inside the placeholder."
+msgstr "प्लेसहोल्डर के अंदर एक छोटा गोपनीयता संदेश दिखाएँ."
+
+#: privacy-lite-video-embeds.php:252
+msgid "Displayed only if the consent text option is enabled."
+msgstr "केवल तभी प्रदर्शित होता है जब सहमति पाठ विकल्प सक्षम हो।"
+
+#: privacy-lite-video-embeds.php:261
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr "उपयोगकर्ता द्वारा प्लेसहोल्डर पर क्लिक करने के तुरंत बाद प्लेबैक प्रारंभ करें।"
+
+#: privacy-lite-video-embeds.php:270
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "वीडियो लोड होने से पहले दिखाए गए ओवरले प्ले बटन का रंग चुनें।"
+
+#: privacy-lite-video-embeds.php:296 privacy-lite-video-embeds.php:322
+msgid "You do not have permission to run this tool."
+msgstr "आपको इस उपकरण को चलाने की अनुमति नहीं है."
+
+#. translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails.
+#: privacy-lite-video-embeds.php:434
+#, php-format
+msgid ""
+"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. "
+"Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+"स्कैन पूरा करें। स्कैन किए गए पोस्ट: %1$d. वीडियो मिले: %2$d. मौजूदा थंबनेल: %3$d. जनरेटेड: %4$d. विफल या "
+"अनुपलब्ध: %5$d."
+
+#. translators: %d: number of deleted local thumbnail files.
+#: privacy-lite-video-embeds.php:456
+#, php-format
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr "स्थानीय थंबनेल कैश साफ़ हो गया। हटाई गई फ़ाइलें: %d."
+
+#: privacy-lite-video-embeds.php:481
+msgid "Support development"
+msgstr "विकास का समर्थन करें"
+
+#: privacy-lite-video-embeds.php:482
+msgid "Buy me a coffee on Ko-fi"
+msgstr "मेरे लिए को-फाई पर एक कॉफ़ी खरीदो"
+
+#. translators: %s: video title.
+#: privacy-lite-video-embeds.php:554
+#, php-format
+msgid "Play video: %s"
+msgstr "वीडियो चलाएं: %s"
+
+#: privacy-lite-video-embeds.php:556
+msgid "Play YouTube video"
+msgstr "YouTube वीडियो चलाएं"
+
+#: privacy-lite-video-embeds.php:801
+msgid "The video is loaded from YouTube only after your click."
+msgstr "आपके क्लिक के बाद ही वीडियो YouTube से लोड किया जाता है।"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/arnopeck/privacy-lite-video-embeds"
+msgstr "https://github.com/arnopeck/privacy-lite-video-embeds"
+
+#. Description of the plugin/theme
+msgid ""
+"Replaces video embeds from YouTube with local thumbnails and loads the youtube-nocookie "
+"player only after user interaction."
+msgstr ""
+"YouTube से वीडियो एम्बेड को स्थानीय थंबनेल से बदल देता है और उपयोगकर्ता इंटरैक्शन के बाद ही youtube-"
+"nocookie प्लेयर लोड करता है."
+
+#. Author of the plugin/theme
+msgid "Arno Peck"
+msgstr "अर्नो पेक"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/arnopeck"
+msgstr "https://github.com/arnopeck"

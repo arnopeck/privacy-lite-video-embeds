@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
-"POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:03+0200\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/"
+"issues\n"
+"POT-Creation-Date: 2026-06-09 19:55+0200\n"
+"PO-Revision-Date: 2026-06-09 20:00+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -16,113 +17,241 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
+#: privacy-lite-video-embeds.php:98
 msgid "Settings"
 msgstr "Réglages"
 
+#: privacy-lite-video-embeds.php:116
 msgid "Click-to-load video embeds"
 msgstr "Embeds vidéo à clic pour charger"
 
-msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "Remplacez les incrustations YouTube par des vignettes locales et ne chargez le lecteur vidéo qu’après un clic."
+#: privacy-lite-video-embeds.php:118
+msgid ""
+"Replace video embeds from YouTube with local thumbnails and load the video "
+"player only after click."
+msgstr ""
+"Remplacez les insertions vidéo de YouTube par des vignettes locales et ne "
+"chargez le lecteur vidéo qu’après un clic."
 
-msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "Ce site utilise des insertions vidéo Privacy Lite pour YouTube afin d’afficher des vidéos YouTube avec un espace réservé local. Avant qu’un visiteur ne clique sur un espace réservé vidéo, le navigateur ne charge ni le lecteur YouTube ni les miniatures YouTube distantes. Si le visiteur choisit de lire une vidéo, le lecteur YouTube est chargé depuis le domaine youtube-nocookie.com protégé par la confidentialité et YouTube/Google peut traiter les données selon leurs propres conditions et politique de confidentialité."
-
+#: privacy-lite-video-embeds.php:123
 msgid "Replacement scope"
 msgstr "Portée de remplacement"
 
+#: privacy-lite-video-embeds.php:124
 msgid "Consent text"
 msgstr "Texte de consentement"
 
+#: privacy-lite-video-embeds.php:125
 msgid "Consent message"
 msgstr "Message de consentement"
 
+#: privacy-lite-video-embeds.php:126
 msgid "Autoplay after click"
 msgstr "Lecture automatique après clic"
 
-msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "Vidéos Privacy Lite intégrées pour YouTube"
-
-msgid "Privacy Lite Video"
-msgstr "Vidéo Privacy Lite"
-
-msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "Des embeds rapides sur YouTube. Rien ne charge jusqu’à ce que le clic ne se déclenche."
-
-msgid "Privacy behavior"
-msgstr "Comportement en matière de vie privée"
-
-msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "Avant le clic, la front-end charge uniquement du HTML local, du CSS, du JavaScript et des vignettes mises en cache localement. YouTube ne se charge depuis youtube-nocookie.com qu’après que le visiteur ait cliqué sur le Placeholder."
-
-msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "Pour le vérifier, ouvrez le panneau Réseau de votre navigateur et rechargez une page avec une intégration YouTube : avant le clic, il ne devrait y avoir aucune requête pour youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com ou gstatic.com."
-
-msgid "Thumbnail tools"
-msgstr "Outils miniatures"
-
-msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "Utilisez ces outils pour le contenu existant, le dépannage, ou après avoir modifié de nombreux embeds YouTube."
-
-msgid "Scan content and generate missing thumbnails"
-msgstr "Scannez le contenu et générez les vignettes manquantes"
-
-msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "Scanne jusqu’à %d publications/pages publiques publiées par run et télécharge les miniatures locales manquantes."
-
-msgid "Clear local thumbnail cache"
-msgstr "Effacer le cache miniature local"
-
-msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "Supprimer toutes les vignettes YouTube mises en cache localement ?"
-
-msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "Supprime les fichiers miniatures mis en cache localement et efface les marqueurs de tentative de téléchargement échoué. Les vignettes seront régénérées lorsque le contenu sera scanné, sauvegardé ou visionné."
-
-msgid "Only Gutenberg YouTube embed blocks"
-msgstr "Seuls les blocs d’intégration YouTube de Gutenberg"
-
-msgid "All YouTube videos found in content"
-msgstr "Toutes les vidéos YouTube se trouvent dans le contenu"
-
-msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "Utilisez « Tous » pour remplacer aussi les oEmbeds classiques et les iframes YouTube collés manuellement."
-
-msgid "Show a short privacy message inside the placeholder."
-msgstr "Affichez un court message de confidentialité à l’intérieur du placeholder."
-
-msgid "Displayed only if the consent text option is enabled."
-msgstr "Affiché uniquement si l’option de texte de consentement est activée."
-
-msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "Commencez la lecture immédiatement après que l’utilisateur ait cliqué sur le placeholder."
-
-msgid "You do not have permission to run this tool."
-msgstr "Vous n’avez pas la permission d’exécuter cet outil."
-
-msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "Scan terminé. Publications numérisées : %1$d. Vidéos trouvées : %2$d. Vignettes existantes : %3$d. Générées : %4$d. Échouées ou indisponibles : %5$d."
-
-msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "Le cache miniature local effacé. Fichiers supprimés : %d."
-
-msgid "Support development"
-msgstr "Soutenir le développement"
-
-msgid "Buy me a coffee on Ko-fi"
-msgstr "Offrez-moi un café sur Ko-fi"
-
-msgid "Play video: %s"
-msgstr "Lire la vidéo : %s"
-
-msgid "Play YouTube video"
-msgstr "Lire la vidéo YouTube"
-
-msgid "The video is loaded from YouTube only after your click."
-msgstr "La vidéo n’est téléchargée depuis YouTube qu’après votre clic."
-
+#: privacy-lite-video-embeds.php:127
 msgid "Play button color"
 msgstr "Couleur du bouton de lecture"
 
+#: privacy-lite-video-embeds.php:137
+msgid ""
+"This site uses Privacy Lite Video Embeds for YouTube to display YouTube "
+"videos with a local placeholder. Before a visitor clicks a video "
+"placeholder, the visitor browser does not load the YouTube player or remote "
+"YouTube thumbnails. If the visitor chooses to play a video, the YouTube "
+"player is loaded from the privacy-enhanced youtube-nocookie.com domain and "
+"YouTube/Google may process data according to their own terms and privacy "
+"policy."
+msgstr ""
+"Ce site utilise des insertions vidéo Privacy Lite pour YouTube afin "
+"d’afficher des vidéos YouTube avec un espace réservé local. Avant qu’un "
+"visiteur ne clique sur un espace réservé vidéo, le navigateur ne charge ni "
+"le lecteur YouTube ni les miniatures YouTube distantes. Si le visiteur "
+"choisit de lire une vidéo, le lecteur YouTube est chargé depuis le domaine "
+"youtube-nocookie.com protégé par la confidentialité et YouTube/Google peut "
+"traiter les données selon leurs propres conditions et politique de "
+"confidentialité."
+
+#. Plugin Name of the plugin/theme
+#: privacy-lite-video-embeds.php:147 privacy-lite-video-embeds.php:162
+msgid "Privacy Lite Video Embeds for YouTube"
+msgstr "Vidéos Privacy Lite intégrées pour YouTube"
+
+#: privacy-lite-video-embeds.php:148
+msgid "Privacy Lite Video"
+msgstr "Vidéo Privacy Lite"
+
+#: privacy-lite-video-embeds.php:163
+msgid "Fast video embeds for YouTube. Nothing loads until click."
+msgstr ""
+"Des insertions vidéo rapides pour YouTube. Rien ne charge jusqu’à ce que le "
+"clic ne se déclenche."
+
+#: privacy-lite-video-embeds.php:169
+msgid "Privacy behavior"
+msgstr "Comportement en matière de vie privée"
+
+#: privacy-lite-video-embeds.php:170
+msgid ""
+"Before click, the frontend loads only local HTML, CSS, JavaScript and "
+"locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
+"after the visitor clicks the placeholder."
+msgstr ""
+"Avant le clic, la front-end charge uniquement du HTML local, du CSS, du "
+"JavaScript et des vignettes mises en cache localement. YouTube ne se charge "
+"depuis youtube-nocookie.com qu’après que le visiteur ait cliqué sur le "
+"Placeholder."
+
+#: privacy-lite-video-embeds.php:171
+msgid ""
+"To verify this, open your browser Network panel and reload a page with a "
+"YouTube embed: before the click there should be no third-party video player "
+"requests initiated by this plugin."
+msgstr ""
+"Pour vérifier cela, ouvrez le panneau réseau de votre navigateur et "
+"rechargez une page avec un embed YouTube : avant le clic, aucune demande de "
+"lecteur vidéo tierce ne devrait être lancée par ce plugin."
+
+#: privacy-lite-video-embeds.php:188
+msgid "Thumbnail tools"
+msgstr "Outils miniatures"
+
+#: privacy-lite-video-embeds.php:189
+msgid ""
+"Use these tools for existing content, troubleshooting, or after changing "
+"many YouTube embeds."
+msgstr ""
+"Utilisez ces outils pour le contenu existant, le dépannage, ou après avoir "
+"modifié de nombreux embeds YouTube."
+
+#: privacy-lite-video-embeds.php:194
+msgid "Scan content and generate missing thumbnails"
+msgstr "Scannez le contenu et générez les vignettes manquantes"
+
+#. translators: %d: maximum number of published public posts/pages scanned per run.
+#: privacy-lite-video-embeds.php:199
+#, php-format
+msgid ""
+"Scans up to %d published public posts/pages per run and downloads missing "
+"local thumbnails."
+msgstr ""
+"Scanne jusqu’à %d publications/pages publiques publiées par run et "
+"télécharge les miniatures locales manquantes."
+
+#: privacy-lite-video-embeds.php:211
+msgid "Clear local thumbnail cache"
+msgstr "Effacer le cache miniature local"
+
+#: privacy-lite-video-embeds.php:216
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "Supprimer toutes les vignettes YouTube mises en cache localement ?"
+
+#: privacy-lite-video-embeds.php:220
+msgid ""
+"Deletes locally cached thumbnail files and clears failed-download retry "
+"markers. Thumbnails will be regenerated when content is scanned, saved, or "
+"viewed."
+msgstr ""
+"Supprime les fichiers miniatures mis en cache localement et efface les "
+"marqueurs de tentative de téléchargement échoué. Les vignettes seront "
+"régénérées lorsque le contenu sera scanné, sauvegardé ou visionné."
+
+#: privacy-lite-video-embeds.php:231
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "Seuls les blocs d’intégration YouTube de Gutenberg"
+
+#: privacy-lite-video-embeds.php:232
+msgid "All YouTube videos found in content"
+msgstr "Toutes les vidéos YouTube se trouvent dans le contenu"
+
+#: privacy-lite-video-embeds.php:234
+msgid ""
+"Use “All” to also replace classic oEmbeds and manually pasted YouTube "
+"iframes."
+msgstr ""
+"Utilisez « Tous » pour remplacer aussi les oEmbeds classiques et les iframes "
+"YouTube collés manuellement."
+
+#: privacy-lite-video-embeds.php:243
+msgid "Show a short privacy message inside the placeholder."
+msgstr ""
+"Affichez un court message de confidentialité à l’intérieur du placeholder."
+
+#: privacy-lite-video-embeds.php:252
+msgid "Displayed only if the consent text option is enabled."
+msgstr "Affiché uniquement si l’option de texte de consentement est activée."
+
+#: privacy-lite-video-embeds.php:261
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr ""
+"Commencez la lecture immédiatement après que l’utilisateur ait cliqué sur le "
+"placeholder."
+
+#: privacy-lite-video-embeds.php:270
 msgid "Choose the overlay play button color shown before the video is loaded."
-msgstr "Choisissez la couleur du bouton de lecture en superposition affichée avant le chargement de la vidéo."
+msgstr ""
+"Choisissez la couleur du bouton de lecture en superposition affichée avant "
+"le chargement de la vidéo."
+
+#: privacy-lite-video-embeds.php:296 privacy-lite-video-embeds.php:322
+msgid "You do not have permission to run this tool."
+msgstr "Vous n’avez pas la permission d’exécuter cet outil."
+
+#. translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails.
+#: privacy-lite-video-embeds.php:434
+#, php-format
+msgid ""
+"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
+"%3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+"Scan terminé. Publications numérisées : %1$d. Vidéos trouvées : %2$d. "
+"Vignettes existantes : %3$d. Générées : %4$d. Échouées ou indisponibles : "
+"%5$d."
+
+#. translators: %d: number of deleted local thumbnail files.
+#: privacy-lite-video-embeds.php:456
+#, php-format
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr "Le cache miniature local effacé. Fichiers supprimés : %d."
+
+#: privacy-lite-video-embeds.php:481
+msgid "Support development"
+msgstr "Soutenir le développement"
+
+#: privacy-lite-video-embeds.php:482
+msgid "Buy me a coffee on Ko-fi"
+msgstr "Offrez-moi un café sur Ko-fi"
+
+#. translators: %s: video title.
+#: privacy-lite-video-embeds.php:554
+#, php-format
+msgid "Play video: %s"
+msgstr "Lire la vidéo : %s"
+
+#: privacy-lite-video-embeds.php:556
+msgid "Play YouTube video"
+msgstr "Lire la vidéo YouTube"
+
+#: privacy-lite-video-embeds.php:801
+msgid "The video is loaded from YouTube only after your click."
+msgstr "La vidéo n’est téléchargée depuis YouTube qu’après votre clic."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/arnopeck/privacy-lite-video-embeds"
+msgstr "https://github.com/arnopeck/privacy-lite-video-embeds"
+
+#. Description of the plugin/theme
+msgid ""
+"Replaces video embeds from YouTube with local thumbnails and loads the "
+"youtube-nocookie player only after user interaction."
+msgstr ""
+"Remplace les insertions vidéo de YouTube par des vignettes locales et ne "
+"charge le lecteur youtube-nocookie qu’après l’interaction de l’utilisateur."
+
+#. Author of the plugin/theme
+msgid "Arno Peck"
+msgstr "Arno Peck"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/arnopeck"
+msgstr "https://github.com/arnopeck"

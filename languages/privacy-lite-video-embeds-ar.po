@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
-"POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:02+0200\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/"
+"issues\n"
+"POT-Creation-Date: 2026-06-09 19:55+0200\n"
+"PO-Revision-Date: 2026-06-09 20:02+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
@@ -16,113 +17,230 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
+#: privacy-lite-video-embeds.php:98
 msgid "Settings"
 msgstr "الإعدادات"
 
+#: privacy-lite-video-embeds.php:116
 msgid "Click-to-load video embeds"
 msgstr "تضمينات الفيديو بالنقر للتحميل"
 
-msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "استبدل يوتيوب المدمجة بصور مصغرة محلية وقم بتحميل مشغل الفيديو فقط بعد النقر."
+#: privacy-lite-video-embeds.php:118
+msgid ""
+"Replace video embeds from YouTube with local thumbnails and load the video "
+"player only after click."
+msgstr ""
+"استبدل الفيديوهات المدمجة من يوتيوب بصور مصغرة محلية وحمل مشغل الفيديو فقط "
+"بعد النقر."
 
-msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "يستخدم هذا الموقع فيديوهات Privacy Lite المضمنة ليوتيوب لعرض فيديوهات يوتيوب مع ميزة محلية. قبل أن ينقر الزائر على فيديو، لا يقوم متصفح الزائر بتحميل مشغل يوتيوب أو الصور المصغرة عن بعد. إذا اختار الزائر تشغيل فيديو، يتم تحميل مشغل يوتيوب من نطاق youtube-nocookie.com المعززة للخصوصية، وقد تعالج يوتيوب/جوجل البيانات وفقا لشروطها وسياسة الخصوصية الخاصة بها."
-
+#: privacy-lite-video-embeds.php:123
 msgid "Replacement scope"
 msgstr "منظار استبدال"
 
+#: privacy-lite-video-embeds.php:124
 msgid "Consent text"
 msgstr "نص الموافقة"
 
+#: privacy-lite-video-embeds.php:125
 msgid "Consent message"
 msgstr "رسالة الموافقة"
 
+#: privacy-lite-video-embeds.php:126
 msgid "Autoplay after click"
 msgstr "التشغيل التلقائي بعد النقر"
 
-msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "فيديوهات Privacy Lite المدمجة على يوتيوب"
-
-msgid "Privacy Lite Video"
-msgstr "فيديو الخصوصية الخفيفة"
-
-msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "دمج سريع على يوتيوب. لا شيء يحمل حتى النقرة."
-
-msgid "Privacy behavior"
-msgstr "سلوك الخصوصية"
-
-msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "قبل النقر، تقوم الواجهة الأمامية بتحميل HTML محلي، CSS، JavaScript والصور المصغرة المخزنة محليا. يتم تحميل يوتيوب من youtube-nocookie.com فقط بعد أن ينقر الزائر على المفتاح المؤقت."
-
-msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "للتحقق من ذلك، افتح لوحة شبكة المتصفح وأعد تحميل صفحة تحتوي على تضمين يوتيوب: قبل النقر يجب ألا تكون هناك طلبات ل youtube.com أو youtube-nocookie.com أو ytimg.com أو googlevideo.com أو google.com أو gstatic.com."
-
-msgid "Thumbnail tools"
-msgstr "أدوات الصور المصغرة"
-
-msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "استخدم هذه الأدوات للمحتوى الحالي، أو لحل المشكلة، أو بعد تغيير العديد من التضمين في يوتيوب."
-
-msgid "Scan content and generate missing thumbnails"
-msgstr "مسح المحتوى وإنشاء صور مصغرة مفقودة"
-
-msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "يمسح حتى %d منشورات/صفحات عامة منشورة في كل جولة ويحمل الصور المصغرة المحلية المفقودة."
-
-msgid "Clear local thumbnail cache"
-msgstr "مسح ذاكرة التخزين المؤقت المحلية المصغرة"
-
-msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "هل أحذف جميع الصور المصغرة المخزنة محليا على يوتيوب؟"
-
-msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "يحذف ملفات الصور المصغرة التي تم تخزينها محليا ويمسح علامات إعادة المحاولة التي فشل في التنزيل. سيتم إعادة توليد الصور المصغرة عند مسح المحتوى ضوئيا أو حفظه أو مشاهدته."
-
-msgid "Only Gutenberg YouTube embed blocks"
-msgstr "فقط كتل تضمين جوتنبرغ على يوتيوب"
-
-msgid "All YouTube videos found in content"
-msgstr "جميع فيديوهات يوتيوب الموجودة في المحتوى"
-
-msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "استخدم \"الكل\" أيضا لاستبدال oEmbeds الكلاسيكية وإطارات يوتيوب اليدوية التي تم لصقها يدويا."
-
-msgid "Show a short privacy message inside the placeholder."
-msgstr "عرض رسالة خصوصية قصيرة داخل الملف المؤقت."
-
-msgid "Displayed only if the consent text option is enabled."
-msgstr "يعرض فقط إذا كان خيار نص الموافقة مفعلا."
-
-msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "ابدأ التشغيل فور النقر على المفتاح المؤقت."
-
-msgid "You do not have permission to run this tool."
-msgstr "ليس لديك إذن لتشغيل هذه الأداة."
-
-msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "اكتمل المسح. المشاركات التي تم مسحها: %1$d. الفيديوهات التي تم العثور عليها: %2$d. الصور المصغرة الموجودة: %3$d. تم الإنشاء فيها: %4$d. فشل أو غير متوفر: %5$d."
-
-msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "تم مسح ذاكرة الصور المصغرة المحلية. الملفات المحذوفة: %d."
-
-msgid "Support development"
-msgstr "تطوير الدعم"
-
-msgid "Buy me a coffee on Ko-fi"
-msgstr "اشتر لي قهوة على كو-فاي"
-
-msgid "Play video: %s"
-msgstr "تشغيل الفيديو: %s"
-
-msgid "Play YouTube video"
-msgstr "شغل فيديو على يوتيوب"
-
-msgid "The video is loaded from YouTube only after your click."
-msgstr "يتم تحميل الفيديو من يوتيوب فقط بعد النقر عليك."
-
+#: privacy-lite-video-embeds.php:127
 msgid "Play button color"
 msgstr "لون زر التشغيل"
 
+#: privacy-lite-video-embeds.php:137
+msgid ""
+"This site uses Privacy Lite Video Embeds for YouTube to display YouTube "
+"videos with a local placeholder. Before a visitor clicks a video "
+"placeholder, the visitor browser does not load the YouTube player or remote "
+"YouTube thumbnails. If the visitor chooses to play a video, the YouTube "
+"player is loaded from the privacy-enhanced youtube-nocookie.com domain and "
+"YouTube/Google may process data according to their own terms and privacy "
+"policy."
+msgstr ""
+"يستخدم هذا الموقع فيديوهات Privacy Lite المضمنة ليوتيوب لعرض فيديوهات يوتيوب "
+"مع ميزة محلية. قبل أن ينقر الزائر على فيديو، لا يقوم متصفح الزائر بتحميل "
+"مشغل يوتيوب أو الصور المصغرة عن بعد. إذا اختار الزائر تشغيل فيديو، يتم تحميل "
+"مشغل يوتيوب من نطاق youtube-nocookie.com المعززة للخصوصية، وقد تعالج يوتيوب/"
+"جوجل البيانات وفقا لشروطها وسياسة الخصوصية الخاصة بها."
+
+#. Plugin Name of the plugin/theme
+#: privacy-lite-video-embeds.php:147 privacy-lite-video-embeds.php:162
+msgid "Privacy Lite Video Embeds for YouTube"
+msgstr "فيديوهات Privacy Lite المدمجة على يوتيوب"
+
+#: privacy-lite-video-embeds.php:148
+msgid "Privacy Lite Video"
+msgstr "فيديو الخصوصية الخفيفة"
+
+#: privacy-lite-video-embeds.php:163
+msgid "Fast video embeds for YouTube. Nothing loads until click."
+msgstr "فيديوهات سريعة مدمجة على يوتيوب. لا شيء يحمل حتى النقرة."
+
+#: privacy-lite-video-embeds.php:169
+msgid "Privacy behavior"
+msgstr "سلوك الخصوصية"
+
+#: privacy-lite-video-embeds.php:170
+msgid ""
+"Before click, the frontend loads only local HTML, CSS, JavaScript and "
+"locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
+"after the visitor clicks the placeholder."
+msgstr ""
+"قبل النقر، تقوم الواجهة الأمامية بتحميل HTML محلي، CSS، JavaScript والصور "
+"المصغرة المخزنة محليا. يتم تحميل يوتيوب من youtube-nocookie.com فقط بعد أن "
+"ينقر الزائر على المفتاح المؤقت."
+
+#: privacy-lite-video-embeds.php:171
+msgid ""
+"To verify this, open your browser Network panel and reload a page with a "
+"YouTube embed: before the click there should be no third-party video player "
+"requests initiated by this plugin."
+msgstr ""
+"للتحقق من ذلك، افتح لوحة شبكة المتصفح وأعد تحميل صفحة تحتوي على تضمين "
+"يوتيوب: قبل النقر يجب ألا تكون هناك طلبات مشغل فيديو من طرف ثالث تبدأ من هذه "
+"الإضافة."
+
+#: privacy-lite-video-embeds.php:188
+msgid "Thumbnail tools"
+msgstr "أدوات الصور المصغرة"
+
+#: privacy-lite-video-embeds.php:189
+msgid ""
+"Use these tools for existing content, troubleshooting, or after changing "
+"many YouTube embeds."
+msgstr ""
+"استخدم هذه الأدوات للمحتوى الحالي، أو لحل المشكلة، أو بعد تغيير العديد من "
+"التضمين في يوتيوب."
+
+#: privacy-lite-video-embeds.php:194
+msgid "Scan content and generate missing thumbnails"
+msgstr "مسح المحتوى وإنشاء صور مصغرة مفقودة"
+
+#. translators: %d: maximum number of published public posts/pages scanned per run.
+#: privacy-lite-video-embeds.php:199
+#, php-format
+msgid ""
+"Scans up to %d published public posts/pages per run and downloads missing "
+"local thumbnails."
+msgstr ""
+"يمسح حتى %d منشورات/صفحات عامة منشورة في كل جولة ويحمل الصور المصغرة المحلية "
+"المفقودة."
+
+#: privacy-lite-video-embeds.php:211
+msgid "Clear local thumbnail cache"
+msgstr "مسح ذاكرة التخزين المؤقت المحلية المصغرة"
+
+#: privacy-lite-video-embeds.php:216
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "هل أحذف جميع الصور المصغرة المخزنة محليا على يوتيوب؟"
+
+#: privacy-lite-video-embeds.php:220
+msgid ""
+"Deletes locally cached thumbnail files and clears failed-download retry "
+"markers. Thumbnails will be regenerated when content is scanned, saved, or "
+"viewed."
+msgstr ""
+"يحذف ملفات الصور المصغرة التي تم تخزينها محليا ويمسح علامات إعادة المحاولة "
+"التي فشل في التنزيل. سيتم إعادة توليد الصور المصغرة عند مسح المحتوى ضوئيا أو "
+"حفظه أو مشاهدته."
+
+#: privacy-lite-video-embeds.php:231
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "فقط كتل تضمين جوتنبرغ على يوتيوب"
+
+#: privacy-lite-video-embeds.php:232
+msgid "All YouTube videos found in content"
+msgstr "جميع فيديوهات يوتيوب الموجودة في المحتوى"
+
+#: privacy-lite-video-embeds.php:234
+msgid ""
+"Use “All” to also replace classic oEmbeds and manually pasted YouTube "
+"iframes."
+msgstr ""
+"استخدم \"الكل\" أيضا لاستبدال oEmbeds الكلاسيكية وإطارات يوتيوب اليدوية التي "
+"تم لصقها يدويا."
+
+#: privacy-lite-video-embeds.php:243
+msgid "Show a short privacy message inside the placeholder."
+msgstr "عرض رسالة خصوصية قصيرة داخل الملف المؤقت."
+
+#: privacy-lite-video-embeds.php:252
+msgid "Displayed only if the consent text option is enabled."
+msgstr "يعرض فقط إذا كان خيار نص الموافقة مفعلا."
+
+#: privacy-lite-video-embeds.php:261
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr "ابدأ التشغيل فور النقر على المفتاح المؤقت."
+
+#: privacy-lite-video-embeds.php:270
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "اختر زر التشغيل التراكب الذي يظهر قبل تحميل الفيديو."
+
+#: privacy-lite-video-embeds.php:296 privacy-lite-video-embeds.php:322
+msgid "You do not have permission to run this tool."
+msgstr "ليس لديك إذن لتشغيل هذه الأداة."
+
+#. translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails.
+#: privacy-lite-video-embeds.php:434
+#, php-format
+msgid ""
+"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
+"%3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+"اكتمل المسح. المشاركات التي تم مسحها: %1$d. الفيديوهات التي تم العثور عليها: "
+"%2$d. الصور المصغرة الموجودة: %3$d. تم الإنشاء فيها: %4$d. فشل أو غير متوفر: "
+"%5$d."
+
+#. translators: %d: number of deleted local thumbnail files.
+#: privacy-lite-video-embeds.php:456
+#, php-format
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr "تم مسح ذاكرة الصور المصغرة المحلية. الملفات المحذوفة: %d."
+
+#: privacy-lite-video-embeds.php:481
+msgid "Support development"
+msgstr "تطوير الدعم"
+
+#: privacy-lite-video-embeds.php:482
+msgid "Buy me a coffee on Ko-fi"
+msgstr "اشتر لي قهوة على كو-فاي"
+
+#. translators: %s: video title.
+#: privacy-lite-video-embeds.php:554
+#, php-format
+msgid "Play video: %s"
+msgstr "تشغيل الفيديو: %s"
+
+#: privacy-lite-video-embeds.php:556
+msgid "Play YouTube video"
+msgstr "شغل فيديو على يوتيوب"
+
+#: privacy-lite-video-embeds.php:801
+msgid "The video is loaded from YouTube only after your click."
+msgstr "يتم تحميل الفيديو من يوتيوب فقط بعد النقر عليك."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/arnopeck/privacy-lite-video-embeds"
+msgstr "https://github.com/arnopeck/privacy-lite-video-embeds"
+
+#. Description of the plugin/theme
+msgid ""
+"Replaces video embeds from YouTube with local thumbnails and loads the "
+"youtube-nocookie player only after user interaction."
+msgstr ""
+"يستبدل الفيديو المدمج من يوتيوب بصور مصغرة محلية ويقوم بتحميل مشغل youtube-"
+"nocookie فقط بعد تفاعل المستخدم."
+
+#. Author of the plugin/theme
+msgid "Arno Peck"
+msgstr "‫Arno Peck"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/arnopeck"
+msgstr "https://github.com/arnopeck"

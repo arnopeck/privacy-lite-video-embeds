@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Privacy Lite Video Embeds for YouTube 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/issues\n"
-"POT-Creation-Date: 2026-05-22 13:08+0200\n"
-"PO-Revision-Date: 2026-05-29 13:04+0200\n"
+"Report-Msgid-Bugs-To: https://github.com/arnopeck/privacy-lite-video-embeds/"
+"issues\n"
+"POT-Creation-Date: 2026-06-09 19:55+0200\n"
+"PO-Revision-Date: 2026-06-09 19:59+0200\n"
 "Last-Translator: Arno Peck <arnopeck@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16,113 +17,231 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "X-Domain: privacy-lite-video-embeds\n"
 
+#: privacy-lite-video-embeds.php:98
 msgid "Settings"
 msgstr "設定"
 
+#: privacy-lite-video-embeds.php:116
 msgid "Click-to-load video embeds"
 msgstr "クリックで読み込みするビデオ埋め込み"
 
-msgid "Replace YouTube embeds with local thumbnails and load the video player only after click."
-msgstr "YouTubeの埋め込み映像をローカルサムネイルに置き換え、クリック後にのみ動画プレーヤーを読み込みます。"
+#: privacy-lite-video-embeds.php:118
+msgid ""
+"Replace video embeds from YouTube with local thumbnails and load the video "
+"player only after click."
+msgstr ""
+"YouTubeの動画埋め込みをローカルサムネイルに置き換え、クリック後にのみ動画プ"
+"レーヤーを読み込みます。"
 
-msgid "This site uses Privacy Lite Video Embeds for YouTube to display YouTube videos with a local placeholder. Before a visitor clicks a video placeholder, the visitor browser does not load the YouTube player or remote YouTube thumbnails. If the visitor chooses to play a video, the YouTube player is loaded from the privacy-enhanced youtube-nocookie.com domain and YouTube/Google may process data according to their own terms and privacy policy."
-msgstr "このサイトは、Privacy Lite Video Embeds for YouTubeを使い、ローカルのプレースホルダーでYouTube動画を表示します。訪問者が動画のプレースホルダーをクリックする前に、訪問者ブラウザはYouTubeプレーヤーやリモートのYouTubeサムネイルを読み込みません。訪問者が動画を再生を選択すると、YouTubeプレーヤーはプライバシー強化されたドメインから読み込み youtube-nocookie.com、YouTubeやGoogleはそれぞれの利用規約やプライバシーポリシーに従ってデータを処理することがあります。"
-
+#: privacy-lite-video-embeds.php:123
 msgid "Replacement scope"
 msgstr "代替スコープ"
 
+#: privacy-lite-video-embeds.php:124
 msgid "Consent text"
 msgstr "同意文"
 
+#: privacy-lite-video-embeds.php:125
 msgid "Consent message"
 msgstr "同意メッセージ"
 
+#: privacy-lite-video-embeds.php:126
 msgid "Autoplay after click"
 msgstr "クリック後の自動再生"
 
-msgid "Privacy Lite Video Embeds for YouTube"
-msgstr "YouTube用のPrivacy Liteビデオ埋め込み"
-
-msgid "Privacy Lite Video"
-msgstr "プライバシーライトビデオ"
-
-msgid "Fast YouTube embeds. Nothing loads until click."
-msgstr "YouTubeの埋め込みが速いです。クリックするまで何も読み込まれません。"
-
-msgid "Privacy behavior"
-msgstr "プライバシーの行動"
-
-msgid "Before click, the frontend loads only local HTML, CSS, JavaScript and locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only after the visitor clicks the placeholder."
-msgstr "クリック前には、フロントエンドはローカルのHTML、CSS、JavaScript、そしてローカルキャッシュされたサムネイルのみを読み込みます。YouTubeは訪問者がプレースホルダーをクリックした後 youtube-nocookie.com から読み込みます。"
-
-msgid "To verify this, open your browser Network panel and reload a page with a YouTube embed: before the click there should be no requests to youtube.com, youtube-nocookie.com, ytimg.com, googlevideo.com, google.com or gstatic.com."
-msgstr "これを確認するために、ブラウザのネットワークパネルを開き、YouTube埋め込みのあるページを再読み込みしてください。クリック前に youtube.com、youtube-nocookie.com、ytimg.com、googlevideo.com、google.com、gstatic.com のリクエストは一切ありません。"
-
-msgid "Thumbnail tools"
-msgstr "サムネイルツール"
-
-msgid "Use these tools for existing content, troubleshooting, or after changing many YouTube embeds."
-msgstr "既存のコンテンツやトラブルシューティング、または多くのYouTube埋め込み映像を変更した後にこれらのツールを活用しましょう。"
-
-msgid "Scan content and generate missing thumbnails"
-msgstr "コンテンツをスキャンし、サムネイルが欠けている部分を生成します"
-
-msgid "Scans up to %d published public posts/pages per run and downloads missing local thumbnails."
-msgstr "1回のプレイで公開された公開投稿やページを最大%dスキャンし、ローカルサムネイルが欠けているものをダウンロードします。"
-
-msgid "Clear local thumbnail cache"
-msgstr "ローカルサムネイルキャッシュをクリア"
-
-msgid "Delete all locally cached YouTube thumbnails?"
-msgstr "ローカルにキャッシュされているYouTubeのサムネイルをすべて削除する?"
-
-msgid "Deletes locally cached thumbnail files and clears failed-download retry markers. Thumbnails will be regenerated when content is scanned, saved, or viewed."
-msgstr "ローカルにキャッシュされたサムネイルファイルを削除し、失敗したダウンロードの再試行マーカーを消去します。サムネイルは、スキャン、保存、閲覧時に再生成されます。"
-
-msgid "Only Gutenberg YouTube embed blocks"
-msgstr "GutenbergのYouTubeだけがブロックを埋め込んでいます"
-
-msgid "All YouTube videos found in content"
-msgstr "コンテンツに含まれるすべてのYouTube動画"
-
-msgid "Use “All” to also replace classic oEmbeds and manually pasted YouTube iframes."
-msgstr "「All」を使って、クラシックなoEmbedや手動で貼り付けたYouTubeのiframeも置き換えてください。"
-
-msgid "Show a short privacy message inside the placeholder."
-msgstr "プレースホルダー内に短いプライバシーメッセージを表示してください。"
-
-msgid "Displayed only if the consent text option is enabled."
-msgstr "同意テキストオプションが有効の場合のみ表示されます。"
-
-msgid "Start playback immediately after the user clicks the placeholder."
-msgstr "ユーザーがプレースホルダーをクリックした直後に再生を開始します。"
-
-msgid "You do not have permission to run this tool."
-msgstr "このツールを実行する権限はありません。"
-
-msgid "Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: %3$d. Generated: %4$d. Failed or unavailable: %5$d."
-msgstr "スキャン完了。スキャンされた投稿:%1$d. 動画が見つかった:%2$d。既存のサムネイル:%3$d。生成済み:%4$d。失敗または利用不可:%5$d。"
-
-msgid "Local thumbnail cache cleared. Deleted files: %d."
-msgstr "ローカルサムネイルキャッシュがクリアされました。削除されたファイル:%d。"
-
-msgid "Support development"
-msgstr "サポート開発"
-
-msgid "Buy me a coffee on Ko-fi"
-msgstr "Ko-fiでコーヒーをおごって"
-
-msgid "Play video: %s"
-msgstr "動画再生:%s"
-
-msgid "Play YouTube video"
-msgstr "YouTube動画を再生"
-
-msgid "The video is loaded from YouTube only after your click."
-msgstr "動画はクリック後にのみYouTubeから読み込みます。"
-
+#: privacy-lite-video-embeds.php:127
 msgid "Play button color"
 msgstr "再生ボタンの色"
 
+#: privacy-lite-video-embeds.php:137
+msgid ""
+"This site uses Privacy Lite Video Embeds for YouTube to display YouTube "
+"videos with a local placeholder. Before a visitor clicks a video "
+"placeholder, the visitor browser does not load the YouTube player or remote "
+"YouTube thumbnails. If the visitor chooses to play a video, the YouTube "
+"player is loaded from the privacy-enhanced youtube-nocookie.com domain and "
+"YouTube/Google may process data according to their own terms and privacy "
+"policy."
+msgstr ""
+"このサイトは、Privacy Lite Video Embeds for YouTubeを使い、ローカルのプレース"
+"ホルダーでYouTube動画を表示します。訪問者が動画のプレースホルダーをクリックす"
+"る前に、訪問者ブラウザはYouTubeプレーヤーやリモートのYouTubeサムネイルを読み"
+"込みません。訪問者が動画を再生を選択すると、YouTubeプレーヤーはプライバシー強"
+"化されたドメインから読み込み youtube-nocookie.com、YouTubeやGoogleはそれぞれ"
+"の利用規約やプライバシーポリシーに従ってデータを処理することがあります。"
+
+#. Plugin Name of the plugin/theme
+#: privacy-lite-video-embeds.php:147 privacy-lite-video-embeds.php:162
+msgid "Privacy Lite Video Embeds for YouTube"
+msgstr "YouTube用のPrivacy Liteビデオ埋め込み"
+
+#: privacy-lite-video-embeds.php:148
+msgid "Privacy Lite Video"
+msgstr "プライバシーライトビデオ"
+
+#: privacy-lite-video-embeds.php:163
+msgid "Fast video embeds for YouTube. Nothing loads until click."
+msgstr "YouTube用の高速動画埋め込み。クリックするまで何も読み込まれません。"
+
+#: privacy-lite-video-embeds.php:169
+msgid "Privacy behavior"
+msgstr "プライバシーの行動"
+
+#: privacy-lite-video-embeds.php:170
+msgid ""
+"Before click, the frontend loads only local HTML, CSS, JavaScript and "
+"locally cached thumbnails. YouTube is loaded from youtube-nocookie.com only "
+"after the visitor clicks the placeholder."
+msgstr ""
+"クリック前には、フロントエンドはローカルのHTML、CSS、JavaScript、そしてローカ"
+"ルキャッシュされたサムネイルのみを読み込みます。YouTubeは訪問者がプレースホル"
+"ダーをクリックした後 youtube-nocookie.com から読み込みます。"
+
+#: privacy-lite-video-embeds.php:171
+msgid ""
+"To verify this, open your browser Network panel and reload a page with a "
+"YouTube embed: before the click there should be no third-party video player "
+"requests initiated by this plugin."
+msgstr ""
+"これを確認するために、ブラウザのネットワークパネルを開き、YouTube埋め込みのあ"
+"るページを再読み込みしてください。クリック前にこのプラグインによるサードパー"
+"ティの動画プレイヤーリクエストは発生しません。"
+
+#: privacy-lite-video-embeds.php:188
+msgid "Thumbnail tools"
+msgstr "サムネイルツール"
+
+#: privacy-lite-video-embeds.php:189
+msgid ""
+"Use these tools for existing content, troubleshooting, or after changing "
+"many YouTube embeds."
+msgstr ""
+"既存のコンテンツやトラブルシューティング、または多くのYouTube埋め込み映像を変"
+"更した後にこれらのツールを活用しましょう。"
+
+#: privacy-lite-video-embeds.php:194
+msgid "Scan content and generate missing thumbnails"
+msgstr "コンテンツをスキャンし、サムネイルが欠けている部分を生成します"
+
+#. translators: %d: maximum number of published public posts/pages scanned per run.
+#: privacy-lite-video-embeds.php:199
+#, php-format
+msgid ""
+"Scans up to %d published public posts/pages per run and downloads missing "
+"local thumbnails."
+msgstr ""
+"1回のプレイで公開された公開投稿やページを最大%dスキャンし、ローカルサムネイル"
+"が欠けているものをダウンロードします。"
+
+#: privacy-lite-video-embeds.php:211
+msgid "Clear local thumbnail cache"
+msgstr "ローカルサムネイルキャッシュをクリア"
+
+#: privacy-lite-video-embeds.php:216
+msgid "Delete all locally cached YouTube thumbnails?"
+msgstr "ローカルにキャッシュされているYouTubeのサムネイルをすべて削除する?"
+
+#: privacy-lite-video-embeds.php:220
+msgid ""
+"Deletes locally cached thumbnail files and clears failed-download retry "
+"markers. Thumbnails will be regenerated when content is scanned, saved, or "
+"viewed."
+msgstr ""
+"ローカルにキャッシュされたサムネイルファイルを削除し、失敗したダウンロードの"
+"再試行マーカーを消去します。サムネイルは、スキャン、保存、閲覧時に再生成され"
+"ます。"
+
+#: privacy-lite-video-embeds.php:231
+msgid "Only Gutenberg YouTube embed blocks"
+msgstr "GutenbergのYouTubeだけがブロックを埋め込んでいます"
+
+#: privacy-lite-video-embeds.php:232
+msgid "All YouTube videos found in content"
+msgstr "コンテンツに含まれるすべてのYouTube動画"
+
+#: privacy-lite-video-embeds.php:234
+msgid ""
+"Use “All” to also replace classic oEmbeds and manually pasted YouTube "
+"iframes."
+msgstr ""
+"「All」を使って、クラシックなoEmbedや手動で貼り付けたYouTubeのiframeも置き換"
+"えてください。"
+
+#: privacy-lite-video-embeds.php:243
+msgid "Show a short privacy message inside the placeholder."
+msgstr "プレースホルダー内に短いプライバシーメッセージを表示してください。"
+
+#: privacy-lite-video-embeds.php:252
+msgid "Displayed only if the consent text option is enabled."
+msgstr "同意テキストオプションが有効の場合のみ表示されます。"
+
+#: privacy-lite-video-embeds.php:261
+msgid "Start playback immediately after the user clicks the placeholder."
+msgstr "ユーザーがプレースホルダーをクリックした直後に再生を開始します。"
+
+#: privacy-lite-video-embeds.php:270
 msgid "Choose the overlay play button color shown before the video is loaded."
 msgstr "動画が読み込まれる前に表示されるオーバーレイ再生ボタンの色を選びます。"
+
+#: privacy-lite-video-embeds.php:296 privacy-lite-video-embeds.php:322
+msgid "You do not have permission to run this tool."
+msgstr "このツールを実行する権限はありません。"
+
+#. translators: 1: posts scanned, 2: videos found, 3: existing thumbnails, 4: generated thumbnails, 5: failed or unavailable thumbnails.
+#: privacy-lite-video-embeds.php:434
+#, php-format
+msgid ""
+"Scan complete. Posts scanned: %1$d. Videos found: %2$d. Existing thumbnails: "
+"%3$d. Generated: %4$d. Failed or unavailable: %5$d."
+msgstr ""
+"スキャン完了。スキャンされた投稿:%1$d. 動画が見つかった:%2$d。既存のサムネイ"
+"ル:%3$d。生成済み:%4$d。失敗または利用不可:%5$d。"
+
+#. translators: %d: number of deleted local thumbnail files.
+#: privacy-lite-video-embeds.php:456
+#, php-format
+msgid "Local thumbnail cache cleared. Deleted files: %d."
+msgstr ""
+"ローカルサムネイルキャッシュがクリアされました。削除されたファイル:%d。"
+
+#: privacy-lite-video-embeds.php:481
+msgid "Support development"
+msgstr "サポート開発"
+
+#: privacy-lite-video-embeds.php:482
+msgid "Buy me a coffee on Ko-fi"
+msgstr "Ko-fiでコーヒーをおごって"
+
+#. translators: %s: video title.
+#: privacy-lite-video-embeds.php:554
+#, php-format
+msgid "Play video: %s"
+msgstr "動画再生:%s"
+
+#: privacy-lite-video-embeds.php:556
+msgid "Play YouTube video"
+msgstr "YouTube動画を再生"
+
+#: privacy-lite-video-embeds.php:801
+msgid "The video is loaded from YouTube only after your click."
+msgstr "動画はクリック後にのみYouTubeから読み込みます。"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/arnopeck/privacy-lite-video-embeds"
+msgstr "https://github.com/arnopeck/privacy-lite-video-embeds"
+
+#. Description of the plugin/theme
+msgid ""
+"Replaces video embeds from YouTube with local thumbnails and loads the "
+"youtube-nocookie player only after user interaction."
+msgstr ""
+"YouTubeの動画埋め込みをローカルサムネイルに置き換え、ユーザー操作後にのみ"
+"youtube-nocookieプレーヤーを読み込みます。"
+
+#. Author of the plugin/theme
+msgid "Arno Peck"
+msgstr "アルノ・ペック"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/arnopeck"
+msgstr "https://github.com/arnopeck"
