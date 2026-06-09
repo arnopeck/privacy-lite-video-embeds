@@ -111,6 +111,16 @@ If no valid thumbnail can be downloaded, the frontend uses a CSS-only local plac
 
 When a post is saved, the plugin also scans the content and tries to pre-generate thumbnails for detected YouTube videos. This keeps the frontend lighter for newly edited content.
 
+## External services
+
+This plugin works with YouTube embeds.
+
+The plugin may contact `img.youtube.com` server-side to download and cache video thumbnails locally. This happens from the website server, not from the visitor browser.
+
+The visitor browser loads the YouTube player only after the visitor clicks the local placeholder. After click, the iframe is created using `youtube-nocookie.com`.
+
+No account or API key is required.
+
 ## Privacy behavior
 
 This plugin is designed to avoid frontend requests to YouTube before user interaction.
@@ -134,13 +144,7 @@ Open a page containing a YouTube embed and use your browser DevTools.
 1. Open DevTools > Network.
 2. Enable Preserve log if useful.
 3. Reload the page.
-4. Before clicking the placeholder, check that there are no requests to:
-   - `youtube.com`
-   - `youtube-nocookie.com`
-   - `ytimg.com`
-   - `googlevideo.com`
-   - `google.com`
-   - `gstatic.com`
+4. Before clicking the placeholder, check that this plugin has not initiated third-party video player requests from the visitor browser.
 5. Click the placeholder.
 6. Confirm that the iframe is created and loads from `youtube-nocookie.com`.
 

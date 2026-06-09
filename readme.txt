@@ -17,7 +17,7 @@ Privacy Lite Video Embeds for YouTube replaces YouTube embeds with lightweight l
 
 Fast video embeds for YouTube. Nothing loads until click.
 
-Trademark note: this is a third-party plugin and is not affiliated with, endorsed by, or sponsored by with YouTube or Google.
+Trademark note: this is a third-party plugin and is not affiliated with, endorsed by, or sponsored by YouTube or Google.
 
 Before the visitor clicks, the frontend loads only local resources from the site:
 
@@ -60,6 +60,16 @@ Important: this plugin is a technical privacy/performance aid. It does not const
 5. For existing sites, run **Scan content and generate missing thumbnails** from the settings page.
 
 == Frequently Asked Questions ==
+
+= Does this plugin call external services? =
+
+Yes, because the plugin works with YouTube embeds.
+
+The plugin may contact `img.youtube.com` server-side to download and cache video thumbnails locally in the WordPress uploads directory. This happens from the website server, not from the visitor browser.
+
+The visitor browser loads the YouTube player only after the visitor clicks the local placeholder. After click, the iframe is created using the privacy-enhanced `youtube-nocookie.com` embed domain.
+
+No account or API key is required.
 
 = Does the visitor browser load YouTube before click? =
 
@@ -106,7 +116,7 @@ Open a page containing a YouTube embed and use your browser DevTools.
 
 1. Open DevTools > Network.
 2. Reload the page.
-3. Before clicking the placeholder, check that there are no requests to `youtube.com`, `youtube-nocookie.com`, `ytimg.com`, `googlevideo.com`, `google.com`, or `gstatic.com`.
+3. Before clicking the placeholder, check that this plugin has not initiated third-party video player requests from the visitor browser.
 4. Click the placeholder.
 5. Confirm that the iframe is created and loads from `youtube-nocookie.com`.
 
