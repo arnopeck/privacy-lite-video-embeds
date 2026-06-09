@@ -177,9 +177,7 @@ languages/
 
 ## Translations
 
-A `.pot` template is included in `/languages/`.
-
-Before shipping local translations, generate fresh `.po` files from the current `.pot` file and compile them into `.mo` files with Poedit or a similar gettext tool.
+A translation template is included in `/languages/`. Translations can be provided through standard WordPress language packs or local WordPress translation files using the plugin text domain `privacy-lite-video-embeds`.
 
 ## License
 
