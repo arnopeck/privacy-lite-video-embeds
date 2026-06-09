@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-final class Privacy_Lite_Video_Embeds {
+final class PLYE_Privacy_Lite_Video_Embeds {
     private const VERSION = '1.0.0';
     private const OPTION_NAME = 'plye_settings';
     private const FAILED_KEYS_OPTION = 'plye_failed_thumbnail_keys';
@@ -805,5 +805,5 @@ final class Privacy_Lite_Video_Embeds {
     }
 }
 
-register_activation_hook(__FILE__, ['Privacy_Lite_Video_Embeds', 'activate']);
-Privacy_Lite_Video_Embeds::instance();
+register_activation_hook(__FILE__, ['PLYE_Privacy_Lite_Video_Embeds', 'activate']);
+PLYE_Privacy_Lite_Video_Embeds::instance();
