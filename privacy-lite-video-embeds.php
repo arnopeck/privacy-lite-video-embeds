@@ -18,16 +18,16 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-final class PLYE_Privacy_Lite_Video_Embeds {
+final class PLVE_Privacy_Lite_Video_Embeds {
     private const VERSION = '1.0.0';
-    private const OPTION_NAME = 'plye_settings';
-    private const FAILED_KEYS_OPTION = 'plye_failed_thumbnail_keys';
+    private const OPTION_NAME = 'plve_settings';
+    private const FAILED_KEYS_OPTION = 'plve_failed_thumbnail_keys';
     private const THUMB_DIR = 'privacy-lite-video-embeds';
     private const FAILED_THUMB_TTL = 12 * HOUR_IN_SECONDS;
     private const MAX_SCAN_POSTS = 50;
     private const DEFAULT_SUPPORT_URL = 'https://ko-fi.com/luminescenza';
     private const DEFAULT_PLAY_BUTTON_COLOR = '#ff0033';
-    private const ADMIN_NOTICE_NONCE_ACTION = 'plye_admin_notice';
+    private const ADMIN_NOTICE_NONCE_ACTION = 'plve_admin_notice';
 
     private static ?self $instance = null;
 
@@ -43,8 +43,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
         add_action('admin_init', [$this, 'add_privacy_policy_suggestion']);
         add_action('admin_menu', [$this, 'add_settings_page']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_assets']);
-        add_action('admin_post_plye_scan_thumbnails', [$this, 'handle_scan_thumbnails']);
-        add_action('admin_post_plye_clear_thumbnails', [$this, 'handle_clear_thumbnails']);
+        add_action('admin_post_plve_scan_thumbnails', [$this, 'handle_scan_thumbnails']);
+        add_action('admin_post_plve_clear_thumbnails', [$this, 'handle_clear_thumbnails']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
         add_action('save_post', [$this, 'prime_post_thumbnails'], 20, 3);
 
@@ -74,7 +74,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
         wp_enqueue_style('privacy-lite-video-embeds', plugins_url('assets/privacy-lite-video-embeds.css', __FILE__), [], self::VERSION);
         wp_add_inline_style(
             'privacy-lite-video-embeds',
-            '.plye-video{--plye-play-color:' . esc_html($this->settings()['play_button_color']) . ';}'
+            '.plve-video{--plve-play-color:' . esc_html($this->settings()['play_button_color']) . ';}'
         );
         wp_enqueue_script('privacy-lite-video-embeds', plugins_url('assets/privacy-lite-video-embeds.js', __FILE__), [], self::VERSION, true);
     }
@@ -88,7 +88,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
         wp_enqueue_script('wp-color-picker');
         wp_add_inline_script(
             'wp-color-picker',
-            'jQuery(function($){$(".plye-color-picker").wpColorPicker();});'
+            'jQuery(function($){$(".plve-color-picker").wpColorPicker();});'
         );
     }
 
@@ -102,7 +102,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
 
     public function register_settings(): void {
         register_setting(
-            'plye_settings_group',
+            'plve_settings_group',
             self::OPTION_NAME,
             [
                 'type' => 'array',
@@ -112,19 +112,19 @@ final class PLYE_Privacy_Lite_Video_Embeds {
         );
 
         add_settings_section(
-            'plye_main_section',
+            'plve_main_section',
             __('Click-to-load video embeds', 'privacy-lite-video-embeds'),
             function (): void {
                 echo '<p>' . esc_html__('Replace video embeds from YouTube with local thumbnails and load the video player only after click.', 'privacy-lite-video-embeds') . '</p>';
             },
-            'plye_settings'
+            'plve_settings'
         );
 
-        add_settings_field('scope', __('Replacement scope', 'privacy-lite-video-embeds'), [$this, 'render_scope_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('show_consent_text', __('Consent text', 'privacy-lite-video-embeds'), [$this, 'render_consent_toggle_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('consent_text', __('Consent message', 'privacy-lite-video-embeds'), [$this, 'render_consent_text_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('autoplay', __('Autoplay after click', 'privacy-lite-video-embeds'), [$this, 'render_autoplay_field'], 'plye_settings', 'plye_main_section');
-        add_settings_field('play_button_color', __('Play button color', 'privacy-lite-video-embeds'), [$this, 'render_play_button_color_field'], 'plye_settings', 'plye_main_section');
+        add_settings_field('scope', __('Replacement scope', 'privacy-lite-video-embeds'), [$this, 'render_scope_field'], 'plve_settings', 'plve_main_section');
+        add_settings_field('show_consent_text', __('Consent text', 'privacy-lite-video-embeds'), [$this, 'render_consent_toggle_field'], 'plve_settings', 'plve_main_section');
+        add_settings_field('consent_text', __('Consent message', 'privacy-lite-video-embeds'), [$this, 'render_consent_text_field'], 'plve_settings', 'plve_main_section');
+        add_settings_field('autoplay', __('Autoplay after click', 'privacy-lite-video-embeds'), [$this, 'render_autoplay_field'], 'plve_settings', 'plve_main_section');
+        add_settings_field('play_button_color', __('Play button color', 'privacy-lite-video-embeds'), [$this, 'render_play_button_color_field'], 'plve_settings', 'plve_main_section');
     }
 
     public function add_privacy_policy_suggestion(): void {
@@ -177,8 +177,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
 
             <form method="post" action="options.php" style="max-width:1120px;">
                 <?php
-                settings_fields('plye_settings_group');
-                do_settings_sections('plye_settings');
+                settings_fields('plve_settings_group');
+                do_settings_sections('plve_settings');
                 submit_button();
                 ?>
             </form>
@@ -189,8 +189,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
                 <p><?php echo esc_html__('Use these tools for existing content, troubleshooting, or after changing many YouTube embeds.', 'privacy-lite-video-embeds'); ?></p>
 
                 <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" style="margin-bottom:1em;">
-                    <input type="hidden" name="action" value="plye_scan_thumbnails">
-                    <?php wp_nonce_field('plye_scan_thumbnails'); ?>
+                    <input type="hidden" name="action" value="plve_scan_thumbnails">
+                    <?php wp_nonce_field('plve_scan_thumbnails'); ?>
                     <?php submit_button(__('Scan content and generate missing thumbnails', 'privacy-lite-video-embeds'), 'secondary', 'submit', false); ?>
                     <p class="description">
                         <?php
@@ -204,8 +204,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
                 </form>
 
                 <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-                    <input type="hidden" name="action" value="plye_clear_thumbnails">
-                    <?php wp_nonce_field('plye_clear_thumbnails'); ?>
+                    <input type="hidden" name="action" value="plve_clear_thumbnails">
+                    <?php wp_nonce_field('plve_clear_thumbnails'); ?>
                     <?php
                     submit_button(
                         __('Clear local thumbnail cache', 'privacy-lite-video-embeds'),
@@ -266,7 +266,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
     public function render_play_button_color_field(): void {
         $settings = $this->settings();
         ?>
-        <input type="text" class="plye-color-picker" name="<?php echo esc_attr(self::OPTION_NAME); ?>[play_button_color]" value="<?php echo esc_attr($settings['play_button_color']); ?>" data-default-color="<?php echo esc_attr(self::DEFAULT_PLAY_BUTTON_COLOR); ?>">
+        <input type="text" class="plve-color-picker" name="<?php echo esc_attr(self::OPTION_NAME); ?>[play_button_color]" value="<?php echo esc_attr($settings['play_button_color']); ?>" data-default-color="<?php echo esc_attr(self::DEFAULT_PLAY_BUTTON_COLOR); ?>">
         <p class="description"><?php echo esc_html__('Choose the overlay play button color shown before the video is loaded.', 'privacy-lite-video-embeds'); ?></p>
         <?php
     }
@@ -296,19 +296,19 @@ final class PLYE_Privacy_Lite_Video_Embeds {
             wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-video-embeds'));
         }
 
-        check_admin_referer('plye_scan_thumbnails');
+        check_admin_referer('plve_scan_thumbnails');
         $result = $this->scan_content_for_thumbnails(self::MAX_SCAN_POSTS);
 
         wp_safe_redirect(
             add_query_arg(
                 [
                     'page' => 'privacy-lite-video-embeds',
-                    'plye_notice' => 'scan',
-                    'plye_posts' => absint($result['posts_scanned']),
-                    'plye_videos' => absint($result['videos_found']),
-                    'plye_existing' => absint($result['existing']),
-                    'plye_generated' => absint($result['generated']),
-                    'plye_failed' => absint($result['failed']),
+                    'plve_notice' => 'scan',
+                    'plve_posts' => absint($result['posts_scanned']),
+                    'plve_videos' => absint($result['videos_found']),
+                    'plve_existing' => absint($result['existing']),
+                    'plve_generated' => absint($result['generated']),
+                    'plve_failed' => absint($result['failed']),
                     '_wpnonce' => wp_create_nonce(self::ADMIN_NOTICE_NONCE_ACTION),
                 ],
                 admin_url('options-general.php')
@@ -322,7 +322,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
             wp_die(esc_html__('You do not have permission to run this tool.', 'privacy-lite-video-embeds'));
         }
 
-        check_admin_referer('plye_clear_thumbnails');
+        check_admin_referer('plve_clear_thumbnails');
         $deleted = $this->clear_thumbnail_cache();
         $this->clear_failed_thumbnail_transients();
 
@@ -330,8 +330,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
             add_query_arg(
                 [
                     'page' => 'privacy-lite-video-embeds',
-                    'plye_notice' => 'clear',
-                    'plye_deleted' => absint($deleted),
+                    'plve_notice' => 'clear',
+                    'plve_deleted' => absint($deleted),
                     '_wpnonce' => wp_create_nonce(self::ADMIN_NOTICE_NONCE_ACTION),
                 ],
                 admin_url('options-general.php')
@@ -408,7 +408,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
     }
 
     private function render_admin_tool_notice(): void {
-        if (empty($_GET['plye_notice']) || empty($_GET['_wpnonce'])) {
+        if (empty($_GET['plve_notice']) || empty($_GET['_wpnonce'])) {
             return;
         }
 
@@ -417,14 +417,14 @@ final class PLYE_Privacy_Lite_Video_Embeds {
             return;
         }
 
-        $notice = sanitize_key(wp_unslash((string) $_GET['plye_notice']));
+        $notice = sanitize_key(wp_unslash((string) $_GET['plve_notice']));
 
         if ('scan' === $notice) {
-            $posts = isset($_GET['plye_posts']) ? absint($_GET['plye_posts']) : 0;
-            $videos = isset($_GET['plye_videos']) ? absint($_GET['plye_videos']) : 0;
-            $existing = isset($_GET['plye_existing']) ? absint($_GET['plye_existing']) : 0;
-            $generated = isset($_GET['plye_generated']) ? absint($_GET['plye_generated']) : 0;
-            $failed = isset($_GET['plye_failed']) ? absint($_GET['plye_failed']) : 0;
+            $posts = isset($_GET['plve_posts']) ? absint($_GET['plve_posts']) : 0;
+            $videos = isset($_GET['plve_videos']) ? absint($_GET['plve_videos']) : 0;
+            $existing = isset($_GET['plve_existing']) ? absint($_GET['plve_existing']) : 0;
+            $generated = isset($_GET['plve_generated']) ? absint($_GET['plve_generated']) : 0;
+            $failed = isset($_GET['plve_failed']) ? absint($_GET['plve_failed']) : 0;
             ?>
             <div class="notice notice-success is-dismissible">
                 <p>
@@ -446,7 +446,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
         }
 
         if ('clear' === $notice) {
-            $deleted = isset($_GET['plye_deleted']) ? absint($_GET['plye_deleted']) : 0;
+            $deleted = isset($_GET['plve_deleted']) ? absint($_GET['plve_deleted']) : 0;
             ?>
             <div class="notice notice-success is-dismissible">
                 <p>
@@ -492,8 +492,8 @@ final class PLYE_Privacy_Lite_Video_Embeds {
     }
 
     private function support_url(): string {
-        $url = defined('PLYE_SUPPORT_URL') ? (string) PLYE_SUPPORT_URL : self::DEFAULT_SUPPORT_URL;
-        $url = (string) apply_filters('plye_support_url', $url);
+        $url = defined('PLVE_SUPPORT_URL') ? (string) PLVE_SUPPORT_URL : self::DEFAULT_SUPPORT_URL;
+        $url = (string) apply_filters('plve_support_url', $url);
         return esc_url_raw($url, ['https']) ?: '';
     }
 
@@ -558,17 +558,17 @@ final class PLYE_Privacy_Lite_Video_Embeds {
 
         ob_start();
         ?>
-        <div class="<?php echo esc_attr($thumb ? 'plye-video' : 'plye-video plye-video--no-thumb'); ?>" data-plye-video-id="<?php echo esc_attr($video_id); ?>" data-plye-autoplay="<?php echo $settings['autoplay'] ? '1' : '0'; ?>">
-            <button class="plye-video__button" type="button" aria-label="<?php echo esc_attr($label); ?>">
+        <div class="<?php echo esc_attr($thumb ? 'plve-video' : 'plve-video plve-video--no-thumb'); ?>" data-plve-video-id="<?php echo esc_attr($video_id); ?>" data-plve-autoplay="<?php echo $settings['autoplay'] ? '1' : '0'; ?>">
+            <button class="plve-video__button" type="button" aria-label="<?php echo esc_attr($label); ?>">
                 <?php if ($thumb) : ?>
-                    <img class="plye-video__thumb" src="<?php echo esc_url($thumb['url']); ?>" alt="" loading="lazy" decoding="async">
+                    <img class="plve-video__thumb" src="<?php echo esc_url($thumb['url']); ?>" alt="" loading="lazy" decoding="async">
                 <?php else : ?>
-                    <span class="plye-video__fallback" aria-hidden="true"></span>
+                    <span class="plve-video__fallback" aria-hidden="true"></span>
                 <?php endif; ?>
-                <span class="plye-video__overlay" aria-hidden="true"></span>
-                <span class="plye-video__play" aria-hidden="true"></span>
+                <span class="plve-video__overlay" aria-hidden="true"></span>
+                <span class="plve-video__play" aria-hidden="true"></span>
                 <?php if (!empty($settings['show_consent_text']) && '' !== trim($settings['consent_text'])) : ?>
-                    <span class="plye-video__consent"><?php echo esc_html($settings['consent_text']); ?></span>
+                    <span class="plve-video__consent"><?php echo esc_html($settings['consent_text']); ?></span>
                 <?php endif; ?>
             </button>
         </div>
@@ -775,7 +775,7 @@ final class PLYE_Privacy_Lite_Video_Embeds {
     }
 
     private function failed_thumbnail_transient_key(string $video_id): string {
-        return 'plye_thumb_fail_' . md5($video_id);
+        return 'plve_thumb_fail_' . md5($video_id);
     }
 
     private function extract_title_from_html(string $html): string {
@@ -805,5 +805,5 @@ final class PLYE_Privacy_Lite_Video_Embeds {
     }
 }
 
-register_activation_hook(__FILE__, ['PLYE_Privacy_Lite_Video_Embeds', 'activate']);
-PLYE_Privacy_Lite_Video_Embeds::instance();
+register_activation_hook(__FILE__, ['PLVE_Privacy_Lite_Video_Embeds', 'activate']);
+PLVE_Privacy_Lite_Video_Embeds::instance();
